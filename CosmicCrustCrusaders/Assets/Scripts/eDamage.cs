@@ -12,6 +12,7 @@ public class eDamage : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        // change this after player is ready, this is just an example
         playerHp.health -= damage;
     }
 
