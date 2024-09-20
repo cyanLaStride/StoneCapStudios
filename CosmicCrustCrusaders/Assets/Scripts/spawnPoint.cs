@@ -2,19 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour
+public class spawnPoint : MonoBehaviour
 {
     // setting spawn point
-    public Transform spawnPoint;
-    // Start is called before the first frame update
-    void Start()
+    public Transform respawn;
+
+    // starting at spawn point
+    private void Start()
     {
-        // spawnPoint = player.
+        transform.position = respawn.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    // setting up respawn point (only 1 respawn point right now, won't work)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Respawn"))
+        {
+            respawn = collision.gameObject.transform;
+        }
+    }
+
+    // setting up respawn method
+    public void Respawn()
+    {
+        transform.position = respawn.position;
     }
 }
