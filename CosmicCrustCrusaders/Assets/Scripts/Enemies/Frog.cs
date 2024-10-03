@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Frog : MonoBehaviour
 {
+    private Transform forglocation;
+
     // Start is called before the first frame update
     void Start()
     {
