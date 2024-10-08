@@ -25,7 +25,7 @@ public class Frog : MonoBehaviour
     private float frogJumpSpeedX;
     [SerializeField]
     private float frogJumpFroceY;
-    private float frogLastXPos;
+    // private float frogLastXPos;
     private float frogCurrentPos;
     private float currentTimer = 0;
     private float frogIdleTime = 2f;
@@ -94,7 +94,6 @@ public class Frog : MonoBehaviour
         {
             isFacingR = true;
             isFacingL = false;
-            Debug.Log("touched");
         }
         else if (collision.gameObject.tag == "FrogTurnLeft")
         {
