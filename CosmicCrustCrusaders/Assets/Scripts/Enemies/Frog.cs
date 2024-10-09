@@ -90,7 +90,18 @@ public class Frog : MonoBehaviour
             isGround = true;
             isIdle = true;
         }
-        else if (collision.gameObject.tag == "FrogTurnRight")
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            isGround = false;
+        }
+    }
+    // on triggerEnter2D if needed or another method
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "FrogTurnRight")
         {
             isFacingR = true;
             isFacingL = false;
@@ -101,13 +112,4 @@ public class Frog : MonoBehaviour
             isFacingR = false;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "ground")
-        {
-            isGround = false;
-        }
-    }
-    // on triggerEnter2D if needed or another method
-
 }
