@@ -56,6 +56,5 @@ public class NewBehaviourScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Click");
     }
 }
