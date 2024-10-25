@@ -14,11 +14,12 @@ public class Mushroom : MonoBehaviour
     private bool isLeft;
     [SerializeField]
     private bool isRight;
-    private int direction = 1;
+    private int direction;
 
     // field for basic
     [SerializeField]
     private float speed;
+    private float decreaseSpeed = 0.001f;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +36,16 @@ public class Mushroom : MonoBehaviour
             direction = 1;
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        rb.velocity = new Vector2(speed * direction, rb.velocity.y);
-    } 
+        transform.position = transform.position + new Vector3(speed * decreaseSpeed * direction, 0, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
