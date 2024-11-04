@@ -14,13 +14,13 @@ public class VenusFlyTrap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isSpawn = false;
+        isSpawn = IsDestroyed(obj);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        isSpawn = IsDestroyed(obj);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,5 +33,14 @@ public class VenusFlyTrap : MonoBehaviour
                 isSpawn = true;
             }
         }
+    }
+
+    public static bool IsDestroyed(GameObject obj)
+    {
+        if (obj != null)
+        {
+            return false;
+        }
+        return true;
     }
 }
