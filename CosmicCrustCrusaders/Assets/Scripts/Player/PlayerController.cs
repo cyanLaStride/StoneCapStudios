@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
 
     [SerializeField]
-    private float movementSpeed = 10f;
+    public float movementSpeed = 10f;
     [SerializeField]
-    private float jumpSpeed = 30f;
+    public float jumpSpeed = 30f;
 
     private bool isGrounded;
 

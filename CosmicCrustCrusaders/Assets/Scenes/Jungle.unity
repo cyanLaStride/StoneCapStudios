@@ -504,7 +504,7 @@ Transform:
   m_GameObject: {fileID: 89864646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.86, y: -11.37, z: 0}
+  m_LocalPosition: {x: -11.28, y: -10.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -523,8 +523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 1019221667}
-  randomRangeMax: 1
-  randomRangeMin: 1
+  randomRangeMax: 0.1
+  randomRangeMin: 0.1
+  shakeAmount: 5
+  playerController: {fileID: 1041918112}
+  speedDecreasePercentage: 5
 --- !u!1001 &141106157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2592,6 +2595,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rope: {fileID: 877168388}
+--- !u!114 &1041918112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  m_PrefabInstance: {fileID: 141106157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948795460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a924e6ba81a01419e8efbfc2bcbdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192114862
 GameObject:
   m_ObjectHideFlags: 0
