@@ -25,6 +25,7 @@ public class Flowerhead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // calculate the distance
         distance = Vector2.Distance(transform.position, player.transform.position);
         toBaseDistance = Vector2.Distance(flowerBase.position, transform.position);
         Vector2 direction = player.transform.position - transform.position;

@@ -50,6 +50,7 @@ public class BarkBeast : MonoBehaviour
         }
     }
 
+    // when entering bark range?
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

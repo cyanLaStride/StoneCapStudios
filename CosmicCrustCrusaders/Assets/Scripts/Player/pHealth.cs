@@ -13,6 +13,7 @@ public class pHealth : MonoBehaviour
     // Canvas Health Bar
     public Image healthBar;
     public spawnPoint respawn;
+    public int deathCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class pHealth : MonoBehaviour
         {
             respawn.Respawn();
             health = maxHealth;
+            deathCount += 1;
         }
 
         
