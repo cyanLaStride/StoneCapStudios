@@ -3,12 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class NewBehaviourScript : MonoBehaviour
 {
 
     public GameObject pauseMenu;
     public bool isPaused;
+    [SerializeField]
+    private TMP_Text DeathCount;
+    [SerializeField]
+    private pHealth pH;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +43,7 @@ public class NewBehaviourScript : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        DeathCount.text = "Death Count: " + pH.deathCount;
     }
 
     public void ResumeGame()
