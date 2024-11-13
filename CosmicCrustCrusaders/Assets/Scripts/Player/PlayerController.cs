@@ -14,11 +14,16 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded;
 
+    [SerializeField]
+    public Camera cam;
+
+    public SpriteRenderer ren;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        ren = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,10 +34,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rb2d.velocity = new Vector2(-movementSpeed, rb2d.velocity.y);
+            ren.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rb2d.velocity = new Vector2(movementSpeed, rb2d.velocity.y);
+            ren.flipX = false;
         }
         else
         {
@@ -46,6 +53,17 @@ public class PlayerController : MonoBehaviour
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
             }
         }
+        /* obselete camera movement
+        if (this.transform.position.x/24 < 1)
+        {
+            cam.transform.position = new Vector3(0, 0.5f, -10);
+        } else
+        {
+            cam.transform.position = new Vector3(48, 0.5f, -10);
+        }*/
+
+        // this camera movement will cause issues when x < 0; will fix if it comes up
+        cam.transform.position = new Vector3((((int)this.transform.position.x + 24) / 48)*48, 0.5f, -10);
 
     }
 
