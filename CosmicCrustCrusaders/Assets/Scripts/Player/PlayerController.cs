@@ -12,12 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float jumpSpeed = 30f;
 
-    private bool isGrounded;
+    public bool isGrounded;
 
     [SerializeField]
     public Camera cam;
 
-    public SpriteRenderer ren;
+    private SpriteRenderer ren;
+
+    [SerializeField]
+    public BoxCollider2D feet;
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // jump stuff
+    /* jump stuff -- MOVED TO FEET
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground")
@@ -81,5 +84,5 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
-    }
+    }*/
 }
