@@ -27,6 +27,7 @@ public class feetToJumpWith : MonoBehaviour
         if (collision.gameObject.tag == "ground")
         {
             player.isGrounded = true;
+            player.anim.SetBool("land", true);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -34,6 +35,7 @@ public class feetToJumpWith : MonoBehaviour
         if (collision.gameObject.tag == "ground")
         {
             player.isGrounded = false;
+            player.anim.SetBool("land", false);
         }
     }
 }

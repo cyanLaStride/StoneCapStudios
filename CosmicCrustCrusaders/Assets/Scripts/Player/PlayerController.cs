@@ -27,11 +27,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float tossSpeed;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         ren = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,16 +45,19 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rb2d.velocity = new Vector2(-movementSpeed, rb2d.velocity.y);
+            anim.SetBool("run", true);
             ren.flipX = true;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rb2d.velocity = new Vector2(movementSpeed, rb2d.velocity.y);
+            anim.SetBool("run", true);
             ren.flipX = false;
         }
         else
         {
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            anim.SetBool("run", false);
         }
         // jump
         if (Input.GetKey(KeyCode.W))
@@ -59,6 +65,7 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+                anim.SetTrigger("jump");
             }
         }
 
@@ -85,6 +92,8 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = new Vector3((((int)this.transform.position.x + 24) / 48)*48, 0.5f, -10);
 
     }
+
+
 
     /* jump stuff -- MOVED TO FEET
     private void OnCollisionEnter2D(Collision2D collision)

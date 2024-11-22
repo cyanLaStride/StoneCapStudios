@@ -402,6 +402,7 @@ MonoBehaviour:
   feet: {fileID: 0}
   tossPrefab: {fileID: 2706539683821205617, guid: fa6988c4cf0b55b479ea232639a9cdc8, type: 3}
   tossSpeed: 100
+  anim: {fileID: 0}
 --- !u!212 &7570893843060113437
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -578,6 +579,7 @@ MonoBehaviour:
   healthBar: {fileID: 7452260589489143797}
   respawn: {fileID: 0}
   deathCount: 0
+  InvulnerablityTime: 0.5
 --- !u!114 &778269556818483218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +816,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 7381012515020304971}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d5b164dcfa5c56d46b1e120c10bc7073, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
