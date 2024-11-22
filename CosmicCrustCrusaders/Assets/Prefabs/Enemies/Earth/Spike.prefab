@@ -149,4 +149,4 @@ MonoBehaviour:
   playerHp: {fileID: 0}
   damage: 3
   onEnter: 1
-  onStay: 0
+  onStay: 1

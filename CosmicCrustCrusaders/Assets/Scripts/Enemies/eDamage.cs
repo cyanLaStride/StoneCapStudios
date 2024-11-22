@@ -23,9 +23,13 @@ public class eDamage : MonoBehaviour
             // change this after player is ready, this is just an example
             if (collision.gameObject.CompareTag("Player"))
             {
-                playerHp.health -= damage;
+                //playerHp.health -= damage;
                 // next line of code used in actual game, the one above just for testing for now, doesn't require drag and drop everytime
                 // other.gameObject.GetComponent<playerHealth>().health -= damage;
+
+                // hey this is daniel sorry for working in your code
+                // this is so that the player takes knockback and is invulnerable for a second
+                playerHp.Knockback(damage, this.transform.position);
             }
         }
     }
@@ -38,9 +42,12 @@ public class eDamage : MonoBehaviour
             // change this after player is ready, this is just an example
             if (collision.gameObject.CompareTag("Player"))
             {
-                playerHp.health -= damage;
+                //playerHp.health -= damage;
                 // next line of code used in actual game, the one above just for testing for now, doesn't require drag and drop everytime
                 // other.gameObject.GetComponent<playerHealth>().health -= damage;
+
+                // same as above
+                playerHp.Knockback(damage, this.transform.position);
             }
         }
     }

@@ -15,6 +15,10 @@ public class pHealth : MonoBehaviour
     public spawnPoint respawn;
     public int deathCount = 0;
 
+    [SerializeField]
+    private float InvulnerablityTime = 0.5f;
+    private float invulnTimer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +35,28 @@ public class pHealth : MonoBehaviour
             respawn.Respawn();
             health = maxHealth;
             deathCount += 1;
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
 
         
         // Image health bar fill amount
         healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0.0f, 1.0f);
+
+        if (invulnTimer > 0)
+        {
+            invulnTimer -= Time.deltaTime;
+        }
+    }
+
+    // hey sorry this is daniel, this is a function to apply knockback and make the player invulnerable for a second, this is just for the demo so feel free to change it afterwards
+    public void Knockback(float dam, Vector3 damPos)
+    {
+        if(invulnTimer <= 0)
+        {
+            health -= dam;
+            invulnTimer = InvulnerablityTime;
+            gameObject.GetComponent<Rigidbody2D>().velocity = (transform.position - damPos).normalized * dam * 10;
+        }
+        
     }
 }
