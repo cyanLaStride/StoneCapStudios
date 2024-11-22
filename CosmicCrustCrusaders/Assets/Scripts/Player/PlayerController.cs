@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
             }
         }
+
+        // toss
+        
+
         /* obselete camera movement
         if (this.transform.position.x/24 < 1)
         {

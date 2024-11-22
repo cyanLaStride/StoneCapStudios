@@ -13,6 +13,9 @@ public class TargetBlock : MonoBehaviour
     [SerializeField]
     private bool isChanged;
 
+    [SerializeField]
+    private GameObject door;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,7 @@ public class TargetBlock : MonoBehaviour
         {
             ren.material.color = changeColor;
             isChanged = true;
+            door.SetActive(true);
         }
     }
 }
