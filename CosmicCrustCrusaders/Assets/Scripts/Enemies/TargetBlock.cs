@@ -35,6 +35,7 @@ public class TargetBlock : MonoBehaviour
                 ren.material.color = orignalColor;
                 isChanged = false;
                 timer = 0;
+                door.SetActive(true);
             }
         }
     }
@@ -45,7 +46,7 @@ public class TargetBlock : MonoBehaviour
         {
             ren.material.color = changeColor;
             isChanged = true;
-            door.SetActive(true);
+            door.SetActive(false);
         }
     }
 }

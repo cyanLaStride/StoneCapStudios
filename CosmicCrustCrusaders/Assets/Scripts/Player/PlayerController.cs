@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public BoxCollider2D feet;
 
+    [SerializeField]
+    private Rigidbody2D tossPrefab;
+    [SerializeField]
+    private float tossSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +63,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // toss
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 tossTowards = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+            tossTowards.z = 0;
+            Rigidbody2D tossNew = Instantiate(tossPrefab, transform.position, Quaternion.identity);
+            tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed;
+            Physics2D.IgnoreCollision(tossNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
 
         /* obselete camera movement
         if (this.transform.position.x/24 < 1)

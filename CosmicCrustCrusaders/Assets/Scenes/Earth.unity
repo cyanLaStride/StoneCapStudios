@@ -13048,6 +13048,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 311068401}
+    - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: tossSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1747679923559986020, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 309
