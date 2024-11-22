@@ -12492,6 +12492,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   m_PrefabInstance: {fileID: 5226569352356234261}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1895557070 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  m_PrefabInstance: {fileID: 5226569352356234261}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121447835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a924e6ba81a01419e8efbfc2bcbdfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1895557076
 Animator:
   serializedVersion: 5
@@ -13157,6 +13168,10 @@ PrefabInstance:
       propertyPath: tossSpeed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1895557070}
     - target: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: InvulnerablityTime
       value: 0.5

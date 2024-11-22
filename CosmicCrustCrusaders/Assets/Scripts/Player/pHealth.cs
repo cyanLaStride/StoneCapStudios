@@ -16,8 +16,11 @@ public class pHealth : MonoBehaviour
     public int deathCount = 0;
 
     [SerializeField]
-    private float InvulnerablityTime = 0.5f;
+    private float InvulnerablityTime = 0.75f;
     private float invulnTimer = 0;
+
+    [SerializeField]
+    PlayerController player;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +57,12 @@ public class pHealth : MonoBehaviour
         if(invulnTimer <= 0)
         {
             health -= dam;
-            invulnTimer = InvulnerablityTime;
-            gameObject.GetComponent<Rigidbody2D>().velocity = (transform.position - damPos).normalized * dam * 10;
+            if (health > 0)
+            {
+                invulnTimer = InvulnerablityTime;
+                gameObject.GetComponent<Rigidbody2D>().velocity = (transform.position - damPos).normalized * dam * 10;
+                player.anim.SetTrigger("hurt");
+            }
         }
         
     }
