@@ -443,6 +443,26 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 991831116}
+    - target: {fileID: 996169681069947971, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
+    - target: {fileID: 996169681069947971, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7991762183134681939, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
+    - target: {fileID: 996169681069947971, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747679923559986020, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 269.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747679923559986020, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 195.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_Name
       value: Player
@@ -496,7 +516,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 611403436194864469, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       insertIndex: -1
@@ -823,8 +844,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Coins:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
+  m_sharedMaterial: {fileID: -7991762183134681939, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5080,8 +5101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
+  m_sharedMaterial: {fileID: -7991762183134681939, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
