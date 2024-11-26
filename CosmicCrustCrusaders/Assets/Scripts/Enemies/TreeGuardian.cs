@@ -21,7 +21,6 @@ public class TreeGuardian : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isRight = false;
         isSpawn = false;
     }
 
@@ -37,21 +36,24 @@ public class TreeGuardian : MonoBehaviour
             direction = -1;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (!isSpawn)
+            {
+                SpawnSpike(spawnAmount);
+                isSpawn = true;
+            }
+        }
+    }
     private void SpawnSpike(int spawnAmount)
     {
         for (int i = 0; i < spawnAmount; i++)
         {
             newSpawn = new Vector3(spawnLocation.position.x + (direction * spawnDistance * i), spawnLocation.position.y, spawnLocation.position.z);
             GameObject sapwnSpike = Instantiate(spike, newSpawn, spawnLocation.rotation);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!isSpawn)
-        {
-            SpawnSpike(spawnAmount);
-            isSpawn = true;
         }
     }
 }

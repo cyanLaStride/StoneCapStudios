@@ -29,6 +29,7 @@ public class eDamage : MonoBehaviour
 
                 // hey this is daniel sorry for working in your code
                 // this is so that the player takes knockback and is invulnerable for a second
+                playerHp = collision.gameObject.GetComponent<pHealth>();
                 playerHp.Knockback(damage, this.transform.position);
             }
         }
@@ -47,6 +48,7 @@ public class eDamage : MonoBehaviour
                 // other.gameObject.GetComponent<playerHealth>().health -= damage;
 
                 // same as above
+                playerHp = collision.gameObject.GetComponent<pHealth>();
                 playerHp.Knockback(damage, this.transform.position);
             }
         }

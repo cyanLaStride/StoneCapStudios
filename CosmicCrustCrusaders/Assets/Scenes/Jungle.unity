@@ -535,6 +535,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1041918106}
+    - targetCorrespondingSourceObject: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1041918113}
   m_SourcePrefab: {fileID: 100100000, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
 --- !u!224 &141106158 stripped
 RectTransform:
@@ -717,12 +720,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351229681}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.94, y: 0.66, z: 0}
-  m_LocalScale: {x: 0.6046, y: 0.5255, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0131151555, y: -0.9739376, z: 0}
+  m_LocalScale: {x: 0.39255005, y: 0.49917522, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 393257105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &351229685
 BoxCollider2D:
@@ -947,10 +950,11 @@ Transform:
   m_GameObject: {fileID: 393257104}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9602, y: 1.6452997, z: 0}
+  m_LocalPosition: {x: 1.56, y: -1, z: 0}
   m_LocalScale: {x: 1.5401858, y: 1.0527365, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 351229684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &393257106
@@ -2817,6 +2821,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a924e6ba81a01419e8efbfc2bcbdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1041918113
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948795460}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1068181923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,15 +6152,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2538694119946103042, guid: aecffc7f4232c1e4e8496f542b2fd3ac, type: 3}
       propertyPath: m_Name
-      value: VenusFlyTrap_part1
+      value: thisisAnotherMonsterGotToRenameAndMove
       objectReference: {fileID: 0}
     - target: {fileID: 8373815517084591428, guid: aecffc7f4232c1e4e8496f542b2fd3ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.39
+      value: 19.5
       objectReference: {fileID: 0}
     - target: {fileID: 8373815517084591428, guid: aecffc7f4232c1e4e8496f542b2fd3ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.43
+      value: -11.34
       objectReference: {fileID: 0}
     - target: {fileID: 8373815517084591428, guid: aecffc7f4232c1e4e8496f542b2fd3ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6254,7 +6279,6 @@ SceneRoots:
   - {fileID: 845269524}
   - {fileID: 1817687168}
   - {fileID: 393257105}
-  - {fileID: 351229684}
   - {fileID: 2582098946231858017}
   - {fileID: 89864649}
   - {fileID: 1861103955}
