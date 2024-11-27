@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: respawn
       value: 
       objectReference: {fileID: 991831116}
+    - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2022502124}
     - target: {fileID: 996169681069947971, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -2831,7 +2835,7 @@ Animator:
   m_GameObject: {fileID: 948795460}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1c37c42d08531043a9233f88d06a264, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5723,7 +5727,7 @@ Transform:
   m_GameObject: {fileID: 1861103952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.91, y: -11.42, z: 0}
+  m_LocalPosition: {x: -8.03, y: -11.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6045,6 +6049,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &2022502124 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 828233359311906476, guid: 89dba5eec8341b849bf39b4ad719ad67, type: 3}
+  m_PrefabInstance: {fileID: 1196678403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2073532635
 PrefabInstance:
   m_ObjectHideFlags: 0

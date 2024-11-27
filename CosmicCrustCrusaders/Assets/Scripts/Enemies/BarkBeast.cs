@@ -21,7 +21,7 @@ public class BarkBeast : MonoBehaviour
     private int shakeAmount;
     private bool shake;
 
-    // player 
+    // player speed
     [SerializeField]
     private PlayerController playerController;
     [SerializeField]

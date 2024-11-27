@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-public class VenusFlyTrapHead : MonoBehaviour
+public class BubbleHead : MonoBehaviour
 {
     [SerializeField]
     private int range;
