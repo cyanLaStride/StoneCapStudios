@@ -672,7 +672,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6650944, g: 1, b: 0.7312664, a: 1}
+    m_NormalColor: {r: 0.18752226, g: 0.9245283, b: 0.3262528, a: 0.6156863}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -770,7 +770,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978467694}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 177d68c2a12b8664e8e7282683b81146, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3326bc5fafef0fb4991cf1a2c861b0c6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
