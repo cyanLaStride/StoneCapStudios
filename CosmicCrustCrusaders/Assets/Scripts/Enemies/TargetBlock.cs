@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetBlock : MonoBehaviour
 {
+    // Collect Colour
     private Renderer ren;
     [SerializeField]
     private Color changeColor;
@@ -13,6 +14,7 @@ public class TargetBlock : MonoBehaviour
     [SerializeField]
     private bool isChanged;
 
+    // Control Door
     [SerializeField]
     private GameObject door;
 
