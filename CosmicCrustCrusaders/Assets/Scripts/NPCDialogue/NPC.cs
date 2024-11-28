@@ -18,6 +18,7 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
+        
         if (dialoguePanel.activeInHierarchy)
         {
             zeroText();
@@ -31,6 +32,7 @@ public class NPC : MonoBehaviour
         {
             contButton.SetActive(true);
         }
+        
     }
 
     // Update is called once per frame

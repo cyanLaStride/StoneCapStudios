@@ -43,7 +43,7 @@ public class NewBehaviourScript : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        DeathCount.text = "Death Count: " + pH.deathCount;
+        DeathCount.text = "Deaths: " + pH.deathCount;
     }
 
     public void ResumeGame()
