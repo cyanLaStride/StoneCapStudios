@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
@@ -15,10 +16,28 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
 
 
+    private void Start()
+    {
+        if (dialoguePanel.activeInHierarchy)
+        {
+            zeroText();
+        }
+        else
+        {
+            dialoguePanel.SetActive(true);
+            StartCoroutine(Typing());
+        }
+        if (dialogueText.text == dialogue[index])
+        {
+            contButton.SetActive(true);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && playerIsClose)
+        
+       if (Input.GetKeyDown(KeyCode.T)) //&& playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy)
             {
@@ -35,6 +54,7 @@ public class NPC : MonoBehaviour
         {
             contButton.SetActive(true);
         }
+        
     }
 
 
@@ -43,7 +63,6 @@ public class NPC : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
-
 
 
     }
@@ -71,6 +90,7 @@ public class NPC : MonoBehaviour
         else
         {
             zeroText();
+            SceneManager.LoadSceneAsync(8);
         }
     }
 
