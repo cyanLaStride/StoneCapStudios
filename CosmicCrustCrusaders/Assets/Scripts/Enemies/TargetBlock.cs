@@ -18,6 +18,9 @@ public class TargetBlock : MonoBehaviour
     [SerializeField]
     private GameObject door;
 
+    [SerializeField]
+    private AudioSource SFXopen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,8 +50,13 @@ public class TargetBlock : MonoBehaviour
         if (collision != null)
         {
             ren.material.color = changeColor;
+            if (!isChanged)
+            {
+                SFXopen.Play();
+            }
             isChanged = true;
             door.SetActive(false);
+            
         }
     }
 }

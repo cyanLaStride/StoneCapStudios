@@ -34,6 +34,18 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    [SerializeField]
+    private AudioSource MusicLevel;
+    [SerializeField]
+    private AudioSource SFXclick;
+    [SerializeField]
+    private AudioSource SFXcomplete;
+    private bool s1 = true;
+    private bool s2 = true;
+    private bool s3 = true;
+    private bool s4 = true;
+    private bool s5 = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,29 +65,39 @@ public class GameManager : MonoBehaviour
 
         if (!gameGo)
         {
-            if (timer > endTime + 1)
+            if (timer > endTime + 1 && s1)
             {
+                s1 = false;
                 scoreScreen1.GetComponent<TMP_Text>().text = "\r\n\r\nCoins: " + CoinCount;
                 scoreScreen1.SetActive(true);
+                SFXclick.Play();
             }
-            if (timer > endTime + 2)
+            if (timer > endTime + 2 && s2)
             {
+                s2 = false;
                 scoreScreen2.GetComponent<TMP_Text>().text = "\r\n\r\n\r\nTime: " + (int)endTime;
                 scoreScreen2.SetActive(true);
+                SFXclick.Play();
             }
-            if (timer > endTime + 3)
+            if (timer > endTime + 3 && s3)
             {
+                s3 = false;
                 scoreScreen3.GetComponent<TMP_Text>().text = "\r\n\r\n\r\n\r\nDeaths: " + player.GetComponent<pHealth>().deathCount;
                 scoreScreen3.SetActive(true);
+                SFXclick.Play();
             }
-            if (timer > endTime + 4)
+            if (timer > endTime + 4 && s4)
             {
+                s4 = false;
                 scoreScreen4.GetComponent<TMP_Text>().text = "\r\n\r\n\r\n\r\n\r\n\r\nScore: " + (((int)(((100 + (CoinCount * 10)) - (((int)endTime) - 30)) * Mathf.Pow(0.75f, (float)player.GetComponent<pHealth>().deathCount))));
                 scoreScreen4.SetActive(true);
+                SFXclick.Play();
             }
-            if (timer > endTime + 5)
+            if (timer > endTime + 5 && s5)
             {
+                s5 = false;
                 scoreScreen5.SetActive(true);
+                SFXcomplete.Play();
             }
             if (Input.GetKey(KeyCode.Space))
             {
@@ -94,6 +116,7 @@ public class GameManager : MonoBehaviour
         scoreScreen3.SetActive(false);
         scoreScreen4.SetActive(false);
         scoreScreen5.SetActive(false);
-
+        MusicLevel.gameObject.SetActive(false);
+        SFXclick.Play();
     }
 }
