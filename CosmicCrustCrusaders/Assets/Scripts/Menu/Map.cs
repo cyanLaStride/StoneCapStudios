@@ -18,7 +18,7 @@ public class Map : MonoBehaviour
 
     public void Jungle()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync(6);
     }
 
 }
