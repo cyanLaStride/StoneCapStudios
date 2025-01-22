@@ -114,8 +114,8 @@ public class PlayerController : MonoBehaviour
         }*/
 
         // this camera movement will cause issues when x < 0; will fix if it comes up
-        cam.transform.position = new Vector3((((int)this.transform.position.x + 24) / 48) * 48, 0.5f, -10);
-
+        cam.transform.position = new Vector3((((int)this.transform.position.x + 24) / 48) * 48,((((int)this.transform.position.y - 13) / 27) * 27) + 0.5f, -10);
+        
         }
 
 
