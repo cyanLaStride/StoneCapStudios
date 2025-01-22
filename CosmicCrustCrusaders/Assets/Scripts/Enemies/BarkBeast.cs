@@ -15,6 +15,8 @@ public class BarkBeast : MonoBehaviour
     private float randomRangeMax;
     [SerializeField] 
     private float randomRangeMin;
+    [SerializeField]
+    private int timeBetweenShake;
 
     // shake
     [SerializeField]
@@ -40,13 +42,7 @@ public class BarkBeast : MonoBehaviour
     {
         if (shake)
         {
-            playerController.movementSpeed = characterSpeed * (1/speedDecreasePercentage);
-
-            for (int i = 0; i < shakeAmount; i++)
-            {
-                cameraPos.position += new Vector3(Random.Range(-randomRangeMin, randomRangeMax), Random.Range(-randomRangeMin, randomRangeMax), 0);
-            }
-
+            shakeTheWorld();
         }
     }
 
@@ -69,4 +65,14 @@ public class BarkBeast : MonoBehaviour
         }
     }
     
+    private IEnumerable shakeTheWorld()
+    {
+        playerController.movementSpeed = characterSpeed * (1 / speedDecreasePercentage);
+
+        for (int i = 0; i < shakeAmount; i++)
+        {
+            cameraPos.position += new Vector3(Random.Range(-randomRangeMin, randomRangeMax), Random.Range(-randomRangeMin, randomRangeMax), 0);
+        }
+        yield return new WaitForSeconds(timeBetweenShake);
+    }
 }

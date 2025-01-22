@@ -14,6 +14,8 @@ public class eDamage : MonoBehaviour
     bool onEnter;
     [SerializeField]
     bool onStay;
+    [SerializeField]
+    bool onTrigger;
 
     //damage the player when staying with enemies
     private void OnCollisionStay2D(Collision2D collision)
@@ -54,4 +56,21 @@ public class eDamage : MonoBehaviour
         }
     }
 
+    // on trigger enter
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (onTrigger)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                //playerHp.health -= damage;
+                // next line of code used in actual game, the one above just for testing for now, doesn't require drag and drop everytime
+                // other.gameObject.GetComponent<playerHealth>().health -= damage;
+
+                // same as above
+                playerHp = collision.gameObject.GetComponent<pHealth>();
+                playerHp.Knockback(damage, this.transform.position);
+            }
+        }
+    }
 }

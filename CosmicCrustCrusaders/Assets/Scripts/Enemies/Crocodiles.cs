@@ -26,20 +26,16 @@ public class Crocodiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shootTime += Time.deltaTime;
-        if (shootTime > shootDelayTime)
+        for (int i = 0; i < shootAmout; i++)
         {
-            for (int i = 0; i < shootAmout; i++)
-            {
-                shoot();
-            }
-            shootTime = 0;
+            shoot();
         }
     }
 
-    private void shoot()
+    private IEnumerable shoot()
     {
         GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
         crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * shurikenSpeed);
+        yield return new WaitForSeconds(shootDelayTime);
     }
 }
