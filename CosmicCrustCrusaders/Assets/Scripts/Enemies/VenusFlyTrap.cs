@@ -7,6 +7,13 @@ public class VenusFlyTrap : MonoBehaviour
     public bool isUp;
     public bool isLeft;
     public bool isRight;
+    public bool isAttack;
+    public bool isIdle;
+
+    // animation
+    [SerializeField]
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +23,10 @@ public class VenusFlyTrap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isIdle)
+        {
+            animator.SetBool("VIdle",true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +34,19 @@ public class VenusFlyTrap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Check player direction and play animation
+            animator.SetBool("VAttack", true);
+            animator.SetBool("VIdle", false);
+            isIdle = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Check player direction and play animation
+            animator.SetBool("VAttack", false);
+            isIdle = true;
         }
     }
 }
