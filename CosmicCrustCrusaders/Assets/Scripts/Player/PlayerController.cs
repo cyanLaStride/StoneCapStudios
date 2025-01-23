@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float movementSpeed = 10f;
     [SerializeField]
-    public float jumpSpeed = 30f;
+    public float jumpSpeed = 18f;
 
     public bool isGrounded;
 
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
             SFXrun.gameObject.SetActive(false);
         }
         // jump
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space))
         {
             if (isGrounded)
             {
@@ -91,6 +91,21 @@ public class PlayerController : MonoBehaviour
                 anim.SetTrigger("jump");
                 SFXjump.Play();
             }
+        }
+        // crouch
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.LeftControl))
+        {
+            this.transform.localScale = new Vector3(1, 0.5f, 1);
+            if (isGrounded)
+            {
+                movementSpeed = 5f;
+                jumpSpeed = 9f;
+            }
+        } else
+        {
+            this.transform.localScale = new Vector3(1, 1, 1);
+            movementSpeed = 10f;
+            jumpSpeed = 18f;
         }
 
         // toss
