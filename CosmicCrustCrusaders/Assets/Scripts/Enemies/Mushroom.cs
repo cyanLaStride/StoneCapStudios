@@ -8,6 +8,7 @@ public class Mushroom : MonoBehaviour
     public SpriteRenderer spriteR;
     public Rigidbody2D rb;
     public GameObject stopCheck;
+    public Animator animator;
 
     // tigger for mushroom moving left or right
     [SerializeField]
@@ -27,6 +28,7 @@ public class Mushroom : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         stopCheck = GetComponent<GameObject>();
+        animator = GetComponent<Animator>();
         if (isLeft)
         {
             direction = -1;

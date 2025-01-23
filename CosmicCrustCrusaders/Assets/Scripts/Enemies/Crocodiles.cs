@@ -32,10 +32,9 @@ public class Crocodiles : MonoBehaviour
         }
     }
 
-    private IEnumerable shoot()
+    private void shoot()
     {
         GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
         crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * shurikenSpeed);
-        yield return new WaitForSeconds(shootDelayTime);
     }
 }
