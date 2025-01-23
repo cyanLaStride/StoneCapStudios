@@ -8,6 +8,7 @@ public class Frog : MonoBehaviour
     // input sprite, rigidbody, and animation
     public SpriteRenderer spriteR;
     public Rigidbody2D rb;
+    public Animator animator;
     // public Animator animator; //later for animation
     // setting up "enum" when animation is testing !!! remember
 
@@ -15,8 +16,7 @@ public class Frog : MonoBehaviour
     private bool isGround = false;
     private bool isFacingR = false;
     private bool isFacingL = true;
-    private bool isStun; // upgrades
-    private bool isIdle = true;
+    private bool isIdle;
     private bool isJump; // animation
 
     // setting up frog setting
@@ -28,16 +28,16 @@ public class Frog : MonoBehaviour
     // private float frogLastXPos;
     private float frogCurrentPos;
     private float currentTimer = 0;
-    private float frogIdleTime = 2f;
+    public float frogIdleTime;
     private int jumpDirection;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        isStun = false;
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,15 +52,16 @@ public class Frog : MonoBehaviour
         if (isIdle)
         {
             currentTimer += Time.deltaTime;
+            animator.SetBool("Fidle", true);
             if (currentTimer >= frogIdleTime)
             {
                 currentTimer = 0;
                 frogJump();
             }
         }
-        if (isStun)
+        else if (isJump)
         {
-            rb.velocity = new Vector2 (0, 0);
+            animator.SetBool("Fjump", true);
         }
     }
 
@@ -89,6 +90,7 @@ public class Frog : MonoBehaviour
         {
             isGround = true;
             isIdle = true;
+            isJump = false;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
