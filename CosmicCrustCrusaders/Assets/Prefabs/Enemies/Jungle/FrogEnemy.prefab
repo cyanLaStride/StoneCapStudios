@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f670a0bc3214d478ac63b95b80a2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHp: {fileID: 0}
-  damage: 1
+  playerHp: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  damage: 2
   onEnter: 0
   onStay: 0
   onTrigger: 1
