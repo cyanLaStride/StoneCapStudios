@@ -138,5 +138,5 @@ MonoBehaviour:
   randomRangeMin: 0.1
   timeBetweenShake: 2
   shakeAmount: 5
-  playerController: {fileID: 0}
+  playerController: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   speedDecreasePercentage: 5

@@ -7,7 +7,7 @@ public class BarkBeast : MonoBehaviour
 {
     // camera position
     [SerializeField]
-    private Transform cameraPos;
+    private Camera cameraPos;
     private Vector3 originalPos;
 
     // random number max and min
@@ -33,20 +33,22 @@ public class BarkBeast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalPos = cameraPos.position;
+        originalPos = cameraPos.transform.position;
         characterSpeed = playerController.movementSpeed;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (shake)
         {
+            
             playerController.movementSpeed = characterSpeed * (1 / speedDecreasePercentage);
 
             for (int i = 0; i < shakeAmount; i++)
             {
-                cameraPos.position += new Vector3(Random.Range(-randomRangeMin, randomRangeMax), Random.Range(-randomRangeMin, randomRangeMax), 0);
+                Debug.Log("boop");
+                cameraPos.transform.position += new Vector3(Random.Range(-randomRangeMin, randomRangeMax), Random.Range(-randomRangeMin, randomRangeMax), 0);
             }
         }
     }
@@ -56,15 +58,17 @@ public class BarkBeast : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            shake = true; 
+            shake = true;
+            
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("???????????");
         if (collision.gameObject.CompareTag("Player"))
         {
-            cameraPos.position = originalPos;
+            cameraPos.transform.position = originalPos;
             shake = false;
             playerController.movementSpeed = characterSpeed;
         }

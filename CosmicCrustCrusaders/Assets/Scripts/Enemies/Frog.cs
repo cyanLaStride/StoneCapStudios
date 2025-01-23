@@ -68,8 +68,9 @@ public class Frog : MonoBehaviour
     // method handle frog jumping 
     private void frogJump()
     {
-        isJump = true; // jumping animation
-        isIdle = false;
+        //isJump = true; // jumping animation
+        //isIdle = false;
+        animator.SetTrigger("FJump");
         if (isFacingR)
         {
             jumpDirection = 1;

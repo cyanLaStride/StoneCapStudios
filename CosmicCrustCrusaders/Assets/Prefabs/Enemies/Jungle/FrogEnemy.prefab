@@ -106,8 +106,8 @@ MonoBehaviour:
   spriteR: {fileID: 7714223947460684001}
   rb: {fileID: 3068888822086566132}
   animator: {fileID: 0}
-  frogJumpSpeedX: 4
-  frogJumpFroceY: 4
+  frogJumpSpeedX: 12
+  frogJumpFroceY: 12
   frogIdleTime: 2
 --- !u!58 &8898128829303770408
 CircleCollider2D:
