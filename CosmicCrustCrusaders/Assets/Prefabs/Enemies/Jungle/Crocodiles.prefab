@@ -103,10 +103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shuriken: {fileID: 3902629010181640613, guid: 3a7c860d069f2b846887137501fa9f73, type: 3}
   shootingLocation: {fileID: 8231583353359881503}
-  shurikenSpeed: 100
+  shurikenSpeed: 1000
   shootAmout: 1
-  shootDelayTime: 2
-  fireRate: 0
+  shootDelayTime: 5
+  fireRate: 1
+  shootTime: 2
+  isRight: 0
 --- !u!50 &489810194501690405
 Rigidbody2D:
   serializedVersion: 4

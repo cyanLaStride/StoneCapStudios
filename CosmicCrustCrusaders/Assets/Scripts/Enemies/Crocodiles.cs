@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crocodiles : MonoBehaviour
 {
+    public Animator animator;
     public GameObject shuriken;
     [SerializeField]
     private Transform shootingLocation;
@@ -15,26 +16,35 @@ public class Crocodiles : MonoBehaviour
     private float shootDelayTime;
     [SerializeField]
     private float fireRate;
+    [SerializeField]
     private float shootTime;
+
+    public bool isRight;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        InvokeRepeating("shoot", shootDelayTime, shootTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < shootAmout; i++)
-        {
-            shoot();
-        }
+        
     }
 
     private void shoot()
     {
         GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
-        crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * shurikenSpeed);
+        animator.SetTrigger("CrocoAttack");
+        if (isRight)
+        {
+            crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * shurikenSpeed);
+        }
+       else if (!isRight)
+        {
+            crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * -1 * shurikenSpeed);
+        }
     }
 }
