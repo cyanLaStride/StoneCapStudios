@@ -73,10 +73,12 @@ public class Frog : MonoBehaviour
         animator.SetTrigger("FJump");
         if (isFacingR)
         {
+            spriteR.flipX = true;
             jumpDirection = 1;
         }
         else if (isFacingL)
         {
+            spriteR.flipX = false;
             jumpDirection = -1;
         }
 

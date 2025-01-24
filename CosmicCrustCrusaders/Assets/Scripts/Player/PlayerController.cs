@@ -95,15 +95,24 @@ public class PlayerController : MonoBehaviour
         // crouch
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.LeftControl))
         {
-            this.transform.localScale = new Vector3(1, 0.5f, 1);
+            anim.SetBool("crouch", true);
+            //this.transform.localScale = new Vector3(1, 0.5f, 1);
+            
             if (isGrounded)
             {
+                CapsuleCollider2D[] capcolliders = GetComponents<CapsuleCollider2D>();
+                capcolliders[0].size = new Vector2(1.9f, 1.9f);
+                capcolliders[1].size = new Vector2(1.9f, 1.9f);
                 movementSpeed = 5f;
                 jumpSpeed = 9f;
             }
         } else
         {
-            this.transform.localScale = new Vector3(1, 1, 1);
+            anim.SetBool("crouch", false);
+            //this.transform.localScale = new Vector3(1, 1, 1);
+            CapsuleCollider2D[] capcolliders = GetComponents<CapsuleCollider2D>();
+            capcolliders[0].size = new Vector2(1.9f, 3.9f);
+            capcolliders[1].size = new Vector2(1.9f, 3.9f);
             movementSpeed = 10f;
             jumpSpeed = 18f;
         }
