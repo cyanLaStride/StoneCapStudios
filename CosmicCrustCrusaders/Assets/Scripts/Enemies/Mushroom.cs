@@ -5,17 +5,19 @@ using UnityEngine;
 public class Mushroom : MonoBehaviour
 {
     // input sprite, rigidbody, and animation
-    public SpriteRenderer spriteR;
+    //public SpriteRenderer spriteR;
     public Rigidbody2D rb;
     public GameObject flipCheck;
     public LayerMask ground;
     public Animator animator;
+    public GameObject player;
 
     // tigger for mushroom moving left or right
     [SerializeField]
     private bool isRight;
     public bool isGrounded;
     public float circleRadius;
+    public bool isIdle;
 
     // field for basic
     [SerializeField]
@@ -23,47 +25,58 @@ public class Mushroom : MonoBehaviour
     private float decreaseSpeed = 0.001f;
     [SerializeField]
     private float runningRange;
-    [SerializeField]
-    private float attackRange;
+    private float distance;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteR = GetComponent<SpriteRenderer>();
-        flipCheck = GetComponent<GameObject>();
+        //spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        isIdle = true;
     }
     private void Update()
     {
-        Debug.Log(Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground));
-        rb.velocity = Vector2.right * speed * Time.deltaTime;
-        isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
-        if (isGrounded && isRight)
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance < runningRange)
         {
-            flip();
+            isIdle = false;
+            animator.SetBool("RRunning",true);
         }
-        else if (isGrounded && !isRight)
+        // if rushroom is not idle
+        if (!isIdle)
         {
-            flip();
+            rb.velocity = Vector2.right * speed * Time.deltaTime;
+            isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
+            if (isGrounded && isRight)
+            {
+                flip();
+            }
+            else if (isGrounded && !isRight)
+            {
+                flip();
+            }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // when player hit rushroom
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isRight = !isRight;
-            transform.Rotate(new Vector3(0, 180, 0));
-            speed = -speed;
+            animator.SetTrigger("RAttack");
         }
     }
 
+    // changing direction
     private void flip()
     {
-
+        isRight = !isRight;
+        transform.Rotate(new Vector3(0, 180, 0));
+        speed = -speed;
     }
 
+    // making the radius of circle visible
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

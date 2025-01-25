@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Crocodiles : MonoBehaviour
 {
+    // setting up basic
     public Animator animator;
     public GameObject shuriken;
     [SerializeField]
     private Transform shootingLocation;
+
+    // shooting setting
     [SerializeField]
     private float shurikenSpeed;
     [SerializeField]
@@ -34,6 +37,7 @@ public class Crocodiles : MonoBehaviour
         
     }
 
+    // shooting method
     private void shoot()
     {
         animator.SetTrigger("CrocoAttack");
