@@ -36,8 +36,9 @@ public class Crocodiles : MonoBehaviour
 
     private void shoot()
     {
-        GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
         animator.SetTrigger("CrocoAttack");
+        
+        GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
         if (isRight)
         {
             crocodileShoot.gameObject.GetComponent<Rigidbody2D>().AddForce(crocodileShoot.transform.right * shurikenSpeed);

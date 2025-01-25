@@ -542,6 +542,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &345812082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4728730366978220567, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+  m_PrefabInstance: {fileID: 989779058877841895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &351229681
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,11 +3153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1904092324432520828, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.59
+      value: 20.74
       objectReference: {fileID: 0}
     - target: {fileID: 1904092324432520828, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.39
+      value: -10.43
       objectReference: {fileID: 0}
     - target: {fileID: 1904092324432520828, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6657,20 +6662,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1041918099}
     - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: speed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: isLeft
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: isRight
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: flipCheck
+      value: 
+      objectReference: {fileID: 345812082}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: isGrounded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: circleRadius
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: ground.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6588314618764267598, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.9
+      value: -8.59
       objectReference: {fileID: 0}
     - target: {fileID: 6588314618764267598, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.27
+      value: -10.2
       objectReference: {fileID: 0}
     - target: {fileID: 6588314618764267598, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6704,7 +6729,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8142272100002630711, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: m_Mass
+      value: 7.6400857
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206003898064986345, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206003898064986345, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172779980660650912, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: d5b164dcfa5c56d46b1e120c10bc7073, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6294776437417732984, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
