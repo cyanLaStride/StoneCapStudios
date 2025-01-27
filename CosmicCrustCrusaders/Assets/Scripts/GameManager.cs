@@ -46,10 +46,16 @@ public class GameManager : MonoBehaviour
     private bool s4 = true;
     private bool s5 = true;
 
+    // upgrades
+    public bool upgFlashlightUnlock = false;
+    public bool upgGrapplingHookUnlock = false;
+    public bool upgPropellorUnlock = false;
+    public bool upgBuddyBoostersUnlock = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        gameGo = true;
+        //gameGo = true;
         scoreScreen0.SetActive(false);
     }
 
@@ -118,5 +124,14 @@ public class GameManager : MonoBehaviour
         scoreScreen5.SetActive(false);
         MusicLevel.gameObject.SetActive(false);
         SFXclick.Play();
+    }
+
+    public void LevelStart(PlayerController player)
+    {
+        gameGo = true;
+        player.upgFlashlight = upgFlashlightUnlock;
+        player.upgGrapplingHook = upgGrapplingHookUnlock;
+        player.upgPropellor = upgPropellorUnlock;
+        player.upgBuddyBoosters = upgBuddyBoostersUnlock;
     }
 }

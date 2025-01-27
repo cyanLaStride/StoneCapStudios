@@ -206,6 +206,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &28444934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8888744131241321099, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  m_PrefabInstance: {fileID: 1165831982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &105495568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,6 +341,18 @@ PrefabInstance:
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: Coins
       value: 
+      objectReference: {fileID: 28444934}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1761734890}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: upgPropellorUnlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: upgFlashlightUnlock
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49758,6 +49781,17 @@ MonoBehaviour:
   isPaused: 0
   DeathCount: {fileID: 0}
   pH: {fileID: 0}
+--- !u!114 &1012457985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+  m_PrefabInstance: {fileID: 105538334}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012457980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f1adc09adcd1241a5bd21534ebccd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014727679
 GameObject:
   m_ObjectHideFlags: 0
@@ -50193,6 +50227,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1103761247}
+    - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1012457985}
     - target: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_Name
       value: Player
@@ -51282,6 +51320,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2742615051162720136, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
   m_PrefabInstance: {fileID: 1249474126}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1761734890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3803027948175642867, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  m_PrefabInstance: {fileID: 1165831982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1845809145
 PrefabInstance:
   m_ObjectHideFlags: 0

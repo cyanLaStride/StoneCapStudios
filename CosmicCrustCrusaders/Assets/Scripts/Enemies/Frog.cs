@@ -52,7 +52,7 @@ public class Frog : MonoBehaviour
         if (isIdle)
         {
             currentTimer += Time.deltaTime;
-            animator.SetBool("Fidle", true);
+            //animator.SetBool("Fidle", true);
             if (currentTimer >= frogIdleTime)
             {
                 currentTimer = 0;

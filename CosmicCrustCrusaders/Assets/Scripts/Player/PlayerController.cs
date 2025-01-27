@@ -36,6 +36,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioSource SFXjump;
 
+    [SerializeField]
+    private GameManager gameManager;
+
+    // upgrades
+    public bool upgFlashlight = false;
+    public bool upgGrapplingHook = false;
+    public bool upgPropellor = false;
+    public bool upgBuddyBoosters = false;
+
+    public bool upgPropellorUse = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +54,7 @@ public class PlayerController : MonoBehaviour
         ren = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         SFXrun.gameObject.SetActive(false);
+        gameManager.LevelStart(this);
     }
 
     // Update is called once per frame
@@ -126,6 +138,37 @@ public class PlayerController : MonoBehaviour
             tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed;
             Physics2D.IgnoreCollision(tossNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             SFXthrow.Play();
+        }
+
+        // upgrades
+        if (upgFlashlight)
+        {
+
+        }
+        if (upgGrapplingHook)
+        {
+
+        }
+        if (upgPropellor)
+        {
+            if (!upgPropellorUse && isGrounded)
+            {
+                upgPropellorUse = true;
+            }
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+            {
+                if (upgPropellorUse && !isGrounded)
+                {
+                    upgPropellorUse = false;
+                    rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+                    anim.SetTrigger("jump");
+                    SFXjump.Play();
+                }
+            }
+        }
+        if (upgBuddyBoosters)
+        {
+
         }
 
         /* obselete camera movement
