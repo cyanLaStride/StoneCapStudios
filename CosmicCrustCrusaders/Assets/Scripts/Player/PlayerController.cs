@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
 
     public bool upgPropellorUse = false;
 
+    public bool upgBoost = false;
+    private float upgBoostSpeed = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +67,13 @@ public class PlayerController : MonoBehaviour
         // left and right
         if (Input.GetKey(KeyCode.A))
         {
-            rb2d.velocity = new Vector2(-movementSpeed, rb2d.velocity.y);
+            if (upgBoost)
+            {
+                rb2d.AddForce(new Vector2(-upgBoostSpeed, 0));
+            } else
+            {
+                rb2d.velocity = new Vector2(-movementSpeed, rb2d.velocity.y);
+            }
             anim.SetBool("run", true);
             ren.flipX = true;
             if (isGrounded)
@@ -77,7 +86,14 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            rb2d.velocity = new Vector2(movementSpeed, rb2d.velocity.y);
+            if (upgBoost)
+            {
+                rb2d.AddForce(new Vector2(upgBoostSpeed, 0));
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(movementSpeed, rb2d.velocity.y);
+            }
             anim.SetBool("run", true);
             ren.flipX = false;
             if (isGrounded)
@@ -90,7 +106,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            if (!upgBoost)
+            {
+                rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            }
+            
             anim.SetBool("run", false);
             SFXrun.gameObject.SetActive(false);
         }
@@ -168,7 +188,14 @@ public class PlayerController : MonoBehaviour
         }
         if (upgBuddyBoosters)
         {
-
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                upgBoost = true;
+            } else
+            {
+                upgBoost = false;
+            }
+            // rest in movement
         }
 
         /* obselete camera movement
