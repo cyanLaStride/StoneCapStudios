@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Icicle : MonoBehaviour
 {
+    /*
     // Start is called before the first frame update
     // cool particle effect later
     // freeze character?
@@ -43,4 +44,5 @@ public class Icicle : MonoBehaviour
             timer = 0;
         }
     }
+    */
 }

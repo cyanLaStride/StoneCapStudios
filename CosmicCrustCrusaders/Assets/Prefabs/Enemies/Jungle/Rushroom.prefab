@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2035231871358960404}
   m_Layer: 8
   m_Name: Rushroom
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,19 +103,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b7be01689a688499e4a52bc3373e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteR: {fileID: 1137915442616635051}
   rb: {fileID: 8142272100002630711}
   flipCheck: {fileID: 4728730366978220567}
   ground:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 0}
+  player: {fileID: 0}
   isRight: 1
   isGrounded: 0
   circleRadius: 0.5
+  isIdle: 0
   speed: 6
   runningRange: 0
-  attackRange: 0
 --- !u!50 &8142272100002630711
 Rigidbody2D:
   serializedVersion: 4

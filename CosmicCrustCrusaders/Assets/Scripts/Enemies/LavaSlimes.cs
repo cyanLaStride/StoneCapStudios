@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LavaSlimes : MonoBehaviour
 {
+    /*
     // player and checking
     private bool checkSameLevel;
     [SerializeField]
@@ -22,4 +23,5 @@ public class LavaSlimes : MonoBehaviour
             checkSameLevel = true;
         }
     }
+    */
 }

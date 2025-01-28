@@ -7,6 +7,8 @@ TagManager:
   - ground
   - FrogTurnRight
   - FrogTurnLeft
+  - Enemies
+  - Toss
   layers:
   - Default
   - TransparentFX
