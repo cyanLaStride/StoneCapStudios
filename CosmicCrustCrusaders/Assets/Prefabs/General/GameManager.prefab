@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba6fc5b98db05643861e3147d8ebd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 1508148784522570653, guid: 25a5590eebc4e74429c96496c430b2b4, type: 3}
   isPaused: 0
   DeathCount: {fileID: 0}
   pH: {fileID: 0}
@@ -61,6 +61,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f1adc09adcd1241a5bd21534ebccd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameGo: 1
   Coins: {fileID: 0}
   CoinCount: 0
   timerText: {fileID: 0}
+  scoreScreen0: {fileID: 0}
+  scoreScreen1: {fileID: 0}
+  scoreScreen2: {fileID: 0}
+  scoreScreen3: {fileID: 0}
+  scoreScreen4: {fileID: 0}
+  scoreScreen5: {fileID: 0}
+  player: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  MusicLevel: {fileID: 0}
+  SFXclick: {fileID: 0}
+  SFXcomplete: {fileID: 0}
+  upgFlashlightUnlock: 0
+  upgGrapplingHookUnlock: 0
+  upgPropellorUnlock: 1
+  upgBuddyBoostersUnlock: 1

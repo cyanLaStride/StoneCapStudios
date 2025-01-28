@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float movementSpeed = 10f;
     [SerializeField]
-    public float jumpSpeed = 18f;
+    public float jumpSpeed = 20f;
+    [SerializeField]
+    public float slow = 1f;
 
     public bool isGrounded;
 
@@ -65,14 +68,14 @@ public class PlayerController : MonoBehaviour
     {
         // basic movement
         // left and right
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (upgBoost)
             {
-                rb2d.AddForce(new Vector2(-upgBoostSpeed, 0));
+                rb2d.AddForce(new Vector2(-upgBoostSpeed * slow, 0));
             } else
             {
-                rb2d.velocity = new Vector2(-movementSpeed, rb2d.velocity.y);
+                rb2d.velocity = new Vector2(-movementSpeed * slow, rb2d.velocity.y);
             }
             anim.SetBool("run", true);
             ren.flipX = true;
@@ -84,15 +87,15 @@ public class PlayerController : MonoBehaviour
                 SFXrun.gameObject.SetActive(false);
             }
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             if (upgBoost)
             {
-                rb2d.AddForce(new Vector2(upgBoostSpeed, 0));
+                rb2d.AddForce(new Vector2(upgBoostSpeed * slow, 0));
             }
             else
             {
-                rb2d.velocity = new Vector2(movementSpeed, rb2d.velocity.y);
+                rb2d.velocity = new Vector2(movementSpeed * slow, rb2d.velocity.y);
             }
             anim.SetBool("run", true);
             ren.flipX = false;
@@ -115,11 +118,11 @@ public class PlayerController : MonoBehaviour
             SFXrun.gameObject.SetActive(false);
         }
         // jump
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
             if (isGrounded)
             {
-                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed * slow);
                 anim.SetTrigger("jump");
                 SFXjump.Play();
             }
@@ -135,8 +138,7 @@ public class PlayerController : MonoBehaviour
                 CapsuleCollider2D[] capcolliders = GetComponents<CapsuleCollider2D>();
                 capcolliders[0].size = new Vector2(1.9f, 1.9f);
                 capcolliders[1].size = new Vector2(1.9f, 1.9f);
-                movementSpeed = 5f;
-                jumpSpeed = 9f;
+                slow = 0.5f;
             }
         } else
         {
@@ -145,8 +147,7 @@ public class PlayerController : MonoBehaviour
             CapsuleCollider2D[] capcolliders = GetComponents<CapsuleCollider2D>();
             capcolliders[0].size = new Vector2(1.9f, 3.9f);
             capcolliders[1].size = new Vector2(1.9f, 3.9f);
-            movementSpeed = 10f;
-            jumpSpeed = 18f;
+            slow = 1f;
         }
 
         // toss
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
             {
                 upgPropellorUse = true;
             }
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
             {
                 if (upgPropellorUse && !isGrounded)
                 {
