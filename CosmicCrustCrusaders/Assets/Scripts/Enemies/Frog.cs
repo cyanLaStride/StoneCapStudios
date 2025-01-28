@@ -16,8 +16,8 @@ public class Frog : MonoBehaviour
     private bool isGround = false;
     private bool isFacingR = false;
     private bool isFacingL = true;
-    private bool isIdle;
-    private bool isJump; // animation
+    private bool isIdle; // animation
+    public bool isStun;
 
     // setting up frog setting
     private float jumpTimer;
@@ -25,6 +25,9 @@ public class Frog : MonoBehaviour
     private float frogJumpSpeedX;
     [SerializeField]
     private float frogJumpFroceY;
+    [SerializeField]
+    private float stunSecond;
+    private float timer;
     // private float frogLastXPos;
     private float frogCurrentPos;
     private float currentTimer = 0;
@@ -35,21 +38,20 @@ public class Frog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // getting components
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        timer = 0.0f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
     // fixed update specifically dealing with rigidbody (gravity stuff) and timer
-    private void FixedUpdate()
+    void Update()
     {
-        if (isIdle)
+        if (isIdle && !isStun)
         {
             currentTimer += Time.deltaTime;
             //animator.SetBool("Fidle", true);
@@ -59,9 +61,15 @@ public class Frog : MonoBehaviour
                 frogJump();
             }
         }
-        else if (isJump)
+        else if (isStun)
         {
-            animator.SetBool("Fjump", true);
+            timer += Time.deltaTime;
+            rb.velocity = Vector2.zero;
+            if (timer >= stunSecond)
+            {
+                timer = 0;
+                isStun = false;
+            }
         }
     }
 
@@ -70,7 +78,6 @@ public class Frog : MonoBehaviour
     {
         //isJump = true; // jumping animation
         //isIdle = false;
-        animator.SetTrigger("FJump");
         if (isFacingR)
         {
             spriteR.flipX = true;
@@ -82,7 +89,12 @@ public class Frog : MonoBehaviour
             jumpDirection = -1;
         }
 
-        rb.velocity = new Vector2(frogJumpSpeedX * jumpDirection, frogJumpFroceY);
+        // when the frog is notstun
+        if (!isStun)
+        {
+            animator.SetTrigger("FJump");
+            rb.velocity = new Vector2(frogJumpSpeedX * jumpDirection, frogJumpFroceY);
+        }
         
     }
 
@@ -93,7 +105,6 @@ public class Frog : MonoBehaviour
         {
             isGround = true;
             isIdle = true;
-            isJump = false;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -115,6 +126,10 @@ public class Frog : MonoBehaviour
         {
             isFacingL = true;
             isFacingR = false;
+        }
+        else if ((collision.gameObject.CompareTag("Toss")))
+        {
+            isStun = true;
         }
     }
 }
