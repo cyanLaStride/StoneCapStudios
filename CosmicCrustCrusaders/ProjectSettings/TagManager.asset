@@ -9,6 +9,7 @@ TagManager:
   - FrogTurnLeft
   - Enemies
   - Toss
+  - Event
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3831626967
+    locked: 0
+  - name: Forground
+    uniqueID: 2243399973
     locked: 0
