@@ -10,6 +10,7 @@ TagManager:
   - Enemies
   - Toss
   - Event
+  - NPC
   layers:
   - Default
   - TransparentFX

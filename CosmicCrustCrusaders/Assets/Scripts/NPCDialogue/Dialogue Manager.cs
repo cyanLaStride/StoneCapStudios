@@ -23,7 +23,8 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
-
+    public event System.Action OnDialogueEnd;
+    [SerializeField] private PlayerController playerController;
 
 
     private void Awake()
@@ -84,6 +85,9 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        // Notify listeners that dialogue has ended
+        OnDialogueEnd?.Invoke();
     }
     private void ContinueStory()
     {

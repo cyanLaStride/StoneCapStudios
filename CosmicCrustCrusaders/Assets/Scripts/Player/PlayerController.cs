@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
 
+
 public class PlayerController : MonoBehaviour
 {
 
@@ -14,9 +15,10 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 20f;
     [SerializeField]
     public float slow = 1f;
-
+   
     public bool isGrounded;
 
+   
     [SerializeField]
     public Camera cam;
 
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     public bool upgBoost = false;
     private float upgBoostSpeed = 2f;
+    public bool isInteracting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +71,16 @@ public class PlayerController : MonoBehaviour
     {
         // basic movement
         // left and right
+
+        // If player is interacting with an NPC, lock movement
+        if (isInteracting)
+        {
+            rb2d.velocity = new Vector2(0, rb2d.velocity.y); // Ensure the player stays still
+            anim.SetBool("run", false); // Optionally disable running animation
+            SFXrun.gameObject.SetActive(false); // Disable running sound
+            return; // Skip the rest of the movement logic
+        }
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             if (upgBoost)
@@ -212,22 +225,28 @@ public class PlayerController : MonoBehaviour
         cam.transform.position = new Vector3((((int)this.transform.position.x + 24) / 48) * 48,((((int)this.transform.position.y - 13) / 27) * 27) + 0.5f, -10);
         
         }
-
-
-
-    /* jump stuff -- MOVED TO FEET
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "ground")
+        if (other.CompareTag("NPC"))  // Assuming NPCs are tagged with "NPC"
         {
-            isGrounded = true;
+            isInteracting = true;
+            // Optionally, trigger NPC dialogue, animations, etc.
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "ground")
+        if (other.CompareTag("NPC"))
         {
-            isGrounded = false;
+            isInteracting = false;
+            // Optionally close the NPC dialogue, etc.
         }
-    }*/
+    }
+    public void LockMovement(bool isLocked)
+    {
+        isInteracting = isLocked;
+        rb2d.velocity = Vector2.zero; // Stops the player's movement
+        anim.SetBool("run", false); // Stops running animation
+    }
+
 }
