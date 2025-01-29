@@ -1916,21 +1916,16 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1459453722}
   dialogueText: {fileID: 1181352040}
   dialogue:
-  - Hi there Cyrus
-  - Welcome to Ezekial's Essentials
-  - What are you looking for?
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
-  - END OF DEMO
+  - Hey there! Pretty rare that I get a human in here
+  - "\u201CNice to meet you! Now let me give you a brief explanation of what this
+    place actually is, cause you look as confused as a martian.\u201D"
+  - "\u201CThis place is my mechanic bar. I got every essential ANY robot would want,
+    but some of it could help you out too. Bring your gold here after your deliveries
+    and buy whatever may help you. I mean, if you want to at least."
+  - "\u201CAlright! before you head out take this.\u201D"
+  - "\u201CTrust me.. you might find it helpful. HAH!\u201D"
   contButton: {fileID: 1670364418}
-  wordSpeed: 0.08
+  wordSpeed: 0.03
   playerIsClose: 0
 --- !u!70 &1122066794
 CapsuleCollider2D:

@@ -1109,12 +1109,15 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1236140357}
   dialogueText: {fileID: 2043281837}
   dialogue:
-  - Hi there, Cyrus!
-  - Welcome to my pizza shop.
-  - You're here for the interview I see?
-  - Cool man, well you got the job...
-  - Take cheddar with you and start heading out.
-  - Check out Ezekial's shop before you leave! You might need some stuff from there.
+  - "Well, you\u2019ve got an impressive resume"
+  - "and you\u2019ve answered all my questions!"
+  - "\u201CGreat! You\u2019re hired! You can start immediately if ya want\u201D"
+  - "\u201CAlright, you can go ahead and start on your first order, the boxes are
+    on the counter waiting for you\u201D"
+  - "\u201COh, the cat? That\u2019s Cheddar. He\u2019s been in the family for years.
+    He\u2019ll help you on your shifts.\u201D"
+  - "\u201CHey wait! Before you go, make sure to stop by the store next door. Ezekiel
+    wants to meet you.\u201D"
   contButton: {fileID: 1039584924}
   wordSpeed: 0.04
   playerIsClose: 0
