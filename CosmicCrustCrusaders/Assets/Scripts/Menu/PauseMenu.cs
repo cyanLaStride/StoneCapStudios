@@ -42,8 +42,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
         DeathCount.text = "Deaths: " + pH.deathCount;
+        isPaused = true;
     }
 
     public void ResumeGame()
