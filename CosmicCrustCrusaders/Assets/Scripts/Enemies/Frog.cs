@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Frog : MonoBehaviour
 {
+    // wait a minute, i just realize i'm not using ground check lol, will fix it? i don't think it matter that much now
     // input sprite, rigidbody, and animation
     public SpriteRenderer spriteR;
     public Rigidbody2D rb;

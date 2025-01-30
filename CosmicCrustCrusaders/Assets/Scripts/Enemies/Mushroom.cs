@@ -43,6 +43,7 @@ public class Mushroom : MonoBehaviour
     }
     private void Update()
     {
+        // checking for distance
         distance = Vector2.Distance(transform.position, player.transform.position);
         if (distance < runningRange)
         {
