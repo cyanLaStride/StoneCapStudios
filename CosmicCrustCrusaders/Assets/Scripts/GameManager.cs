@@ -155,7 +155,9 @@ public class GameManager : MonoBehaviour
 
     public void LevelStart(PlayerController player)
     {
+        timer = 0;
         gameGo = true;
+        
         player.upgFlashlight = upgFlashlightUnlock;
         player.upgGrapplingHook = upgGrapplingHookUnlock;
         player.upgPropellor = upgPropellorUnlock;
