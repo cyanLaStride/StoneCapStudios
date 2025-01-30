@@ -104,7 +104,7 @@ public class BarkBeast : MonoBehaviour
         }
         if (!isIdle && !isStun)
         {
-            rb.velocity = Vector2.right * speed * 1000 * Time.deltaTime;
+            rb.velocity = Vector2.right * speed * 100 * Time.fixedDeltaTime;
             isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
             if (isGrounded && isRight)
             {
