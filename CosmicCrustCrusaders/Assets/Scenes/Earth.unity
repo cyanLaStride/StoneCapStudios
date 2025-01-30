@@ -12638,6 +12638,7 @@ MonoBehaviour:
   scoreScreen5: {fileID: 1415603640}
   SFXclick: {fileID: 931988511}
   SFXcomplete: {fileID: 1605890082}
+  levelName: Earth
 --- !u!1001 &1160558117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16344,7 +16345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4557001617157929537, guid: fdd0dc665a0d89a4c8a334674c8c514e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194
+      value: 190.86
       objectReference: {fileID: 0}
     - target: {fileID: 4557001617157929537, guid: fdd0dc665a0d89a4c8a334674c8c514e, type: 3}
       propertyPath: m_LocalPosition.y

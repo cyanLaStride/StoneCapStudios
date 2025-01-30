@@ -34,6 +34,8 @@ public class PizzaShopTrigger : MonoBehaviour
     private bool s4 = true;
     private bool s5 = true;
 
+    public string levelName = string.Empty;
+
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -83,7 +85,13 @@ public class PizzaShopTrigger : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Space) && scoreScreen5.activeInHierarchy)
             {
-                SceneManager.LoadSceneAsync("Dialogue Upgrade Shop");
+                if (levelName == "Earth"){
+                    SceneManager.LoadSceneAsync("Dialogue Upgrade Shop");
+                } else if (levelName == "Jungle")
+                {
+                    SceneManager.LoadSceneAsync("Jungle Customer");
+                }
+                
             }
         }
     }
