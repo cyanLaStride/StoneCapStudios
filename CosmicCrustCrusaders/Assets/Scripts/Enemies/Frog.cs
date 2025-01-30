@@ -27,7 +27,7 @@ public class Frog : MonoBehaviour
     private float frogJumpFroceY;
     [SerializeField]
     private float stunTime;
-    private float stunTimer;
+    private float stunTimer = 0.0f;
     // private float frogLastXPos;
     private float frogCurrentPos;
     private float currentTimer = 0;
@@ -42,8 +42,6 @@ public class Frog : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-
-        stunTimer = 0.0f;
     }
 
 
@@ -63,12 +61,14 @@ public class Frog : MonoBehaviour
         }
         else if (isStun)
         {
+            animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
                 isStun = false;
+                animator.enabled = true;
             }
         }
     }

@@ -18,14 +18,20 @@ public class Mushroom : MonoBehaviour
     public bool isGrounded;
     public float circleRadius;
     public bool isIdle;
+    public bool isStun;
 
     // field for basic
     [SerializeField]
     private float speed;
-    private float decreaseSpeed = 0.001f;
     [SerializeField]
     private float runningRange;
     private float distance;
+    [SerializeField]
+    private float stunTime;
+    private float stunTimer = 0.0f;
+    [SerializeField]
+    private float idleTime;
+    private float idleTimer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +47,23 @@ public class Mushroom : MonoBehaviour
         if (distance < runningRange)
         {
             isIdle = false;
+            idleTimer = 0.0f;
             animator.SetBool("RRunning",true);
         }
-        // if rushroom is not idle
-        if (!isIdle)
+        else if(distance > runningRange)
         {
-            rb.velocity = Vector2.right * speed * Time.deltaTime;
+            idleTimer += Time.deltaTime;
+            if (idleTime <= idleTimer)
+            {
+                isIdle = true;
+                animator.SetBool("RRunning",false);
+                idleTimer = 0.0f;
+            }
+        }
+        // if rushroom is not idle
+        if (!isIdle && !isStun)
+        {
+            rb.velocity = Vector2.right * speed * 1000 * Time.deltaTime;
             isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
             if (isGrounded && isRight)
             {
@@ -57,6 +74,18 @@ public class Mushroom : MonoBehaviour
                 flip();
             }
         }
+        else if (isStun)
+        {
+            animator.enabled = false;
+            stunTimer += Time.deltaTime;
+            rb.velocity = Vector2.zero;
+            if (stunTimer >= stunTime)
+            {
+                stunTimer = 0;
+                isStun = false;
+                animator.enabled = true;
+            }
+        }
     }
 
     // when player hit rushroom
@@ -65,6 +94,10 @@ public class Mushroom : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             animator.SetTrigger("RAttack");
+        }
+        else if (collision.gameObject.CompareTag("Toss"))
+        {
+            isStun = true;
         }
     }
 
