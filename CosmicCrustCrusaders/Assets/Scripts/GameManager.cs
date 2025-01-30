@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
     // timer
     [SerializeField]
     private TMP_Text timerText;
-    private float timer;
-    private float endTime;
-
+    public float timer;
+    public float endTime;
+    /*
     [SerializeField]
     private GameObject scoreScreen0;
     [SerializeField]
@@ -31,11 +31,12 @@ public class GameManager : MonoBehaviour
     private GameObject scoreScreen4;
     [SerializeField]
     private GameObject scoreScreen5;
-
+    */
     public GameObject player;
 
     [SerializeField]
     private AudioSource MusicLevel;
+    /*
     [SerializeField]
     private AudioSource SFXclick;
     [SerializeField]
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     private bool s2 = true;
     private bool s3 = true;
     private bool s4 = true;
-    private bool s5 = true;
+    private bool s5 = true;*/
 
     // upgrades
     public bool upgFlashlightUnlock = false;
@@ -84,11 +85,14 @@ public class GameManager : MonoBehaviour
                 timerText.text = "Timer: " + (int)timer;
             }
         }
-        
 
-        
-        
-        
+        if (GameObject.Find("Audio Source") != null)
+        {
+            MusicLevel = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        }
+
+
+
         /*
         if (!gameGo)
         {
@@ -137,6 +141,8 @@ public class GameManager : MonoBehaviour
     {
         gameGo = false;
         endTime = timer;
+        MusicLevel.gameObject.SetActive(false);
+        /*
         scoreScreen0.SetActive(true);
         scoreScreen1.SetActive(false);
         scoreScreen2.SetActive(false);
@@ -144,7 +150,7 @@ public class GameManager : MonoBehaviour
         scoreScreen4.SetActive(false);
         scoreScreen5.SetActive(false);
         MusicLevel.gameObject.SetActive(false);
-        SFXclick.Play();
+        SFXclick.Play();*/
     }
 
     public void LevelStart(PlayerController player)
