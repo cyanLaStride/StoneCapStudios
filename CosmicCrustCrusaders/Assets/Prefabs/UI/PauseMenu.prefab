@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1403396806213134639, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      - m_Target: {fileID: 5023753646302909688}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 8384107258419979124}
   - component: {fileID: 7724450415722323421}
   - component: {fileID: 894798947208993308}
+  - component: {fileID: 5023753646302909688}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -373,6 +374,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5023753646302909688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508148784522570653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba6fc5b98db05643861e3147d8ebd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  DeathCount: {fileID: 5932673998816727081}
+  pH: {fileID: 0}
 --- !u!1 &1616198855112549559
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1403396806213134639, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      - m_Target: {fileID: 5023753646302909688}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
@@ -1163,7 +1179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1403396806213134639, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      - m_Target: {fileID: 5023753646302909688}
         m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

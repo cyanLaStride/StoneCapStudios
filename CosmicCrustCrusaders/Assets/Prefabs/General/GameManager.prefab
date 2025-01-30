@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3866080331725460552}
-  - component: {fileID: 1403396806213134639}
   - component: {fileID: 4356941407541348466}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,22 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1403396806213134639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3365888762830122392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba6fc5b98db05643861e3147d8ebd30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1508148784522570653, guid: 25a5590eebc4e74429c96496c430b2b4, type: 3}
-  isPaused: 0
-  DeathCount: {fileID: 0}
-  pH: {fileID: 0}
 --- !u!114 &4356941407541348466
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,12 +56,23 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //gameGo = true;
-        scoreScreen0.SetActive(false);
+        //scoreScreen0.SetActive(false);
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("manager");
+
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Coins = GameObject.Find("Coins").GetComponent<TMP_Text>();
+        timerText = GameObject.Find("Timer").GetComponent<TMP_Text>();
+
         Coins.text = "Coins: " + CoinCount;
         timer += Time.deltaTime;
         if (gameGo)

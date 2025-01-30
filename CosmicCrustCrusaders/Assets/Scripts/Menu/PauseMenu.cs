@@ -9,7 +9,7 @@ using TMPro;
 public class NewBehaviourScript : MonoBehaviour
 {
 
-    public GameObject pauseMenu;
+    //public GameObject pauseMenu;
     public bool isPaused;
     [SerializeField]
     private TMP_Text DeathCount;
@@ -19,7 +19,8 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
+        //gameObject.SetActive(false);
+        GetComponent<Canvas>().enabled = false;
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
+        GetComponent<Canvas>().enabled = true; 
         Time.timeScale = 0f;
         DeathCount.text = "Deaths: " + pH.deathCount;
         isPaused = true;
@@ -49,7 +50,7 @@ public class NewBehaviourScript : MonoBehaviour
     public void ResumeGame()
     {
         Debug.Log("Click");
-        pauseMenu.SetActive(false);
+        GetComponent<Canvas>().enabled = false;
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -63,5 +64,16 @@ public class NewBehaviourScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void TogglePause()
+    {
+        if (isPaused)
+        {
+            ResumeGame();
+        } else
+        {
+            PauseGame();
+        }
     }
 }

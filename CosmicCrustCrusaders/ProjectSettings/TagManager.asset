@@ -11,6 +11,7 @@ TagManager:
   - Toss
   - Event
   - NPC
+  - manager
   layers:
   - Default
   - TransparentFX
