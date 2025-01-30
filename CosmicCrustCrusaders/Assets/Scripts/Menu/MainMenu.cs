@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     void EndVideo(VideoPlayer player)
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync("Dialogue Pizza Shop");
 
     }
     public void Menu()
@@ -43,7 +43,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync("Dialogue Pizza Shop");
     }
 
 }

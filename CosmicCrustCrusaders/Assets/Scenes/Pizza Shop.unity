@@ -219,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba6fc5b98db05643861e3147d8ebd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1676092726}
   isPaused: 0
   DeathCount: {fileID: 460220380}
   pH: {fileID: 0}
@@ -1008,11 +1007,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614846902}
   m_CullTransparentMesh: 1
---- !u!1 &1676092726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1508148784522570653, guid: 25a5590eebc4e74429c96496c430b2b4, type: 3}
-  m_PrefabInstance: {fileID: 1291719847}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1808708471
 PrefabInstance:
   m_ObjectHideFlags: 0
