@@ -115,7 +115,7 @@ MonoBehaviour:
   circleRadius: 0.5
   isIdle: 0
   isStun: 0
-  speed: 2
+  speed: 4
   runningRange: 15
   stunTime: 3
   idleTime: 5

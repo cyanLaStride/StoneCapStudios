@@ -85,16 +85,16 @@ public class BarkBeast : MonoBehaviour
             animator.SetBool("BWalking", true);
             if (distance <= attackRange && !isSlowed)
             {
-                animator.SetTrigger("BAttack");
                 player.movementSpeed = characterSpeed * (1 / speedDecreasePercentage);
+                animator.SetTrigger("BAttack");
                 isSlowed = true;
             }
         }
-        else if (distance >= runningRange)
+        else if (distance >= runningRange && isSlowed)
         {
-            player.movementSpeed = characterSpeed;
             isSlowed = false;
             idleTimer += Time.deltaTime;
+            player.movementSpeed = characterSpeed;
             if (idleTime <= idleTimer)
             {
                 isIdle = true;
@@ -120,6 +120,7 @@ public class BarkBeast : MonoBehaviour
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
+            player.movementSpeed = characterSpeed;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
