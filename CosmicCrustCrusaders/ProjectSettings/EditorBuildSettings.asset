@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ezekial's Essentials.unity
     guid: 9a5f213db83f12b47bf9ff75e035c3cf
+  - enabled: 1
+    path: Assets/Scenes/Dialogue Pizza Shop.unity
+    guid: e146d877ba308ef43bec3ea47dba12b7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}

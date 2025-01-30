@@ -70,16 +70,26 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Coins = GameObject.Find("Coins").GetComponent<TMP_Text>();
-        timerText = GameObject.Find("Timer").GetComponent<TMP_Text>();
-
-        Coins.text = "Coins: " + CoinCount;
-        timer += Time.deltaTime;
-        if (gameGo)
+        if (GameObject.Find("Coins") != null)
         {
-            timerText.text = "Timer: " + (int)timer;
+            Coins = GameObject.Find("Coins").GetComponent<TMP_Text>();
+            Coins.text = "Coins: " + CoinCount;
         }
+        if (GameObject.Find("Timer") != null)
+        {
+            timerText = GameObject.Find("Timer").GetComponent<TMP_Text>();
+            timer += Time.deltaTime;
+            if (gameGo)
+            {
+                timerText.text = "Timer: " + (int)timer;
+            }
+        }
+        
 
+        
+        
+        
+        /*
         if (!gameGo)
         {
             if (timer > endTime + 1 && s1)
@@ -120,7 +130,7 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadSceneAsync(7);
             }
-        }
+        }*/
     }
 
     public void EndLevel()

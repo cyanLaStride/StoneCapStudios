@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JRDialogueTrigger : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class JRDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
 
     private bool playerInRange;
-    private PlayerController playerController; // Reference to PlayerController
+    private PlayerController playerController; // Reference to PlayerController\
+
+    private bool jank = false;
 
     private void Awake()
     {
@@ -48,7 +51,15 @@ public class JRDialogueTrigger : MonoBehaviour
         */
         if (!DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            if (!jank)
+            {
+                jank = true;
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            } else
+            {
+                SceneManager.LoadSceneAsync("Earth");
+            }
+            
             //playerController.LockMovement(true); // Lock player movement when dialogue starts
         }
     }
