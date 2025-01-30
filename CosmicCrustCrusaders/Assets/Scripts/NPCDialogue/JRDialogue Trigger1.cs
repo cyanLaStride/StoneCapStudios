@@ -67,6 +67,9 @@ public class JRDialogueTrigger : MonoBehaviour
             {
                 //SceneManager.UnloadSceneAsync("Upgrade Shop");
                 SceneManager.LoadSceneAsync("Upgrade Shop");
+            } else if (npcName == "Lilia")
+            {
+                SceneManager.LoadSceneAsync("Pizza Shop");
             }
             
             //playerController.LockMovement(true); // Lock player movement when dialogue starts

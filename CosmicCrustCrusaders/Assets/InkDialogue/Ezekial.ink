@@ -5,7 +5,7 @@
 === IntroSceneEzekial ===
 
 
-Ezekial Hey there! Pretty rare that I get a human in here, how can I service you?
+Ezekial: Hey there! Pretty rare that I get a human in here, how can I service you?
 
 Cyrus: Oh hey, I uh- just got hired at the pizza place. I was told to come here.
 

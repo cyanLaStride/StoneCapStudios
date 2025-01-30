@@ -89,7 +89,7 @@ public class PizzaShopTrigger : MonoBehaviour
                     SceneManager.LoadSceneAsync("Dialogue Upgrade Shop");
                 } else if (levelName == "Jungle")
                 {
-                    SceneManager.LoadSceneAsync("Jungle Customer");
+                    SceneManager.LoadSceneAsync("Pizza Shop");
                 }
                 
             }
