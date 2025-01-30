@@ -37,6 +37,11 @@ public class PizzaShopTrigger : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        s1 = true;
+        s2 = true;
+        s3 = true;
+        s4 = true;
+        s5 = true;
     }
     private void Update()
     {

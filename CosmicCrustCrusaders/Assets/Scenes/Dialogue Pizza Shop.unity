@@ -666,6 +666,10 @@ PrefabInstance:
       propertyPath: inkJSON
       value: 
       objectReference: {fileID: 4900000, guid: c01feee4fdcbbfd44876adb5d1677f6a, type: 3}
+    - target: {fileID: 1468581324722992828, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
+      propertyPath: npcName
+      value: Tim
+      objectReference: {fileID: 0}
     - target: {fileID: 2429356136241914425, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: m_Sprite
       value: 

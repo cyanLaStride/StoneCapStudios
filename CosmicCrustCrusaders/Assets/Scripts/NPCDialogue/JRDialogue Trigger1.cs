@@ -16,6 +16,9 @@ public class JRDialogueTrigger : MonoBehaviour
 
     private bool jank = false;
 
+    [SerializeField]
+    private string npcName = string.Empty;
+
     private void Awake()
     {
         playerController = FindObjectOfType<PlayerController>();
@@ -55,9 +58,15 @@ public class JRDialogueTrigger : MonoBehaviour
             {
                 jank = true;
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-            } else
+            } else if (npcName == "Tim")
             {
+                //SceneManager.UnloadSceneAsync("Earth");
+                //GameObject.Find("GameManager").GetComponent<GameManager>().LevelStart();
                 SceneManager.LoadSceneAsync("Earth");
+            } else if (npcName == "Ezekial")
+            {
+                //SceneManager.UnloadSceneAsync("Upgrade Shop");
+                SceneManager.LoadSceneAsync("Upgrade Shop");
             }
             
             //playerController.LockMovement(true); // Lock player movement when dialogue starts

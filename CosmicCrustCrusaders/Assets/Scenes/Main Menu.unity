@@ -1153,6 +1153,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: gameGo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: upgPropellorUnlock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: upgBuddyBoostersUnlock
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

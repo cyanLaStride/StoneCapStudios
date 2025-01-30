@@ -7,16 +7,18 @@ using UnityEngine.EventSystems;
 public class ShopManagerScript : MonoBehaviour
 {
     public int[,] shopItems = new int[5, 5];
-    public float coins;
+    //public float coins;
     public Text CoinsTXT;
 
 
-
+    private GameManager gameManager;
 
 
     void Start()
     {
-        CoinsTXT.text = "Coins: " + coins.ToString();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //coins = gameManager.CoinCount;
+        CoinsTXT.text = "Coins: " + gameManager.CoinCount.ToString();
 
         //ID's
         shopItems[1, 1] = 1;
@@ -26,9 +28,9 @@ public class ShopManagerScript : MonoBehaviour
 
 
         //Price
-        shopItems[2, 1] = 20;
-        shopItems[2, 2] = 30;
-        shopItems[2, 3] = 40;
+        shopItems[2, 1] = 80;
+        shopItems[2, 2] = 15;
+        shopItems[2, 3] = 35;
         shopItems[2, 4] = 100;
 
 
@@ -60,12 +62,24 @@ public class ShopManagerScript : MonoBehaviour
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         int itemID = ButtonRef.GetComponent<Buttoninfo>().ItemID;
 
-        if (shopItems[4, itemID] > 0 && coins >= shopItems[2, itemID])
+        if (shopItems[4, itemID] > 0 && gameManager.CoinCount >= shopItems[2, itemID])
         {
-            coins -= shopItems[2, itemID];
+            if (itemID == 1)
+            {
+                gameManager.upgGrapplingHookUnlock = true;
+            }
+            else if (itemID == 2)
+            {
+                gameManager.upgPropellorUnlock = true;
+            }
+            else if (itemID == 3)
+            {
+                gameManager.upgBuddyBoostersUnlock = true;
+            }
+            gameManager.CoinCount -= shopItems[2, itemID];
             shopItems[3, itemID]++; // Increase purchased quantity
             shopItems[4, itemID]--; // Decrease stock
-            CoinsTXT.text = "Coins: " + coins.ToString();
+            CoinsTXT.text = "Coins: " + gameManager.CoinCount.ToString();
             ButtonRef.GetComponent<Buttoninfo>().QuantityTxt.text = "Purchased: " + shopItems[3, itemID].ToString();
             ButtonRef.GetComponent<Buttoninfo>().StockTxt.text = "Stock: " + shopItems[4, itemID].ToString();
         }
@@ -73,7 +87,7 @@ public class ShopManagerScript : MonoBehaviour
         {
             Debug.Log("Out of stock!");
         }
-        else if (coins < shopItems[2, itemID])
+        else if (gameManager.CoinCount < shopItems[2, itemID])
         {
             Debug.Log("Not enough coins!");
         }
