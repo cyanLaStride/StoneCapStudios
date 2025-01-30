@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
             Vector3 tossTowards = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
             tossTowards.z = 0;
             Rigidbody2D tossNew = Instantiate(tossPrefab, transform.position, Quaternion.identity);
-            tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed;
+            tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed + new Vector3(rb2d.velocity.x, rb2d.velocity.y);
             Physics2D.IgnoreCollision(tossNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
             SFXthrow.Play();
         }

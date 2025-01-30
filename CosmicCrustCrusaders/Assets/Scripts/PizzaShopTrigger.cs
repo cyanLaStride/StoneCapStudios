@@ -76,9 +76,9 @@ public class PizzaShopTrigger : MonoBehaviour
                 scoreScreen5.SetActive(true);
                 SFXcomplete.Play();
             }
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space) && scoreScreen5.activeInHierarchy)
             {
-                SceneManager.LoadSceneAsync(7);
+                SceneManager.LoadSceneAsync("Dialogue Upgrade Shop");
             }
         }
     }
