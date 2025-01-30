@@ -18,7 +18,17 @@ public class Map : MonoBehaviour
 
     public void Jungle()
     {
-        SceneManager.LoadSceneAsync(6);
+        SceneManager.LoadSceneAsync("Zygophyla");
+    }
+
+    public void UpgradeShop()
+    {
+        SceneManager.LoadSceneAsync("Upgrade Shop");
+    }
+
+    public void PizzaShop()
+    {
+        SceneManager.LoadSceneAsync("Pizza Shop");
     }
 
 }

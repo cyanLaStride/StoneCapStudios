@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 1195503835}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: upgPropellorUnlock
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: upgFlashlightUnlock
@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: upgBuddyBoostersUnlock
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,6 +375,14 @@ PrefabInstance:
       propertyPath: m_Distance
       value: 18.129877
       objectReference: {fileID: 0}
+    - target: {fileID: 778269556818483218, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 2121678957}
+    - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1073406506}
     - target: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_Name
       value: Player
@@ -54582,6 +54590,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89dba5eec8341b849bf39b4ad719ad67, type: 3}
+--- !u!20 &1073406506 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 828233359311906476, guid: 89dba5eec8341b849bf39b4ad719ad67, type: 3}
+  m_PrefabInstance: {fileID: 1073406505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1114427470
 GameObject:
   m_ObjectHideFlags: 0
@@ -56071,6 +56084,11 @@ Transform:
   - {fileID: 1434828751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2121678957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2742615051162720136, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
+  m_PrefabInstance: {fileID: 1249474126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

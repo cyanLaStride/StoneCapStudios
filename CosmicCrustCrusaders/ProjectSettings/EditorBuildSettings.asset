@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Zygophyla.unity
     guid: 1bc53181d39a2294fa5bf5621ae3ee77
   - enabled: 1
-    path: Assets/Scenes/Pizza Shop.unity
+    path: Assets/Scenes/Pizza Shop (old).unity
     guid: bacf7a85cdc7a55478ced7f7fe1c7c53
   - enabled: 1
     path: Assets/Scenes/Ezekial's Essentials.unity
