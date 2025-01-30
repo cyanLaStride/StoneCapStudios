@@ -163,11 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ad57a725caa2248a28722dc26763b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUp: 0
-  isLeft: 0
-  isRight: 0
-  isAttack: 0
-  isIdle: 0
+  isStun: 0
+  stunTime: 3
   animator: {fileID: 0}
 --- !u!61 &7708403338625544096
 BoxCollider2D:

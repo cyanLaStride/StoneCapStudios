@@ -66,8 +66,8 @@ public class Frog : MonoBehaviour
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
-                stunTimer = 0;
                 isStun = false;
+                stunTimer = 0;
                 animator.enabled = true;
             }
         }

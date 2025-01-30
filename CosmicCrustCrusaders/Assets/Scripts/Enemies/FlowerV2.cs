@@ -30,10 +30,13 @@ public class FlowerV2 : MonoBehaviour
         }
         if (isStun)
         {
+            animator.enabled = false;
             stunTimer += Time.deltaTime;
             if (stunTimer >= stunTime)
             {
                 isStun = false;
+                stunTimer = 0;
+                animator.enabled = true;
             }
         }
     }

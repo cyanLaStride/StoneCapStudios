@@ -147,6 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   isIdle: 0
+  isStun: 0
+  stunTime: 3
 --- !u!95 &6689443317081711853
 Animator:
   serializedVersion: 5

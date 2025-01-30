@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class VenusFlyTrap : MonoBehaviour
 {
-    public bool isUp;
-    public bool isLeft;
-    public bool isRight;
-    public bool isAttack;
-    public bool isIdle;
+    // should i set up these?
+    //public bool isUp;
+    //public bool isLeft;
+    //public bool isRight;
+    public bool isStun = false;
+
+    // setting up timer
+    [SerializeField]
+    private float stunTime;
+    private float stunTimer = 0.0f;
 
     // animation
     [SerializeField]
@@ -23,30 +28,29 @@ public class VenusFlyTrap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isIdle)
+        if (isStun)
         {
-            animator.SetBool("VIdle",true);
+            animator.enabled = false;
+            stunTimer += Time.deltaTime;
+            if (stunTimer >= stunTime)
+            {
+                isStun = false;
+                stunTimer = 0;
+                animator.enabled = true;
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !isStun)
         {
             // Check player direction and play animation
-            animator.SetBool("VAttack", true);
-            animator.SetBool("VIdle", false);
-            isIdle = false;
+            animator.SetTrigger("VAttack");
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        else if ((collision.gameObject.CompareTag("Toss")))
         {
-            // Check player direction and play animation
-            animator.SetBool("VAttack", false);
-            isIdle = true;
+            isStun = true;
         }
     }
 }
