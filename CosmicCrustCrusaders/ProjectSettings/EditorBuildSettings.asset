@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pizza Shop.unity
     guid: ca218cd83e3f89e47974e8f5c4c31f22
+  - enabled: 1
+    path: Assets/Scenes/Jungle Customer.unity
+    guid: b434493b12621d941b3ed1dbd308fcec
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}

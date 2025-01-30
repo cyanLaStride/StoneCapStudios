@@ -69,6 +69,7 @@ public class JRDialogueTrigger : MonoBehaviour
                 SceneManager.LoadSceneAsync("Upgrade Shop");
             } else if (npcName == "Lilia")
             {
+                GameObject.Find("GameManager").GetComponent<GameManager>().CoinCount += 15;
                 SceneManager.LoadSceneAsync("Pizza Shop");
             }
             
