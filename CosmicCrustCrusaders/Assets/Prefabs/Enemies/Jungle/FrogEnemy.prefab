@@ -238,7 +238,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   isStun: 0
   frogJumpSpeedX: 12
-  frogJumpFroceY: 12
+  frogJumpFroceY: 20
   stunTime: 3
   frogIdleTime: 2
 --- !u!58 &8898128829303770408
@@ -275,7 +275,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.68
+  m_Radius: 20
 --- !u!114 &3232154722406217726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +343,7 @@ Rigidbody2D:
   m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

@@ -54740,10 +54740,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1318039145}
     m_Modifications:
+    - target: {fileID: 1982252385871126709, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: frogJumpFroceY
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: playerHp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
@@ -54799,6 +54803,10 @@ PrefabInstance:
     - target: {fileID: 6791107819956591769, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898128829303770408, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: m_Radius
+      value: 17.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56137,7 +56145,7 @@ PrefabInstance:
     - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: playerHp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 96979454}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
@@ -59630,7 +59638,7 @@ PrefabInstance:
     - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: playerHp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 96979454}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
@@ -60513,7 +60521,7 @@ PrefabInstance:
     - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: playerHp
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 96979454}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
