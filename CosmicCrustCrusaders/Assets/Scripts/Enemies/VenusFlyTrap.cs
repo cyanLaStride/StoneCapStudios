@@ -18,11 +18,13 @@ public class VenusFlyTrap : MonoBehaviour
     // animation
     [SerializeField]
     private Animator animator;
+    //private AudioSource vAttackAduio;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        //vAttackAduio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,8 @@ public class VenusFlyTrap : MonoBehaviour
         {
             // Check player direction and play animation
             animator.SetTrigger("VAttack");
+            //vAttackAduio.Play();
+            Debug.Log("attack!");
         }
         else if ((collision.gameObject.CompareTag("Toss")))
         {

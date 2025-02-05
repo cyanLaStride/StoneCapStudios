@@ -35,6 +35,10 @@ public class Frog : MonoBehaviour
     public float frogIdleTime;
     private int jumpDirection;
 
+    // music
+    //[SerializeField]
+    //private AudioSource frogAudioClip;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +47,7 @@ public class Frog : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        //frogAudioClip = GetComponent<AudioSource>();
     }
 
 
@@ -52,6 +57,7 @@ public class Frog : MonoBehaviour
     {
         if (isIdle && !isStun)
         {
+            //frogAudioClip.Play();
             currentTimer += Time.deltaTime;
             //animator.SetBool("Fidle", true);
             if (currentTimer >= frogIdleTime)

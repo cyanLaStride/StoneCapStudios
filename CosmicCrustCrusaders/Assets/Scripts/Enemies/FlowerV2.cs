@@ -11,11 +11,17 @@ public class FlowerV2 : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer;
+
+    //music
+    //private AudioSource flowerAduioClip;
+    
     // Start is called before the first frame update
+
     void Start()
     {
         // getting components
         animator = GetComponent<Animator>();
+        //flowerAduioClip = GetComponent<AudioSource>();
 
         // setting up start
         isIdle = false;
@@ -26,6 +32,7 @@ public class FlowerV2 : MonoBehaviour
     {
         if (isIdle && !isStun)
         {
+            //flowerAduioClip.Play();
             animator.SetBool("FlowerIdle", true);
         }
         if (isStun)

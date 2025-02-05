@@ -30,6 +30,12 @@ public class Crocodiles : MonoBehaviour
     public bool isRight;
     public bool isStun;
 
+    // music for now
+    //[SerializeField]
+    //private AudioSource ninjaAttackClip;
+    //[SerializeField]
+    //private AudioSource ninjaIdleClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +49,7 @@ public class Crocodiles : MonoBehaviour
         if (!isStun)
         {
             shootTimer += Time.deltaTime;
+            //ninjaIdleClip.Play();
             if (shootTimer >= shootTime)
             {
                 shoot();
@@ -67,6 +74,7 @@ public class Crocodiles : MonoBehaviour
     private void shoot()
     {
         animator.SetTrigger("CrocoAttack");
+        //ninjaAttackClip.Play();
         
         GameObject crocodileShoot = Instantiate(shuriken, shootingLocation.position, shootingLocation.rotation);
         if (isRight)

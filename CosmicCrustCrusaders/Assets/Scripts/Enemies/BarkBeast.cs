@@ -61,6 +61,9 @@ public class BarkBeast : MonoBehaviour
     private float idleTime;
     private float idleTimer = 0.0f;
 
+    // music
+    //private AudioSource barkAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,7 @@ public class BarkBeast : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        //barkAudioClip = GetComponent<AudioSource>();
         isIdle = true;
         isSlowed = false;
         characterSpeed = player.movementSpeed;
@@ -81,6 +85,7 @@ public class BarkBeast : MonoBehaviour
         if (distance <= runningRange && !isStun)
         {
             isIdle = false;
+            //barkAudioClip.Play();
             idleTimer = 0.0f;
             animator.SetBool("BWalking", true);
             if (distance <= attackRange && !isSlowed)
