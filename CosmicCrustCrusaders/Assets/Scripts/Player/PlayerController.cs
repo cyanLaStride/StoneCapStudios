@@ -6,7 +6,14 @@ using UnityEngine.InputSystem.Interactions;
 
 public class PlayerController : MonoBehaviour
 {
-
+    //grappling hook
+    [SerializeField] private float grappleLength;
+    [SerializeField] private LayerMask grappleLayer;
+    [SerializeField] private LineRenderer rope;
+    private Vector3 grapplePoint;
+    private DistanceJoint2D joint;
+    //grappling hook
+    
     private Rigidbody2D rb2d;
 
     [SerializeField]
@@ -65,7 +72,9 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         gameManager.LevelStart(this);
         SFXrun.gameObject.SetActive(false);
-        
+        joint = gameObject.GetComponent<DistanceJoint2D>();
+        joint.enabled = false;
+        rope.enabled = false;
     }
 
     // Update is called once per frame
@@ -179,11 +188,42 @@ public class PlayerController : MonoBehaviour
         // upgrades
         if (upgFlashlight)
         {
-
+            
         }
         if (upgGrapplingHook)
         {
+            if (Input.GetKeyDown("e"))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(
+                origin: Camera.main.ScreenToWorldPoint(Input.mousePosition),
+                direction: Vector2.zero,
+                distance: Mathf.Infinity,
+                layerMask: grappleLayer
+                );
 
+                if (hit.collider != null)
+                {
+                    grapplePoint = hit.point;
+                    grapplePoint.z = 0;
+                    joint.connectedAnchor = grapplePoint;
+                    joint.enabled = true;
+                    joint.distance = grappleLength;
+                    rope.SetPosition(0, grapplePoint);
+                    rope.SetPosition(1, transform.position);
+                    rope.enabled = true;
+                }
+            }
+
+            if (Input.GetKeyUp("e"))
+            {
+                joint.enabled = false;
+                rope.enabled = false;
+            }
+
+            if (rope.enabled == true)
+            {
+                rope.SetPosition(1, transform.position);
+            }
         }
         if (upgPropellor)
         {

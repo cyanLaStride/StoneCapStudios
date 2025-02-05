@@ -670,6 +670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a924e6ba81a01419e8efbfc2bcbdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grappleLength: 2
+  grappleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rope: {fileID: 6838595818159611418}
   movementSpeed: 10
   jumpSpeed: 20
   slow: 1
@@ -689,6 +694,7 @@ MonoBehaviour:
   upgBuddyBoosters: 0
   upgPropellorUse: 0
   upgBoost: 0
+  isInteracting: 0
 --- !u!212 &7570893843060113437
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -952,7 +958,7 @@ MonoBehaviour:
   grappleLength: 2
   grappleLayer:
     serializedVersion: 2
-    m_Bits: 118
+    m_Bits: 64
   rope: {fileID: 6838595818159611418}
 --- !u!95 &4701501757084256383
 Animator:
