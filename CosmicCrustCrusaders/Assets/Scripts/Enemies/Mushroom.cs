@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Mushroom : MonoBehaviour
@@ -19,6 +20,7 @@ public class Mushroom : MonoBehaviour
     public float circleRadius;
     public bool isIdle;
     public bool isStun;
+    private int direction;
 
     // field for basic
     [SerializeField]
@@ -29,9 +31,11 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
+    /*
     [SerializeField]
     private float idleTime;
     private float idleTimer = 0.0f;
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +44,15 @@ public class Mushroom : MonoBehaviour
         //spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         isIdle = true;
+        if (isRight)
+        {
+            direction = 1;
+        }
+        else if (!isRight)
+        {
+            direction = -1;
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
     }
     private void Update()
     {
@@ -48,9 +61,10 @@ public class Mushroom : MonoBehaviour
         if (distance < runningRange)
         {
             isIdle = false;
-            idleTimer = 0.0f;
+            //idleTimer = 0.0f;
             animator.SetBool("RRunning",true);
         }
+        /*
         else if(distance > runningRange)
         {
             idleTimer += Time.deltaTime;
@@ -58,14 +72,21 @@ public class Mushroom : MonoBehaviour
             {
                 isIdle = true;
                 animator.SetBool("RRunning",false);
-                idleTimer = 0.0f;
+                //idleTimer = 0.0f;
             }
         }
+        */
         // if rushroom is not idle
         if (!isIdle && !isStun)
         {
-            rb.velocity = Vector2.right * speed * 100 * Time.fixedDeltaTime;
+            rb.velocity = Vector2.right * speed * 100 * direction * Time.fixedDeltaTime;
             isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
+            if (isGrounded)
+            {
+                speed = 0;
+                animator.SetBool("RRunning", false);
+            }
+            /*
             if (isGrounded && isRight)
             {
                 flip();
@@ -74,6 +95,7 @@ public class Mushroom : MonoBehaviour
             {
                 flip();
             }
+            */
         }
         else if (isStun)
         {
@@ -103,12 +125,14 @@ public class Mushroom : MonoBehaviour
     }
 
     // changing direction
+    /*
     private void flip()
     {
         isRight = !isRight;
         transform.Rotate(new Vector3(0, 180, 0));
         speed = -speed;
     }
+    */
 
     // making the radius of circle visible
     private void OnDrawGizmosSelected()

@@ -40,6 +40,8 @@ public class BarkBeast : MonoBehaviour
     public bool isIdle;
     public bool isStun;
     public bool isSlowed;
+    [SerializeField]
+    private bool isStationery;
 
     // speed
     [SerializeField]
@@ -107,7 +109,7 @@ public class BarkBeast : MonoBehaviour
                 idleTimer = 0.0f;
             }
         }
-        if (!isIdle && !isStun)
+        if (!isIdle && !isStun && !isStationery)
         {
             rb.velocity = Vector2.right * speed * 100 * Time.fixedDeltaTime;
             isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
@@ -132,6 +134,10 @@ public class BarkBeast : MonoBehaviour
                 isStun = false;
                 animator.enabled = true;
             }
+        }
+        else if (isStationery)
+        {
+            animator.SetBool("BWalking", false);
         }
         /*
         if (shake)

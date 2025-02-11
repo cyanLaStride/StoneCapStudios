@@ -68,6 +68,7 @@ public class Frog : MonoBehaviour
         }
         else if (isStun)
         {
+            animator.Play("Fidle", 0, 0);
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
