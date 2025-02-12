@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
-    [SerializeField]
-    private AudioSource SFXthrow;
+    //[SerializeField]
+    //private AudioSource SFXthrow;
     [SerializeField]
     private AudioSource SFXrun;
     [SerializeField]
@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D tossNew = Instantiate(tossPrefab, transform.position, Quaternion.identity);
             tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed; //+ new Vector3(rb2d.velocity.x, rb2d.velocity.y);
             Physics2D.IgnoreCollision(tossNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            SFXthrow.Play();
+            AudioManager.instance.PlayPlayerSFX("Throwing");
         }
 
         // upgrades
