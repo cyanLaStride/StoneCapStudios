@@ -56765,6 +56765,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1032269552}
+    - target: {fileID: 5041596886665877048, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: isRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6588314618764267598, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 116.7
@@ -58258,6 +58262,10 @@ PrefabInstance:
     - target: {fileID: 8260712790007198546, guid: bde5c26f7bd074a4d9f10e33aa4e4606, type: 3}
       propertyPath: runningRange
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260712790007198546, guid: bde5c26f7bd074a4d9f10e33aa4e4606, type: 3}
+      propertyPath: speedDecreasePercentage
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
