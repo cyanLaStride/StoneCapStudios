@@ -533,6 +533,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1195503835}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: MusicLevel
+      value: Jungle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: upgPropellorUnlock
       value: 0
       objectReference: {fileID: 0}
@@ -547,10 +551,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4159509729151312009, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 730040186}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
 --- !u!1 &113709576
 GameObject:
@@ -1530,11 +1531,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 11
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!82 &271303669 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 12611355429066693, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
-  m_PrefabInstance: {fileID: 105538334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &292965306
 GameObject:
   m_ObjectHideFlags: 0
@@ -55592,31 +55588,6 @@ Transform:
   - {fileID: 627435624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &730040184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4159509729151312009, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
-  m_PrefabInstance: {fileID: 105538334}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &730040186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730040184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e529ef38b6ec24bb9df2f47b09fb03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerSFX:
-  - name: 
-    clip: {fileID: 0}
-  JungleSFX: []
-  FireAndIceSFX: []
-  music: []
-  musicSource: {fileID: 271303669}
-  sfxSource: {fileID: 1272872609}
 --- !u!1001 &783521079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55917,7 +55888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &906547221
 Transform:
   m_ObjectHideFlags: 0
@@ -58713,11 +58684,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
---- !u!82 &1272872609 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8898653807153044788, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
-  m_PrefabInstance: {fileID: 105538334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1309779147
 GameObject:
   m_ObjectHideFlags: 0

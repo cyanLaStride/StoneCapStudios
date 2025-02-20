@@ -10,8 +10,8 @@ public class Coin : MonoBehaviour
 
     private bool isColliding;
 
-    [SerializeField]
-    private AudioSource SFXcoin;
+    //[SerializeField]
+    //private AudioSource SFXcoin;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,8 @@ public class Coin : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             gameManager.CoinCount += 1;
-            SFXcoin.Play();
+            //SFXcoin.Play();
+            AudioManager.Instance.PlayPlayerSFX("Coin");
             Destroy(gameObject);
         }
     }

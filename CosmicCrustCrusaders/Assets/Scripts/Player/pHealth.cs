@@ -22,8 +22,8 @@ public class pHealth : MonoBehaviour
     [SerializeField]
     PlayerController player;
 
-    [SerializeField]
-    private AudioSource SFXhurt;
+    //[SerializeField]
+    //private AudioSource SFXhurt;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +65,8 @@ public class pHealth : MonoBehaviour
                 invulnTimer = InvulnerablityTime;
                 gameObject.GetComponent<Rigidbody2D>().velocity = (transform.position - damPos).normalized * dam * 10;
                 player.anim.SetTrigger("hurt");
-                SFXhurt.Play();
+                //SFXhurt.Play();
+                AudioManager.Instance.PlayPlayerSFX("GettingHit");
             }
         }
         

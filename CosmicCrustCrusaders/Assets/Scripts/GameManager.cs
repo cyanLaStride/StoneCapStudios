@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     [SerializeField]
-    private AudioSource MusicLevel;
+    //private AudioSource MusicLevel;
+    private string MusicLevel;
     /*
     [SerializeField]
     private AudioSource SFXclick;
@@ -66,6 +67,9 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        // play the starting music for the level
+        AudioManager.Instance.PlayMusic(MusicLevel);
     }
 
     // Update is called once per frame
@@ -86,10 +90,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (GameObject.Find("Audio Source") != null)
-        {
-            MusicLevel = GameObject.Find("Audio Source").GetComponent<AudioSource>();
-        }
+        //if (GameObject.Find("Audio Source") != null)
+        //{
+        //    MusicLevel = GameObject.Find("Audio Source").GetComponent<AudioSource>();
+        //}
 
 
 
@@ -141,7 +145,7 @@ public class GameManager : MonoBehaviour
     {
         gameGo = false;
         endTime = timer;
-        MusicLevel.gameObject.SetActive(false);
+        //MusicLevel.gameObject.SetActive(false);
         /*
         scoreScreen0.SetActive(true);
         scoreScreen1.SetActive(false);

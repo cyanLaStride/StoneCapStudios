@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     //private AudioSource SFXthrow;
     [SerializeField]
     private AudioSource SFXrun;
-    [SerializeField]
-    private AudioSource SFXjump;
+    //[SerializeField]
+    //private AudioSource SFXjump;
 
     [SerializeField]
     private GameManager gameManager;
@@ -148,7 +148,8 @@ public class PlayerController : MonoBehaviour
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed * slow);
                 anim.SetTrigger("jump");
-                SFXjump.Play();
+                //SFXjump.Play();
+                AudioManager.Instance.PlayPlayerSFX("JumpingLow");
             }
         }
         // crouch
@@ -182,7 +183,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D tossNew = Instantiate(tossPrefab, transform.position, Quaternion.identity);
             tossNew.velocity = (tossTowards - transform.position).normalized * tossSpeed; //+ new Vector3(rb2d.velocity.x, rb2d.velocity.y);
             Physics2D.IgnoreCollision(tossNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-            AudioManager.instance.PlayPlayerSFX("Throwing");
+            AudioManager.Instance.PlayPlayerSFX("Throwing");
         }
 
         // upgrades
@@ -238,7 +239,8 @@ public class PlayerController : MonoBehaviour
                     upgPropellorUse = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
                     anim.SetTrigger("jump");
-                    SFXjump.Play();
+                    //SFXjump.Play();
+                    AudioManager.Instance.PlayPlayerSFX("JumpingLow");
                 }
             }
         }

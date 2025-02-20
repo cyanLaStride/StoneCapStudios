@@ -7,8 +7,8 @@ public class spawnPoint : MonoBehaviour
     // setting spawn point
     public Transform respawn;
 
-    [SerializeField]
-    private AudioSource SFXrespawn;
+    //[SerializeField]
+    //private AudioSource SFXrespawn;
 
     // starting at spawn point
     private void Start()
@@ -29,6 +29,7 @@ public class spawnPoint : MonoBehaviour
     public void Respawn()
     {
         transform.position = respawn.position;
-        SFXrespawn.Play();
+        //SFXrespawn.Play();
+        AudioManager.Instance.PlayPlayerSFX("placeholder");
     }
 }

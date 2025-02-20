@@ -6,7 +6,7 @@ using System; // lol forgot to add this
 public class AudioManager : MonoBehaviour
 {
     // create a instance to call from any method
-    public static AudioManager instance;
+    public static AudioManager Instance;
 
     // all related to player such as coin pick up, respawn goes into player sfx
     public Sound[] PlayerSFX, JungleSFX, FireAndIceSFX;
@@ -16,9 +16,9 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(music, x => x.name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("You enter the wrong name");
         }
@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
     public void PlayPlayerSFX(string name)
     {
         Sound s = Array.Find(PlayerSFX, x => x.name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("You enter the wrong name");
         }
@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
     public void PlayJungleSFX(string name)
     {
         Sound s = Array.Find(JungleSFX, x => x.name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("You enter the wrong name");
         }
@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour
     public void PlayFireAndIceSFX(string name)
     {
         Sound s = Array.Find(FireAndIceSFX, x => x.name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("You enter the wrong name");
         }
