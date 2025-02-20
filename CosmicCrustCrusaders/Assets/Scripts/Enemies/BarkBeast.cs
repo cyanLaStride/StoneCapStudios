@@ -87,6 +87,7 @@ public class BarkBeast : MonoBehaviour
         if (distance <= runningRange && !isStun)
         {
             isIdle = false;
+            AudioManager.Instance.PlayJungleSFX("BarkBeast");
             //barkAudioClip.Play();
             idleTimer = 0.0f;
             animator.SetBool("BWalking", true);

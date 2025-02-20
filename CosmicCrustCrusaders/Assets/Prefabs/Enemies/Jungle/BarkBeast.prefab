@@ -114,10 +114,11 @@ MonoBehaviour:
   isIdle: 0
   isStun: 0
   isSlowed: 0
+  isStationery: 0
   speedDecreasePercentage: 5
   speed: 1
   runningRange: 15
-  attackRange: 10
+  attackRange: 7
   stunTime: 3
   idleTime: 3
 --- !u!61 &5427030457788702581
