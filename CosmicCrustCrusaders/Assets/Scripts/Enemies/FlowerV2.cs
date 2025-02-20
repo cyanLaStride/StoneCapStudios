@@ -56,6 +56,7 @@ public class FlowerV2 : MonoBehaviour
             // Check player direction and play animation
             animator.SetBool("FlowerAttack", true);
             animator.SetBool("FlowerIdle", false);
+            AudioManager.Instance.PlayJungleSFX("DanglingFlower");
             isIdle = false;
         }
         else if (collision.gameObject.CompareTag("Toss"))

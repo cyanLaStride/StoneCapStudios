@@ -49,8 +49,7 @@ public class VenusFlyTrap : MonoBehaviour
         {
             // Check player direction and play animation
             animator.SetTrigger("VAttack");
-            //vAttackAduio.Play();
-            Debug.Log("attack!");
+            AudioManager.Instance.PlayJungleSFX("VenusFlyTrap");
         }
         else if ((collision.gameObject.CompareTag("Toss")))
         {

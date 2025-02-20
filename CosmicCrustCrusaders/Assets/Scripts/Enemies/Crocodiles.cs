@@ -53,6 +53,8 @@ public class Crocodiles : MonoBehaviour
             if (shootTimer >= shootTime)
             {
                 shoot();
+                // throwing sound but affect whole map, will fix it later
+                //AudioManager.Instance.PlayJungleSFX("NinjaThrow");
                 shootTimer = 0.0f;
             }
         }
