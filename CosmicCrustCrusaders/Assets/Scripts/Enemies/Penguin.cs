@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Penguin : MonoBehaviour
 {
+    // setting
     [SerializeField]
     private bool isRight;
     private int direction;
     [SerializeField]
     private float force;
+    private bool isEnter = false; 
 
     [SerializeField]
     private Rigidbody2D rb;
-    // Start is called before the first frame update
-    // I don't get it
+
+    // getting component and setting up
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,8 +31,16 @@ public class Penguin : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+
+    }
+    // when penguin see the player
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        rb.AddForce(transform.right * direction * force);   
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            rb.velocity = Vector2.right * force * direction;
+        }
     }
 }
