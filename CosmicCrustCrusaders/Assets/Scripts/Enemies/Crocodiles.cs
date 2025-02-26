@@ -91,7 +91,7 @@ public class Crocodiles : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("Toss")))
+        if (collision.gameObject.CompareTag("Toss"))
         {
             isStun = true;
         }
