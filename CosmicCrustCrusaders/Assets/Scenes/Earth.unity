@@ -122,16 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &49228516 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4825729772329550655, guid: 486ea752c48f0d9409c1ec4d8cbfe253, type: 3}
-  m_PrefabInstance: {fileID: 2627913837247058321}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &49228517 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7808953173013966903, guid: 486ea752c48f0d9409c1ec4d8cbfe253, type: 3}
-  m_PrefabInstance: {fileID: 2627913837247058321}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &49344403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4742765215115587841, guid: e1b124c7eaac9cd47ad75365e79ffa16, type: 3}
@@ -10440,7 +10430,7 @@ Transform:
   - {fileID: 309549522}
   - {fileID: 815167392}
   - {fileID: 1551694149}
-  - {fileID: 49228516}
+  - {fileID: 2627913837247058322}
   - {fileID: 1237804967}
   - {fileID: 49344403}
   - {fileID: 1399829014}
@@ -15849,6 +15839,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1184904323884001968, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: AudioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 6cc268c615c0538438180b82c901c61e, type: 2}
     - target: {fileID: 1403396806213134639, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: pH
       value: 
@@ -16043,6 +16037,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 486ea752c48f0d9409c1ec4d8cbfe253, type: 3}
+--- !u!4 &2627913837247058322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3128573703968801241, guid: 486ea752c48f0d9409c1ec4d8cbfe253, type: 3}
+  m_PrefabInstance: {fileID: 2627913837247058321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4247135953207916908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16245,7 +16244,7 @@ PrefabInstance:
     - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: SFXrun
       value: 
-      objectReference: {fileID: 49228517}
+      objectReference: {fileID: 0}
     - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: SFXjump
       value: 

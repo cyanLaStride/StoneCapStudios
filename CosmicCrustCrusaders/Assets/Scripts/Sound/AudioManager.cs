@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(music, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("You enter the wrong name");
+            Debug.Log("You entered the wrong name");
         }
         else
         {
@@ -48,7 +48,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(PlayerSFX, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("You enter the wrong name");
+            Debug.Log("You entered the wrong name");
         }
         else
         {
@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(JungleSFX, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("You enter the wrong name");
+            Debug.Log("You entered the wrong name");
         }
         else
         {
@@ -76,7 +76,7 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(FireAndIceSFX, x => x.name == name);
         if (s == null)
         {
-            Debug.Log("You enter the wrong name");
+            Debug.Log("You entered the wrong name");
         }
         else
         {
