@@ -180,7 +180,7 @@ MonoBehaviour:
   timer: 0
   endTime: 0
   player: {fileID: 3788159498642257321, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
-  MusicLevel: {fileID: 0}
+  MusicLevel: 
   upgFlashlightUnlock: 0
   upgGrapplingHookUnlock: 0
   upgPropellorUnlock: 0
@@ -195,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384102261517752215}
   - component: {fileID: 2618410089083734895}
+  - component: {fileID: 1184904323884001968}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -259,6 +260,22 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 341607f9bea272d40a5b1b2aa24f29ed, type: 3}
   musicSource: {fileID: 12611355429066693}
   sfxSource: {fileID: 8898653807153044788}
+--- !u!114 &1184904323884001968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4159509729151312009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f82569113d7bf4b99a866b949bd400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioMixer: {fileID: 0}
+  masterSlider: {fileID: 0}
+  musicSlider: {fileID: 0}
+  SFXSlider: {fileID: 0}
 --- !u!1 &9182790307242033555
 GameObject:
   m_ObjectHideFlags: 0
