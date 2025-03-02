@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2573043912848795871}
   - component: {fileID: 4423417757836305565}
   - component: {fileID: 4435536515972871179}
+  - component: {fileID: 9015296172416668004}
   m_Layer: 8
   m_Name: Penguin
   m_TagString: Enemies
@@ -101,9 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34c6e8ce0dcf234ab359edf01ee9b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   isRight: 0
   force: 15
-  rb: {fileID: 0}
+  delayAttack: 3
+  stunTime: 3
 --- !u!50 &2573043912848795871
 Rigidbody2D:
   serializedVersion: 4
@@ -221,6 +224,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.08, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &9015296172416668004
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445494804966908619}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5568460578016863915
 GameObject:
   m_ObjectHideFlags: 0

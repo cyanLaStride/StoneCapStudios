@@ -685,6 +685,7 @@ MonoBehaviour:
   tossSpeed: 30
   anim: {fileID: 0}
   SFXrun: {fileID: 5109864505011547526, guid: 486ea752c48f0d9409c1ec4d8cbfe253, type: 3}
+  SFXjump: {fileID: 1806627105881975193, guid: 1c5ade854dcaeaf4a863f1964dd70630, type: 3}
   gameManager: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
   upgFlashlight: 0
   upgGrapplingHook: 0
@@ -937,7 +938,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 8.506061
+  m_Distance: 8.690086
   m_MaxDistanceOnly: 0
 --- !u!114 &4284427450445893348
 MonoBehaviour:

@@ -6,8 +6,7 @@ public class IceParticles : MonoBehaviour
 {
     // Update is called once per frame
 
-    [SerializeField]
-    private Icicle ic;
+    public Icicle ic;
 
     public bool isRight;
     private int direction;
@@ -19,11 +18,7 @@ public class IceParticles : MonoBehaviour
     {
         // setting speed
         speed = speed * 0.001f;
-
-    }
-    void Update()
-    {
-        isRight = ic.isRight;
+        isRight = Icicle.isRight;
         // checking direction
         if (isRight)
         {
@@ -33,7 +28,9 @@ public class IceParticles : MonoBehaviour
         {
             direction = -1;
         }
-
+    }
+    void Update()
+    {
         // move attack
         transform.position += new Vector3(speed * direction, 0.0f, 0.0f);
     }
@@ -44,6 +41,13 @@ public class IceParticles : MonoBehaviour
         if (collision.gameObject.CompareTag("ground"))
         {
             Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Icicle.freezePlayer = true;
         }
     }
 }

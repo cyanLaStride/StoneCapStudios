@@ -12,19 +12,30 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private PlayerController player;
     private float characterSpeed;
-    private bool freezePlayer;
+    static public bool freezePlayer;
 
+    [SerializeField]
+    private Animator animator;
     // timer
     private float timer;
     [SerializeField]
     private int freezeDuration;
 
-    public bool isRight;
+    static public bool isRight;
     [SerializeField]
     private Transform spawnLocation;
     [SerializeField]
     private GameObject iceParticles;
     public SpriteRenderer iceRenderer;
+
+    private bool isStun;
+    [SerializeField]
+    private float stunTime;
+    private float stunTimer = 0.0f;
+    [SerializeField]
+    private float delayAttack;
+    private float attackTimer = 0.0f;
+    private bool isAttacked = false;
 
     void Start()
     {
@@ -32,6 +43,7 @@ public class Icicle : MonoBehaviour
         characterSpeed = player.movementSpeed;
         timer = 0;
 
+        animator = GetComponent<Animator>();
         iceRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -59,13 +71,34 @@ public class Icicle : MonoBehaviour
         {
             isRight = true;
             iceRenderer.flipX = true;
-
+            spawnLocation.transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.x);
         }
         else if (player.transform.position.x < transform.position.x)
         {
             isRight = false;
-            iceRenderer.flipX = true;
-
+            iceRenderer.flipX = false;
+            spawnLocation.transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.x);
+        }
+        if (!isStun && isAttacked)
+        {
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= delayAttack)
+            {
+                isAttacked = false;
+                attackTimer = 0;
+            }
+        }
+        else if (isStun)
+        {
+            animator.enabled = false;
+            stunTimer += Time.deltaTime;
+            player.movementSpeed = characterSpeed;
+            if (stunTimer >= stunTime)
+            {
+                stunTimer = 0;
+                isStun = false;
+                animator.enabled = true;
+            }
         }
     }
 
@@ -73,7 +106,15 @@ public class Icicle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
+            if (!isAttacked && !isStun)
+            {
+                GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
+                isAttacked = true;
+            }
+        }
+        else if (collision.gameObject.CompareTag("Toss"))
+        {
+            isStun = true;
         }
     }
 }

@@ -11,42 +11,99 @@ public class LavaSlimes : MonoBehaviour
     private PlayerController player;
     [SerializeField]
     private Rigidbody2D rb;
+    [SerializeField]
+    private Animator animator;
 
     [SerializeField]
     private float speed;
-    private int direction;
+    private bool isRage;
+    [SerializeField]
+    private int speedMultiplier;
+    //private int direction;
+    public GameObject flipCheck;
+    public LayerMask ground;
+    private bool isRight;
+    public float circleRadius;
+    public bool isGrounded;
+
+    private bool isStun;
+    [SerializeField]
+    private float stunTime;
+    private float stunTimer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         //checkSameLevel = false;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+        if (isRage && !isStun)
+        {
+            animator.SetBool("Rage",true);
+            rb.velocity = Vector2.right * speed * speedMultiplier * Time.fixedDeltaTime;
+            isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
+        }
+        else if (!isRage && !isStun)
+        {
+            animator.SetBool("Rage", false);
+            rb.velocity = Vector2.right * speed * Time.fixedDeltaTime;
+            isGrounded = Physics2D.OverlapCircle(flipCheck.transform.position, circleRadius, ground);
+        }
+        else if (isStun)
+        {
+            animator.enabled = false;
+            stunTimer += Time.deltaTime;
+            rb.velocity = Vector2.zero;
+            if (stunTimer >= stunTime)
+            {
+                stunTimer = 0;
+                isStun = false;
+                animator.enabled = true;
+            }
+        }
+        if (isGrounded && isRight && !isStun)
+        {
+            flip();
+        }
+        else if (isGrounded && !isRight && !isStun)
+        {
+            flip();
+        }
         if (player.transform.position.y - 0.3 >= transform.position.y - 0.3 && player.transform.position.y - 0.3 <= transform.position.y + 0.3)
         {
-            //checkSameLevel = true;
-            transform.localScale = new Vector2(1.5f, 1.5f);
-            rb.velocity = Vector2.right * speed * 100 * direction * Time.fixedDeltaTime;
-
+            isRage = true;
         }
         else if (player.transform.position.y -0.3 < transform.position.y - 0.4 || player.transform.position.y - 0.3 > transform.position.y + 0.4)
         {
-            //checkSameLevel = false;
-            transform.localScale = new Vector2(1f, 1f);
+            isRage = false;
+        }
 
-        }
         //Debug.Log(checkSameLevel);
-        if (player.transform.position.x > transform.position.x)
+    }
+    private void flip()
+    {
+        isRight = !isRight;
+        transform.Rotate(new Vector3(0, 180, 0));
+        speed = -speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Toss"))
         {
-            direction = 1;
+            isStun = true; 
         }
-        else if (player.transform.position.x < transform.position.x)
-        {
-            direction = -1;
-        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(flipCheck.transform.position, circleRadius);
     }
 }
