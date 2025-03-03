@@ -239,8 +239,8 @@ public class PlayerController : MonoBehaviour
                     upgPropellorUse = false;
                     rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
                     anim.SetTrigger("jump");
-                    //SFXjump.Play();
-                    AudioManager.Instance.PlayPlayerSFX("JumpingLow");
+                    SFXjump.Play();
+                    //AudioManager.Instance.PlayPlayerSFX("JumpingLow");
                 }
             }
         }

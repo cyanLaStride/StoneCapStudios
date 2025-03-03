@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2918328513906101485}
   - component: {fileID: 3562851483061285047}
   m_Layer: 8
-  m_Name: FlowerEnemy
+  m_Name: SnowAngelBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,8 +159,9 @@ GameObject:
   - component: {fileID: 7185675439652041295}
   - component: {fileID: 241324348826545570}
   - component: {fileID: 5892603579830213825}
+  - component: {fileID: 7530904577876849708}
   m_Layer: 8
-  m_Name: Flower
+  m_Name: SnowAngel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 643232d0e137fb14197683d6e0d6d9f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,9 +248,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   player: {fileID: 0}
+  animator: {fileID: 0}
   targetDistance: 10
   flowerBase: {fileID: 3480515305202255823}
   radius: 10
+  stunTime: 3
 --- !u!61 &241324348826545570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -286,7 +289,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.48, y: 0.48}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -309,6 +312,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
   damage: 1
-  onEnter: 1
+  onEnter: 0
   onStay: 0
-  onTrigger: 0
+  onTrigger: 1
+--- !u!95 &7530904577876849708
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6673631936215616697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d280b0c620bc81b4eb436db08115e991, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -108,6 +108,7 @@ public class Icicle : MonoBehaviour
         {
             if (!isAttacked && !isStun)
             {
+                animator.SetTrigger("IcicleAttack");
                 GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
                 isAttacked = true;
             }
