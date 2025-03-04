@@ -282,7 +282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 25828966}
   - component: {fileID: 25828968}
-  - component: {fileID: 25828967}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_11
   m_TagString: Untagged
@@ -299,25 +298,12 @@ Transform:
   m_GameObject: {fileID: 25828965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -240, y: 27.5, z: 0}
+  m_LocalPosition: {x: -240, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &25828967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25828965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &25828968
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -479,35 +465,6 @@ Transform:
   - {fileID: 1483338015}
   - {fileID: 1123967542}
   - {fileID: 1815850061}
-  - {fileID: 426653053}
-  - {fileID: 1236091235}
-  - {fileID: 1143488655}
-  - {fileID: 611418186}
-  - {fileID: 1587664470}
-  - {fileID: 923226617}
-  - {fileID: 1179962789}
-  - {fileID: 1716756272}
-  - {fileID: 939251332}
-  - {fileID: 1285007025}
-  - {fileID: 1366173993}
-  - {fileID: 25828966}
-  - {fileID: 1939936976}
-  - {fileID: 1273676245}
-  - {fileID: 728722288}
-  - {fileID: 2086786818}
-  - {fileID: 1474164172}
-  - {fileID: 1303755277}
-  - {fileID: 512309785}
-  - {fileID: 1902862239}
-  - {fileID: 1041538246}
-  - {fileID: 642688042}
-  - {fileID: 335515214}
-  - {fileID: 1406377070}
-  - {fileID: 493921884}
-  - {fileID: 488965160}
-  - {fileID: 751670335}
-  - {fileID: 936322141}
-  - {fileID: 544474173}
   - {fileID: 1785702520}
   - {fileID: 2120536168}
   m_Father: {fileID: 0}
@@ -726,6 +683,10 @@ PrefabInstance:
       propertyPath: Coins
       value: 
       objectReference: {fileID: 586941499}
+    - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1032269552}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: timerText
       value: 
@@ -1147,7 +1108,7 @@ PrefabInstance:
     - target: {fileID: 778269556818483218, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: respawn
       value: 
-      objectReference: {fileID: 2121678957}
+      objectReference: {fileID: 2120536168}
     - target: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: cam
       value: 
@@ -1166,11 +1127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.071526
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.103727
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52156,7 +52117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 335515214}
   - component: {fileID: 335515216}
-  - component: {fileID: 335515215}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_8
   m_TagString: Untagged
@@ -52173,25 +52133,12 @@ Transform:
   m_GameObject: {fileID: 335515213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48, y: -80.5, z: 0}
+  m_LocalPosition: {x: -48, y: -81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &335515215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335515213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &335515216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52349,7 +52296,6 @@ GameObject:
   m_Component:
   - component: {fileID: 426653053}
   - component: {fileID: 426653055}
-  - component: {fileID: 426653054}
   m_Layer: 0
   m_Name: IGN_Beta_Neutral_1
   m_TagString: Untagged
@@ -52366,25 +52312,12 @@ Transform:
   m_GameObject: {fileID: 426653052}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &426653054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426653052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &426653055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134564,7 +134497,6 @@ GameObject:
   m_Component:
   - component: {fileID: 488965160}
   - component: {fileID: 488965162}
-  - component: {fileID: 488965161}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_11
   m_TagString: Untagged
@@ -134581,25 +134513,12 @@ Transform:
   m_GameObject: {fileID: 488965159}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -144, y: -53.5, z: 0}
+  m_LocalPosition: {x: -144, y: -54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &488965161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488965159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &488965162
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134662,7 +134581,6 @@ GameObject:
   m_Component:
   - component: {fileID: 493921884}
   - component: {fileID: 493921886}
-  - component: {fileID: 493921885}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_10
   m_TagString: Untagged
@@ -134679,25 +134597,12 @@ Transform:
   m_GameObject: {fileID: 493921883}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -144, y: -80.5, z: 0}
+  m_LocalPosition: {x: -144, y: -81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &493921885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493921883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &493921886
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134934,7 +134839,6 @@ GameObject:
   m_Component:
   - component: {fileID: 512309785}
   - component: {fileID: 512309787}
-  - component: {fileID: 512309786}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_4
   m_TagString: Untagged
@@ -134951,25 +134855,12 @@ Transform:
   m_GameObject: {fileID: 512309784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -53.5, z: 0}
+  m_LocalPosition: {x: 0, y: -54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &512309786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512309784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &512309787
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135308,7 +135199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 544474173}
   - component: {fileID: 544474175}
-  - component: {fileID: 544474174}
   m_Layer: 0
   m_Name: IGN_Beta_Neutral_2
   m_TagString: Untagged
@@ -135325,25 +135215,12 @@ Transform:
   m_GameObject: {fileID: 544474172}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -193, y: -26.5, z: 0}
+  m_LocalPosition: {x: -193, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &544474174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544474172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &544474175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135508,7 +135385,6 @@ GameObject:
   m_Component:
   - component: {fileID: 611418186}
   - component: {fileID: 611418188}
-  - component: {fileID: 611418187}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_3
   m_TagString: Untagged
@@ -135525,25 +135401,12 @@ Transform:
   m_GameObject: {fileID: 611418185}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 54.5, z: 0}
+  m_LocalPosition: {x: 0, y: 54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &611418187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611418185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &611418188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135862,7 +135725,6 @@ GameObject:
   m_Component:
   - component: {fileID: 642688042}
   - component: {fileID: 642688044}
-  - component: {fileID: 642688043}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_7
   m_TagString: Untagged
@@ -135879,25 +135741,12 @@ Transform:
   m_GameObject: {fileID: 642688041}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48, y: -107.5, z: 0}
+  m_LocalPosition: {x: -48, y: -108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &642688043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642688041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &642688044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136314,7 +136163,6 @@ GameObject:
   m_Component:
   - component: {fileID: 728722288}
   - component: {fileID: 728722290}
-  - component: {fileID: 728722289}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_14
   m_TagString: Untagged
@@ -136331,25 +136179,12 @@ Transform:
   m_GameObject: {fileID: 728722287}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 27.5, z: 0}
+  m_LocalPosition: {x: 0, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &728722289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728722287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &728722290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136412,7 +136247,6 @@ GameObject:
   m_Component:
   - component: {fileID: 751670335}
   - component: {fileID: 751670337}
-  - component: {fileID: 751670336}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_12
   m_TagString: Untagged
@@ -136429,25 +136263,12 @@ Transform:
   m_GameObject: {fileID: 751670334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -192, y: -53.5, z: 0}
+  m_LocalPosition: {x: -192, y: -54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &751670336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751670334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &751670337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -136945,7 +136766,6 @@ GameObject:
   m_Component:
   - component: {fileID: 923226617}
   - component: {fileID: 923226619}
-  - component: {fileID: 923226618}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_5
   m_TagString: Untagged
@@ -136962,25 +136782,12 @@ Transform:
   m_GameObject: {fileID: 923226616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48, y: 27.5, z: 0}
+  m_LocalPosition: {x: -48, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &923226618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923226616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &923226619
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137505,7 +137312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 936322141}
   - component: {fileID: 936322143}
-  - component: {fileID: 936322142}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_13
   m_TagString: Untagged
@@ -137522,25 +137328,12 @@ Transform:
   m_GameObject: {fileID: 936322140}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -192, y: -26.5, z: 0}
+  m_LocalPosition: {x: -192, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &936322142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936322140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &936322143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137603,7 +137396,6 @@ GameObject:
   m_Component:
   - component: {fileID: 939251332}
   - component: {fileID: 939251334}
-  - component: {fileID: 939251333}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_8
   m_TagString: Untagged
@@ -137620,25 +137412,12 @@ Transform:
   m_GameObject: {fileID: 939251331}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -144, y: 27.5, z: 0}
+  m_LocalPosition: {x: -144, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &939251333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939251331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &939251334
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -138338,7 +138117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1041538246}
   - component: {fileID: 1041538248}
-  - component: {fileID: 1041538247}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_6
   m_TagString: Untagged
@@ -138355,25 +138133,12 @@ Transform:
   m_GameObject: {fileID: 1041538245}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -107.5, z: 0}
+  m_LocalPosition: {x: 0, y: -108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1041538247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041538245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1041538248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139325,7 +139090,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1143488655}
   - component: {fileID: 1143488657}
-  - component: {fileID: 1143488656}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_2
   m_TagString: Untagged
@@ -139342,25 +139106,12 @@ Transform:
   m_GameObject: {fileID: 1143488654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48, y: 54.5, z: 0}
+  m_LocalPosition: {x: 48, y: 54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1143488656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143488654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1143488657
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139423,7 +139174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1179962789}
   - component: {fileID: 1179962791}
-  - component: {fileID: 1179962790}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_6
   m_TagString: Untagged
@@ -139440,25 +139190,12 @@ Transform:
   m_GameObject: {fileID: 1179962788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96, y: 27.5, z: 0}
+  m_LocalPosition: {x: -96, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1179962790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179962788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1179962791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139808,7 +139545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1236091235}
   - component: {fileID: 1236091237}
-  - component: {fileID: 1236091236}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_1
   m_TagString: Untagged
@@ -139825,25 +139561,12 @@ Transform:
   m_GameObject: {fileID: 1236091234}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48, y: 27.5, z: 0}
+  m_LocalPosition: {x: 48, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236091236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236091234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1236091237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139975,7 +139698,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1273676245}
   - component: {fileID: 1273676247}
-  - component: {fileID: 1273676246}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_13
   m_TagString: Untagged
@@ -139992,25 +139714,12 @@ Transform:
   m_GameObject: {fileID: 1273676244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -240, y: -26.5, z: 0}
+  m_LocalPosition: {x: -240, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1273676246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273676244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1273676247
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140073,7 +139782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1285007025}
   - component: {fileID: 1285007027}
-  - component: {fileID: 1285007026}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_9
   m_TagString: Untagged
@@ -140090,25 +139798,12 @@ Transform:
   m_GameObject: {fileID: 1285007024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -144, y: 54.5, z: 0}
+  m_LocalPosition: {x: -144, y: 54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1285007026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285007024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1285007027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140171,7 +139866,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1303755277}
   - component: {fileID: 1303755279}
-  - component: {fileID: 1303755278}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_3
   m_TagString: Untagged
@@ -140188,25 +139882,12 @@ Transform:
   m_GameObject: {fileID: 1303755276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48, y: -53.5, z: 0}
+  m_LocalPosition: {x: 48, y: -54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1303755278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303755276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1303755279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140695,7 +140376,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1366173993}
   - component: {fileID: 1366173995}
-  - component: {fileID: 1366173994}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_10
   m_TagString: Untagged
@@ -140712,25 +140392,12 @@ Transform:
   m_GameObject: {fileID: 1366173992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -192, y: 27.5, z: 0}
+  m_LocalPosition: {x: -192, y: 27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1366173994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366173992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1366173995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140793,7 +140460,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1406377070}
   - component: {fileID: 1406377072}
-  - component: {fileID: 1406377071}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_9
   m_TagString: Untagged
@@ -140810,25 +140476,12 @@ Transform:
   m_GameObject: {fileID: 1406377069}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96, y: -80.5, z: 0}
+  m_LocalPosition: {x: -96, y: -81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1406377071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406377069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1406377072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140975,7 +140628,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1474164172}
   - component: {fileID: 1474164174}
-  - component: {fileID: 1474164173}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_2
   m_TagString: Untagged
@@ -140992,25 +140644,12 @@ Transform:
   m_GameObject: {fileID: 1474164171}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48, y: -26.5, z: 0}
+  m_LocalPosition: {x: 48, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1474164173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474164171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1474164174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141372,7 +141011,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1587664470}
   - component: {fileID: 1587664472}
-  - component: {fileID: 1587664471}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_4
   m_TagString: Untagged
@@ -141389,25 +141027,12 @@ Transform:
   m_GameObject: {fileID: 1587664469}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48, y: 54.5, z: 0}
+  m_LocalPosition: {x: -48, y: 54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1587664471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587664469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1587664472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -141712,7 +141337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2418395257025494246, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2742615051162720136, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -142019,7 +141644,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1716756272}
   - component: {fileID: 1716756274}
-  - component: {fileID: 1716756273}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_7
   m_TagString: Untagged
@@ -142036,25 +141660,12 @@ Transform:
   m_GameObject: {fileID: 1716756271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96, y: 54.5, z: 0}
+  m_LocalPosition: {x: -96, y: 54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1716756273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716756271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1716756274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -142581,10 +142192,39 @@ Transform:
   m_GameObject: {fileID: 1815850060}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 426653053}
+  - {fileID: 1236091235}
+  - {fileID: 1143488655}
+  - {fileID: 611418186}
+  - {fileID: 1587664470}
+  - {fileID: 923226617}
+  - {fileID: 1179962789}
+  - {fileID: 1716756272}
+  - {fileID: 939251332}
+  - {fileID: 1285007025}
+  - {fileID: 1366173993}
+  - {fileID: 25828966}
+  - {fileID: 1939936976}
+  - {fileID: 1273676245}
+  - {fileID: 728722288}
+  - {fileID: 2086786818}
+  - {fileID: 1474164172}
+  - {fileID: 1303755277}
+  - {fileID: 512309785}
+  - {fileID: 1902862239}
+  - {fileID: 1041538246}
+  - {fileID: 642688042}
+  - {fileID: 335515214}
+  - {fileID: 1406377070}
+  - {fileID: 493921884}
+  - {fileID: 488965160}
+  - {fileID: 751670335}
+  - {fileID: 936322141}
+  - {fileID: 544474173}
   m_Father: {fileID: 51554590}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1816972000
@@ -142799,7 +142439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1902862239}
   - component: {fileID: 1902862241}
-  - component: {fileID: 1902862240}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_5
   m_TagString: Untagged
@@ -142816,25 +142455,12 @@ Transform:
   m_GameObject: {fileID: 1902862238}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -80.5, z: 0}
+  m_LocalPosition: {x: 0, y: -81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1902862240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902862238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1902862241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -142975,7 +142601,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1939936976}
   - component: {fileID: 1939936978}
-  - component: {fileID: 1939936977}
   m_Layer: 0
   m_Name: IGN_Beta_Ice_12
   m_TagString: Untagged
@@ -142992,25 +142617,12 @@ Transform:
   m_GameObject: {fileID: 1939936975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -240, y: 0.5, z: 0}
+  m_LocalPosition: {x: -240, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1939936977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939936975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &1939936978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -143443,7 +143055,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2086786818}
   - component: {fileID: 2086786820}
-  - component: {fileID: 2086786819}
   m_Layer: 0
   m_Name: IGN_Beta_Hot_1
   m_TagString: Untagged
@@ -143460,25 +143071,12 @@ Transform:
   m_GameObject: {fileID: 2086786817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -26.5, z: 0}
+  m_LocalPosition: {x: 0, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 51554590}
+  m_Father: {fileID: 1815850061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2086786819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086786817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe32b6a03dd94584090a4ad17f381fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: {fileID: 0}
 --- !u!212 &2086786820
 SpriteRenderer:
   m_ObjectHideFlags: 0

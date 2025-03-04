@@ -13,6 +13,9 @@ public class ShopManagerScript : MonoBehaviour
 
     private GameManager gameManager;
 
+    [SerializeField]
+    private GameObject IgnateaBuyButton;
+
 
     void Start()
     {
@@ -31,7 +34,7 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[2, 1] = 80;
         shopItems[2, 2] = 10;
         shopItems[2, 3] = 35;
-        shopItems[2, 4] = 100;
+        shopItems[2, 4] = 50;
 
 
         //Quantity 
@@ -51,6 +54,10 @@ public class ShopManagerScript : MonoBehaviour
         {
             shopItems[3, 3] = 1;
         }
+        if (gameManager.lvlIgnateaUnlock)
+        {
+            shopItems[3, 4] = 1;
+        }
 
         // Stock available
         shopItems[4, 1] = 1;
@@ -69,7 +76,11 @@ public class ShopManagerScript : MonoBehaviour
         {
             shopItems[4, 3] = 0;
         }
-
+        if (gameManager.lvlIgnateaUnlock)
+        {
+            shopItems[4, 4] = 0;
+            IgnateaBuyButton.SetActive(false);
+        }
 
     }
 
@@ -92,6 +103,11 @@ public class ShopManagerScript : MonoBehaviour
             else if (itemID == 3)
             {
                 gameManager.upgBuddyBoostersUnlock = true;
+            }
+            else if (itemID == 4)
+            {
+                gameManager.lvlIgnateaUnlock = true;
+                IgnateaBuyButton.SetActive(false);
             }
             gameManager.CoinCount -= shopItems[2, itemID];
             shopItems[3, itemID]++; // Increase purchased quantity

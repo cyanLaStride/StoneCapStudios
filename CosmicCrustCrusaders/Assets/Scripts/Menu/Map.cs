@@ -21,6 +21,11 @@ public class Map : MonoBehaviour
         SceneManager.LoadSceneAsync("Zygophyla");
     }
 
+    public void Ignatea()
+    {
+        SceneManager.LoadSceneAsync("Ignatea");
+    }
+
     public void UpgradeShop()
     {
         SceneManager.LoadSceneAsync("Upgrade Shop");

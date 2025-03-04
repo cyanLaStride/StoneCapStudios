@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public bool upgGrapplingHookUnlock = false;
     public bool upgPropellorUnlock = false;
     public bool upgBuddyBoostersUnlock = false;
+    public bool lvlIgnateaUnlock = false;
 
     // Start is called before the first frame update
     void Start()
