@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
     {
         gameGo = false;
         endTime = timer;
+        AudioManager.Instance.musicSource.Stop();
         //MusicLevel.gameObject.SetActive(false);
         /*
         scoreScreen0.SetActive(true);

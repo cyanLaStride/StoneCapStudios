@@ -21,10 +21,10 @@ public class ShopManagerScript : MonoBehaviour
         CoinsTXT.text = "Coins: " + gameManager.CoinCount.ToString();
 
         //ID's
-        shopItems[1, 1] = 1;
-        shopItems[1, 2] = 2;
-        shopItems[1, 3] = 3;
-        shopItems[1, 4] = 4;
+        shopItems[1, 1] = 1; // hook
+        shopItems[1, 2] = 2; // propellor
+        shopItems[1, 3] = 3; // boosters
+        shopItems[1, 4] = 4; //  unused
 
 
         //Price
@@ -39,19 +39,36 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[3, 2] = 0;
         shopItems[3, 3] = 0;
         shopItems[3, 4] = 0;
+        if (gameManager.upgGrapplingHookUnlock)
+        {
+            shopItems[3, 1] = 1;
+        }
+        if (gameManager.upgPropellorUnlock)
+        {
+            shopItems[3, 2] = 1;
+        }
+        if (gameManager.upgBuddyBoostersUnlock)
+        {
+            shopItems[3, 3] = 1;
+        }
 
-        // Stock available 
-
+        // Stock available
         shopItems[4, 1] = 1;
         shopItems[4, 2] = 1;
         shopItems[4, 3] = 1;
         shopItems[4, 4] = 1;
-
-
-
-
-
-
+        if (gameManager.upgGrapplingHookUnlock)
+        {
+            shopItems[4, 1] = 0;
+        }
+        if (gameManager.upgPropellorUnlock)
+        {
+            shopItems[4, 2] = 0;
+        }
+        if (gameManager.upgBuddyBoostersUnlock)
+        {
+            shopItems[4, 3] = 0;
+        }
 
 
     }
