@@ -75,16 +75,17 @@ public class LavaSlimes : MonoBehaviour
         {
             flip();
         }
-        if (player.transform.position.y - 0.3 >= transform.position.y - 0.3 && player.transform.position.y - 0.3 <= transform.position.y + 0.3)
+        if (player.transform.position.y - 1 >= transform.position.y - 0.3 && player.transform.position.y - 1 <= transform.position.y + 0.3)
         {
             isRage = true;
         }
-        else if (player.transform.position.y -0.3 < transform.position.y - 0.4 || player.transform.position.y - 0.3 > transform.position.y + 0.4)
+        else if (player.transform.position.y - 1 < transform.position.y - 0.4 || player.transform.position.y - 1 > transform.position.y + 0.4)
         {
             isRage = false;
         }
 
-        //Debug.Log(checkSameLevel);
+        
+        //Debug.Log(isRage);
     }
     private void flip()
     {

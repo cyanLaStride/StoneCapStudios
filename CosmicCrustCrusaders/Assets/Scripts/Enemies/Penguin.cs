@@ -8,6 +8,7 @@ public class Penguin : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     [SerializeField]
     private bool isRight;
@@ -24,11 +25,18 @@ public class Penguin : MonoBehaviour
     private float stunTime;
     private float stunTimer;
 
+
     // getting component and setting up
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (!isRight)
+        {
+            flip();
+        }
 
         attack = true;
     }

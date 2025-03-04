@@ -36,6 +36,7 @@ public class IceParticles : MonoBehaviour
     }
 
     // set limit
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
@@ -43,11 +44,16 @@ public class IceParticles : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Icicle.freezePlayer = true;
         }
+        //else if (collision.gameObject.CompareTag("ground"))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
