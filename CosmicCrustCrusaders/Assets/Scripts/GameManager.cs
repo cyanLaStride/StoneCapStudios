@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TMP_Text Coins;
     public int CoinCount;
+    public int coinsAtStart;
 
     // timer
     [SerializeField]
@@ -163,6 +164,7 @@ public class GameManager : MonoBehaviour
     {
         timer = 0;
         gameGo = true;
+        coinsAtStart = CoinCount;
         
         player.upgFlashlight = upgFlashlightUnlock;
         player.upgGrapplingHook = upgGrapplingHookUnlock;

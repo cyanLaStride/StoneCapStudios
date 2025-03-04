@@ -52,7 +52,7 @@ public class PizzaShopTrigger : MonoBehaviour
             if (gameManager.timer > gameManager.endTime + 1 && s1)
             {
                 s1 = false;
-                scoreScreen1.GetComponent<TMP_Text>().text = "\r\n\r\nCoins: " + gameManager.CoinCount;
+                scoreScreen1.GetComponent<TMP_Text>().text = "\r\n\r\nCoins Collected: " + (gameManager.CoinCount-gameManager.coinsAtStart);
                 scoreScreen1.SetActive(true);
                 SFXclick.Play();
             }
