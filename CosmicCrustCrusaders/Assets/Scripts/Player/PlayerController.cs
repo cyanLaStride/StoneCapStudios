@@ -209,11 +209,7 @@ public class PlayerController : MonoBehaviour
                 layerMask: grappleLayer
                 );
 
-                if (hit)
-                {
-                    Debug.DrawRay(transform.position, cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane))-transform.position, Color.green, 5);
-                    Debug.Log("hit");
-                }
+                Debug.DrawRay(transform.position, cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane)) - transform.position, Color.green, 5);
 
                 if (hit.collider != null)
                 {

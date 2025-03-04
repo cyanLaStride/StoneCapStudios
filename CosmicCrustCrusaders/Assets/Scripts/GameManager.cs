@@ -165,6 +165,7 @@ public class GameManager : MonoBehaviour
         timer = 0;
         gameGo = true;
         coinsAtStart = CoinCount;
+        player.isInteracting = false;
         
         player.upgFlashlight = upgFlashlightUnlock;
         player.upgGrapplingHook = upgGrapplingHookUnlock;
