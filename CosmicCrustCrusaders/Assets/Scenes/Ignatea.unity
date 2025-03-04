@@ -495,7 +495,7 @@ Transform:
   m_GameObject: {fileID: 71737577}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -240, y: -27, z: 0}
+  m_LocalPosition: {x: -240, y: -26.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -617,8 +617,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 399652453}
     - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: music.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: PlayerSFX.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: music.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a936501266fdd34f8a4741b849c26ef, type: 3}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: music.Array.data[4].name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: music.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50533c26dcb2a9843be4b3ba5e3319ad, type: 3}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: music.Array.data[5].name
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: PlayerSFX.Array.data[3].clip
@@ -694,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 1195503835}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: MusicLevel
-      value: Jungle
+      value: Ice
       objectReference: {fileID: 0}
     - target: {fileID: 4356941407541348466, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: upgPropellorUnlock
