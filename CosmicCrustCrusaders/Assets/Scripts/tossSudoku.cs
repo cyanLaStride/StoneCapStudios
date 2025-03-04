@@ -24,6 +24,10 @@ public class tossSudoku : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemies"))
         {
+            if(this.GetComponent<Rigidbody2D>().gravityScale == 0f)
+            {
+                Destroy(collision.gameObject);
+            }
             Destroy(gameObject);
         }
     }

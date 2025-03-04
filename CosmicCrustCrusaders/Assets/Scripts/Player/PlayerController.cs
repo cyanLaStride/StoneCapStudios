@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
     public bool upgGrapplingHook = false;
     public bool upgPropellor = false;
     public bool upgBuddyBoosters = false;
+    public bool upgPizzaPistol = false;
 
     public bool upgPropellorUse = false;
 
@@ -246,7 +247,7 @@ public class PlayerController : MonoBehaviour
             {
                 upgPropellorUse = true;
             }
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (upgPropellorUse && !isGrounded)
                 {
@@ -269,7 +270,27 @@ public class PlayerController : MonoBehaviour
             }
             // rest in movement
         }
-
+        if (upgPizzaPistol)
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                Vector3 shootTowards = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+                shootTowards.z = 0;
+                Rigidbody2D shootNew = Instantiate(tossPrefab, transform.position, Quaternion.identity);
+                shootNew.velocity = (shootTowards - transform.position).normalized * tossSpeed * 2; //+ new Vector3(rb2d.velocity.x, rb2d.velocity.y);
+                shootNew.GetComponent<Rigidbody2D>().gravityScale = 0f;
+                Physics2D.IgnoreCollision(shootNew.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+                AudioManager.Instance.PlayPlayerSFX("Throwing");
+            }
+        }
+        if (Input.GetKey(KeyCode.P)) // for ease of testing
+        {
+            upgFlashlight = true;
+            upgGrapplingHook = true;
+            upgPropellor = true;
+            upgBuddyBoosters = true;
+            upgPizzaPistol = true;
+}
         /* obselete camera movement
         if (this.transform.position.x/24 < 1)
         {
