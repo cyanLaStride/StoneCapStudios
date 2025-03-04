@@ -196,17 +196,27 @@ public class PlayerController : MonoBehaviour
         }
         if (upgGrapplingHook)
         {
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("spiderman");
                 RaycastHit2D hit = Physics2D.Raycast(
-                origin: Camera.main.ScreenToWorldPoint(Input.mousePosition),
-                direction: Vector2.zero,
+                //origin: Camera.main.ScreenToWorldPoint(Input.mousePosition),
+                origin: transform.position,
+                //direction: Vector2.zero,
+                direction: cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane)) - transform.position,
                 distance: Mathf.Infinity,
                 layerMask: grappleLayer
                 );
 
+                if (hit)
+                {
+                    Debug.DrawRay(transform.position, cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane))-transform.position, Color.green, 5);
+                    Debug.Log("hit");
+                }
+
                 if (hit.collider != null)
                 {
+                    Debug.Log("connect");
                     grapplePoint = hit.point;
                     grapplePoint.z = 0;
                     joint.connectedAnchor = grapplePoint;
@@ -218,8 +228,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyUp("e"))
+            if (Input.GetKeyUp(KeyCode.E))
             {
+                Debug.Log("spiderman't");
                 joint.enabled = false;
                 rope.enabled = false;
             }
