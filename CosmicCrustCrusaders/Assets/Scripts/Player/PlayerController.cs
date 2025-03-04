@@ -140,20 +140,23 @@ public class PlayerController : MonoBehaviour
             
             anim.SetBool("run", false);
             SFXrun.gameObject.SetActive(false);
+            
         }
         // jump
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
+            
             if (isGrounded)
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed * slow);
                 anim.SetTrigger("jump");
-                SFXjump.Play();
-                //AudioManager.Instance.PlayPlayerSFX("JumpingLow");
+                //SFXjump.Play();
+
+                AudioManager.Instance.PlayPlayerSFX("JumpingLow");
             }
         }
         // crouch
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.DownArrow))
         {
             anim.SetBool("crouch", true);
             //this.transform.localScale = new Vector3(1, 0.5f, 1);
