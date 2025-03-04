@@ -150,9 +150,9 @@ public class PlayerController : MonoBehaviour
             {
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed * slow);
                 anim.SetTrigger("jump");
-                //SFXjump.Play();
+                SFXjump.Play();
 
-                AudioManager.Instance.PlayPlayerSFX("JumpingLow");
+                //AudioManager.Instance.PlayPlayerSFX("JumpingLow");
             }
         }
         // crouch
