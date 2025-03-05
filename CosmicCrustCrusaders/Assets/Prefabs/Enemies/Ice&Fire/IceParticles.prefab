@@ -104,6 +104,7 @@ MonoBehaviour:
   ic: {fileID: 3440222763623771282, guid: 8db9436593e2c6b4b97b3df06565dd27, type: 3}
   isRight: 0
   speed: 5
+  spriteRenderer: {fileID: 0}
 --- !u!61 &5184856604329735197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

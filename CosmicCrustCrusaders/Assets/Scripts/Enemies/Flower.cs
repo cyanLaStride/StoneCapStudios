@@ -11,14 +11,14 @@ public class Flower : MonoBehaviour
 
     [SerializeField]
     private Flowerhead flowerhead;
-    [SerializeField]
-    private FlowerStem stem;
+    //[SerializeField]
+    //private FlowerStem stem;
 
     // Start is called before the first frame update
     void Start()
     {
-        FlowerStem newLine = Instantiate(stem);
-        newLine.targetFlower(transform.position, flowerhead.transform);
+        //FlowerStem newLine = Instantiate(stem);
+        //newLine.targetFlower(transform.position, flowerhead.transform);
     }
 
     // Update is called once per frame

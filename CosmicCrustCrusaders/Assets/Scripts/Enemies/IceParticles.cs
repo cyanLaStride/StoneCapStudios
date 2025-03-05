@@ -12,6 +12,8 @@ public class IceParticles : MonoBehaviour
     private int direction;
     [SerializeField]
     private float speed;
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
     
 
     private void Start()
@@ -19,14 +21,19 @@ public class IceParticles : MonoBehaviour
         // setting speed
         speed = speed * 0.001f;
         isRight = Icicle.isRight;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         // checking direction
         if (isRight)
         {
             direction = 1;
+            spriteRenderer.flipX = true;
         }
         else if (!isRight)
         {
             direction = -1;
+            spriteRenderer.flipX = false;
         }
     }
     void Update()

@@ -10,6 +10,8 @@ public class Flowerhead : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private Animator animator;
+    [SerializeField] 
+    private SpriteRenderer spriteRenderer;
     [SerializeField]
     private int targetDistance;
     [SerializeField]
@@ -28,6 +30,7 @@ public class Flowerhead : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -63,6 +66,14 @@ public class Flowerhead : MonoBehaviour
                 isStun = false;
                 animator.enabled = true;
             }
+        }
+        if (player.transform.position.x > transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (player.transform.position.x < transform.position.x)
+        {
+            spriteRenderer.flipX = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
