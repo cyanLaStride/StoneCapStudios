@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   isRight: 0
-  force: 25
+  force: 27
   delayAttack: 2
   stunTime: 3
 --- !u!50 &2573043912848795871
