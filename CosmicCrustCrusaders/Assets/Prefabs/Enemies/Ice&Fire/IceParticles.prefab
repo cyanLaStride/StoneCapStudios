@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
-  damage: 1
+  damage: 2
   onEnter: 0
   onStay: 0
   onTrigger: 1
