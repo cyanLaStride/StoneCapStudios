@@ -20,17 +20,17 @@ public class IceParticles : MonoBehaviour
     {
         // setting speed
         speed = speed * 0.001f;
-        isRight = Icicle.isRight;
+        isRight = ic.isRight;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // checking direction
-        if (isRight)
+        if (ic.isRight)
         {
             direction = 1;
             spriteRenderer.flipX = true;
         }
-        else if (!isRight)
+        else if (!ic.isRight)
         {
             direction = -1;
             spriteRenderer.flipX = false;
@@ -38,6 +38,7 @@ public class IceParticles : MonoBehaviour
     }
     void Update()
     {
+
         // move attack
         transform.position += new Vector3(speed * direction, 0.0f, 0.0f);
     }

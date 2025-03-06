@@ -21,7 +21,7 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private int freezeDuration;
 
-    static public bool isRight;
+    public bool isRight;
     [SerializeField]
     private Transform spawnLocation;
     [SerializeField]
