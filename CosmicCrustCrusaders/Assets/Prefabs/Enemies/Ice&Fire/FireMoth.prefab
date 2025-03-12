@@ -102,8 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
   damage: 1
-  onEnter: 0
-  onStay: 0
   onTrigger: 1
 --- !u!114 &7492071950030580171
 MonoBehaviour:
@@ -123,6 +121,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   targetDistance: 9
   stunTime: 3
+  tossCollider: {fileID: 1960155197963426669}
 --- !u!61 &1960155197963426669
 BoxCollider2D:
   m_ObjectHideFlags: 0

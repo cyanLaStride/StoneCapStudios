@@ -107,6 +107,7 @@ MonoBehaviour:
   force: 27
   delayAttack: 2
   stunTime: 3
+  tossCollider: {fileID: 4423417757836305565}
 --- !u!50 &2573043912848795871
 Rigidbody2D:
   serializedVersion: 4
@@ -345,8 +346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
   damage: 3
-  onEnter: 0
-  onStay: 0
   onTrigger: 1
 --- !u!61 &7129239663415993947
 BoxCollider2D:

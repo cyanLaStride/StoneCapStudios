@@ -30,6 +30,9 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
+
+    [SerializeField]
+    private Collider2D tossCollider;
     /*
     [SerializeField]
     private float idleTime;
@@ -99,12 +102,14 @@ public class Mushroom : MonoBehaviour
         else if (isStun)
         {
             animator.enabled = false;
+            tossCollider.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
+                isStun = false; 
+                tossCollider.enabled = true;
                 stunTimer = 0;
-                isStun = false;
                 animator.enabled = true;
             }
         }

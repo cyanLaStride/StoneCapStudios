@@ -25,6 +25,8 @@ public class Crocodiles : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
+    [SerializeField]
+    private Collider2D tossCollider;
 
 
     public bool isRight;
@@ -61,11 +63,13 @@ public class Crocodiles : MonoBehaviour
         else if (isStun)
         {
             shootTimer = 0.0f;
+            tossCollider.enabled = false;
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             if (stunTimer >= stunTime)
             {
                 isStun = false;
+                tossCollider.enabled = true;
                 stunTimer = 0;
                 animator.enabled = true;
             }

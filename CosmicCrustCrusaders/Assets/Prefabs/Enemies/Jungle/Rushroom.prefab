@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1137915442616635051}
   - component: {fileID: 5041596886665877048}
   - component: {fileID: 8142272100002630711}
-  - component: {fileID: 2773712290744133824}
   - component: {fileID: 9172779980660650912}
   - component: {fileID: 2998073539230728292}
   - component: {fileID: 2035231871358960404}
@@ -118,7 +117,7 @@ MonoBehaviour:
   speed: 4
   runningRange: 15
   stunTime: 3
-  idleTime: 5
+  tossCollider: {fileID: 9172779980660650912}
 --- !u!50 &8142272100002630711
 Rigidbody2D:
   serializedVersion: 4
@@ -146,51 +145,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2773712290744133824
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993228432391993181}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 8}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1}
-  m_EdgeRadius: 0
 --- !u!61 &9172779980660650912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -250,8 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   damage: 2
-  onEnter: 0
-  onStay: 0
   onTrigger: 1
 --- !u!95 &2035231871358960404
 Animator:

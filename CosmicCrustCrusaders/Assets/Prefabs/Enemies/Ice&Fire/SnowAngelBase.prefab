@@ -253,6 +253,7 @@ MonoBehaviour:
   flowerBase: {fileID: 3480515305202255823}
   radius: 10
   stunTime: 3
+  tossCollider: {fileID: 241324348826545570}
 --- !u!61 &241324348826545570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -312,8 +313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
   damage: 1
-  onEnter: 0
-  onStay: 0
   onTrigger: 1
 --- !u!95 &7530904577876849708
 Animator:

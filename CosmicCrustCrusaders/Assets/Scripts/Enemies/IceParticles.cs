@@ -8,29 +8,29 @@ public class IceParticles : MonoBehaviour
 
     public Icicle ic;
 
-    public bool isRight;
     private int direction;
     [SerializeField]
     private float speed;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private Transform iceSpawn;
     
-
+    
     private void Start()
     {
         // setting speed
         speed = speed * 0.001f;
-        isRight = ic.isRight;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // checking direction
-        if (ic.isRight)
+        if (ic.transform.position.x >= iceSpawn.position.x)
         {
             direction = 1;
             spriteRenderer.flipX = true;
         }
-        else if (!ic.isRight)
+        else if (ic.transform.position.x <= iceSpawn.position.x)
         {
             direction = -1;
             spriteRenderer.flipX = false;
@@ -41,6 +41,7 @@ public class IceParticles : MonoBehaviour
 
         // move attack
         transform.position += new Vector3(speed * direction, 0.0f, 0.0f);
+       
     }
 
     // set limit

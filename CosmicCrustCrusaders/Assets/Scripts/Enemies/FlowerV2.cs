@@ -11,10 +11,12 @@ public class FlowerV2 : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer;
+    [SerializeField]
+    private Collider2D tossCollider;
 
     //music
     //private AudioSource flowerAduioClip;
-    
+
     // Start is called before the first frame update
 
     void Start()
@@ -38,9 +40,11 @@ public class FlowerV2 : MonoBehaviour
         if (isStun)
         {
             animator.enabled = false;
+            tossCollider.enabled = false;
             stunTimer += Time.deltaTime;
             if (stunTimer >= stunTime)
             {
+                tossCollider.enabled = true;
                 isStun = false;
                 stunTimer = 0;
                 animator.enabled = true;

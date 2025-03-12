@@ -21,7 +21,7 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private int freezeDuration;
 
-    public bool isRight;
+    static public bool isRight;
     [SerializeField]
     private Transform spawnLocation;
     [SerializeField]
@@ -71,6 +71,7 @@ public class Icicle : MonoBehaviour
         {
             isRight = true;
             iceRenderer.flipX = true;
+
             spawnLocation.transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.x);
         }
         else if (player.transform.position.x < transform.position.x)
@@ -104,6 +105,7 @@ public class Icicle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             if (!isAttacked && !isStun)
@@ -111,6 +113,7 @@ public class Icicle : MonoBehaviour
                 animator.SetTrigger("IcicleAttack");
                 GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
                 isAttacked = true;
+                Debug.Log("Hit");
             }
         }
         else if (collision.gameObject.CompareTag("Toss"))

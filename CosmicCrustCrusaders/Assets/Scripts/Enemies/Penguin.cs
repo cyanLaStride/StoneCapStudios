@@ -24,6 +24,8 @@ public class Penguin : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer;
+    [SerializeField]
+    private Collider2D tossCollider;
 
 
     // getting component and setting up
@@ -56,11 +58,13 @@ public class Penguin : MonoBehaviour
         else if (isStun)
         {
             animator.enabled = false;
+            tossCollider.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
+                tossCollider.enabled = true;
                 isStun = false;
                 animator.enabled = true;
             }

@@ -104,7 +104,6 @@ MonoBehaviour:
   player: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   animator: {fileID: 0}
   freezeDuration: 3
-  isRight: 0
   spawnLocation: {fileID: 5848992991162594889}
   iceParticles: {fileID: 4749383967300199005, guid: a2204c5c67814fe419e59c9cfa36b0d6, type: 3}
   iceRenderer: {fileID: 0}

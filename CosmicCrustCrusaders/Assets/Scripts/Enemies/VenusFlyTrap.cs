@@ -18,6 +18,8 @@ public class VenusFlyTrap : MonoBehaviour
     // animation
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private Collider2D tossCollider;
     //private AudioSource vAttackAduio;
 
     // Start is called before the first frame update
@@ -33,10 +35,12 @@ public class VenusFlyTrap : MonoBehaviour
         if (isStun)
         {
             animator.enabled = false;
+            tossCollider.enabled = false;
             stunTimer += Time.deltaTime;
             if (stunTimer >= stunTime)
             {
                 isStun = false;
+                tossCollider.enabled = true;
                 stunTimer = 0;
                 animator.enabled = true;
             }

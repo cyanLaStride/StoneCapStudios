@@ -21,6 +21,8 @@ public class Follower : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
+    [SerializeField]
+    private Collider2D tossCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +44,13 @@ public class Follower : MonoBehaviour
         else if (isStun)
         {
             animator.enabled = false;
+            tossCollider.enabled = false;
             stunTimer += Time.deltaTime;
             if (stunTimer >= stunTime)
             {
-                stunTimer = 0;
+                tossCollider.enabled = true;
                 isStun = false;
+                stunTimer = 0;
                 animator.enabled = true;
             }
         }

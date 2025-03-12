@@ -109,6 +109,7 @@ MonoBehaviour:
   fireRate: 1
   shootTime: 2
   stunTime: 3
+  tossCollider: {fileID: 7955264152791289782}
   isRight: 0
   isStun: 0
 --- !u!50 &489810194501690405
