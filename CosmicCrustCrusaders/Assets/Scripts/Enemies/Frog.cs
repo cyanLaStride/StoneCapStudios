@@ -29,11 +29,17 @@ public class Frog : MonoBehaviour
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
+    [SerializeField]
+    private Collider2D tossCollider;
+
     // private float frogLastXPos;
     private float frogCurrentPos;
     private float currentTimer = 0;
     public float frogIdleTime;
     private int jumpDirection;
+
+    //private int enemyLayer = LayerMask.NameToLayer("Enemies");
+    //private int stunLayer = LayerMask.NameToLayer("stunLayer");
 
     // music
     //[SerializeField]
@@ -68,12 +74,16 @@ public class Frog : MonoBehaviour
         }
         else if (isStun)
         {
+            //gameObject.layer = stunLayer;
+            tossCollider.enabled = false;
             animator.Play("Fidle", 0, 0);
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
+                //gameObject.layer = enemyLayer;
+                tossCollider.enabled = true;
                 isStun = false;
                 stunTimer = 0;
                 animator.enabled = true;
