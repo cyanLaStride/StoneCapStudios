@@ -190,5 +190,6 @@ public class BarkBeast : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(flipCheck.transform.position, circleRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

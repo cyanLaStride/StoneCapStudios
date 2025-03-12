@@ -10,14 +10,37 @@ public class eDamage : MonoBehaviour
     [SerializeField]
     float damage;
     // Clickable box for enemies damage type
-    [SerializeField]
-    bool onEnter;
-    [SerializeField]
-    bool onStay;
+    //[SerializeField]
+    //bool onEnter;
+    //[SerializeField]
+    //bool onStay;
     [SerializeField]
     bool onTrigger;
 
+    /*
+    [SerializeField]
+    private float nextAttackDelaySec;
+    private float nextAttackDelayTimer;
+    private bool attack;
+
+    
+    private void FixedUpdate()
+    {
+        if (!attack)
+        {
+            nextAttackDelayTimer += Time.fixedDeltaTime;
+            if(nextAttackDelayTimer > nextAttackDelaySec)
+            {
+                attack = true;
+                nextAttackDelayTimer = 0;
+            }
+                
+        }
+    }
+    */
+
     //damage the player when staying with enemies
+    /*
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (onStay)
@@ -55,22 +78,24 @@ public class eDamage : MonoBehaviour
             }
         }
     }
+    */
 
     // on trigger enter
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (onTrigger)
+        //if (onTrigger)
+        //{
+        if (collision.gameObject.CompareTag("Player")/* && attack */)
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
                 //playerHp.health -= damage;
                 // next line of code used in actual game, the one above just for testing for now, doesn't require drag and drop everytime
                 // other.gameObject.GetComponent<playerHealth>().health -= damage;
 
                 // same as above
-                playerHp = collision.gameObject.GetComponent<pHealth>();
-                playerHp.Knockback(damage, this.transform.position);
-            }
+            playerHp = collision.gameObject.GetComponent<pHealth>();
+            playerHp.Knockback(damage, this.transform.position);
+            //attack = false;
         }
+        //}
     }
 }

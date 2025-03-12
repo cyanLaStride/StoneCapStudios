@@ -56355,6 +56355,10 @@ PrefabInstance:
       propertyPath: playerHp
       value: 
       objectReference: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+    - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: nextAttackDelaySec
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
@@ -59002,6 +59006,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a924e6ba81a01419e8efbfc2bcbdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1032269554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6456736590028360498, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
+  m_PrefabInstance: {fileID: 135594136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1056841990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59068,7 +59077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142272100002630711, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_GravityScale
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8206003898064986345, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -60305,6 +60314,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5806622250286305023, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 1032269554}
     - target: {fileID: 2418395257025494246, guid: 6f34dde1dd8c70346be206841a6f2d66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
