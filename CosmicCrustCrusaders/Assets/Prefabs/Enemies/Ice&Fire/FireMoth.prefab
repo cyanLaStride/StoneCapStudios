@@ -102,7 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
   damage: 1
+  onEnter: 0
   onTrigger: 1
+  nextAttackDelaySec: 1.5
 --- !u!114 &7492071950030580171
 MonoBehaviour:
   m_ObjectHideFlags: 0

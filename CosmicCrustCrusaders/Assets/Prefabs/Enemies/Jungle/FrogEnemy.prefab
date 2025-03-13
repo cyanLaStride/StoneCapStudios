@@ -255,7 +255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   damage: 2
+  onEnter: 0
   onTrigger: 1
+  nextAttackDelaySec: 1.5
 --- !u!50 &3068888822086566132
 Rigidbody2D:
   serializedVersion: 4
@@ -340,7 +342,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1152
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -357,10 +359,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.9, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -371,7 +373,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.2, y: 37.2}
+  m_Size: {x: 34.2, y: 27.82}
   m_EdgeRadius: 0
 --- !u!95 &4582382076446864245
 Animator:

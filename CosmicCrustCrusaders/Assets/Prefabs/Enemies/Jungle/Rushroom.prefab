@@ -204,7 +204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHp: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
   damage: 2
+  onEnter: 0
   onTrigger: 1
+  nextAttackDelaySec: 1.5
 --- !u!95 &2035231871358960404
 Animator:
   serializedVersion: 5

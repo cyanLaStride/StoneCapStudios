@@ -76,7 +76,7 @@ public class Frog : MonoBehaviour
         {
             //gameObject.layer = stunLayer;
             tossCollider.enabled = false;
-            animator.Play("Fidle", 0, 0);
+            animator.Play("Fidle");
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
