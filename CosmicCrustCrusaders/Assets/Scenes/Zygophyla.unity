@@ -56365,11 +56365,15 @@ PrefabInstance:
       objectReference: {fileID: 1419049084947748856, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
     - target: {fileID: 3232154722406217726, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: nextAttackDelaySec
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4439264107754167970, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746762439322997860, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 5817051515754996711, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_IncludeLayers.m_Bits
@@ -56377,11 +56381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6246528341597137734, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60
+      value: 60.5
       objectReference: {fileID: 0}
     - target: {fileID: 6246528341597137734, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 6246528341597137734, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56434,6 +56438,14 @@ PrefabInstance:
     - target: {fileID: 7207235724594992869, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_Offset.x
       value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207235724594992869, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207235724594992869, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 1152
       objectReference: {fileID: 0}
     - target: {fileID: 8898128829303770408, guid: 611afe42ca53d4c4d8c8c79df1631a7a, type: 3}
       propertyPath: m_Radius
@@ -59776,11 +59788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6667462688126393252, guid: bde5c26f7bd074a4d9f10e33aa4e4606, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 145.3
       objectReference: {fileID: 0}
     - target: {fileID: 6667462688126393252, guid: bde5c26f7bd074a4d9f10e33aa4e4606, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: -62.3
       objectReference: {fileID: 0}
     - target: {fileID: 6667462688126393252, guid: bde5c26f7bd074a4d9f10e33aa4e4606, type: 3}
       propertyPath: m_LocalPosition.z

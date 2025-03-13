@@ -10,14 +10,14 @@ public class eDamage : MonoBehaviour
     [SerializeField]
     float damage;
     // Clickable box for enemies damage type
-    //[SerializeField]
-    //bool onEnter;
+    [SerializeField]
+    bool onEnter;
     //[SerializeField]
     //bool onStay;
     [SerializeField]
     bool onTrigger;
 
-    /*
+    
     [SerializeField]
     private float nextAttackDelaySec;
     private float nextAttackDelayTimer;
@@ -37,7 +37,7 @@ public class eDamage : MonoBehaviour
                 
         }
     }
-    */
+    
 
     //damage the player when staying with enemies
     /*
@@ -59,7 +59,7 @@ public class eDamage : MonoBehaviour
             }
         }
     }
-
+    */
     // damage the player when entering the enemy
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -78,14 +78,14 @@ public class eDamage : MonoBehaviour
             }
         }
     }
-    */
+    
 
     // on trigger enter
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        //if (onTrigger)
-        //{
-        if (collision.gameObject.CompareTag("Player")/* && attack */)
+        if (onTrigger)
+        {
+        if (collision.gameObject.CompareTag("Player") && attack )
         {
                 //playerHp.health -= damage;
                 // next line of code used in actual game, the one above just for testing for now, doesn't require drag and drop everytime
@@ -94,8 +94,8 @@ public class eDamage : MonoBehaviour
                 // same as above
             playerHp = collision.gameObject.GetComponent<pHealth>();
             playerHp.Knockback(damage, this.transform.position);
-            //attack = false;
+            attack = false;
         }
-        //}
+        }
     }
 }

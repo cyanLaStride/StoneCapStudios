@@ -232,8 +232,8 @@ MonoBehaviour:
   playerHp: {fileID: 0}
   damage: 2
   onEnter: 0
-  onStay: 0
   onTrigger: 1
+  nextAttackDelaySec: 1.5
 --- !u!95 &978130100096752784
 Animator:
   serializedVersion: 5
