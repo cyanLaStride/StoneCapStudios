@@ -30,5 +30,9 @@ public class tossSudoku : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        else if (collision.gameObject.CompareTag("ground"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
