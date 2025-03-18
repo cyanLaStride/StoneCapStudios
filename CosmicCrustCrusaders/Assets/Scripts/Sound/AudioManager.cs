@@ -50,6 +50,10 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
+        else if (name == "JumpingLow")
+        {
+            sfxSource.PlayOneShot(s.clip, 0.1f);
+        }
         else
         {
             sfxSource.PlayOneShot(s.clip);
@@ -64,9 +68,13 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
-        else
+        else if (name == "BarkBeast")
         {
             sfxSource.PlayOneShot(s.clip, 0.06f);
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
         }
     }
 

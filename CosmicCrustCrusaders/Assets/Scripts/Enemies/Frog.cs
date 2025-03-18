@@ -10,6 +10,8 @@ public class Frog : MonoBehaviour
     public SpriteRenderer spriteR;
     public Rigidbody2D rb;
     public Animator animator;
+    [SerializeField]
+    private PlayerController player;
     // public Animator animator; //later for animation
     // setting up "enum" when animation is testing !!! remember
 
@@ -38,6 +40,10 @@ public class Frog : MonoBehaviour
     public float frogIdleTime;
     private int jumpDirection;
 
+    private float distance;
+    [SerializeField]
+    private float playSoundDistance;
+
     //private int enemyLayer = LayerMask.NameToLayer("Enemies");
     //private int stunLayer = LayerMask.NameToLayer("stunLayer");
 
@@ -61,6 +67,7 @@ public class Frog : MonoBehaviour
     // fixed update specifically dealing with rigidbody (gravity stuff) and timer
     void Update()
     {
+        distance = Vector2.Distance(transform.position, player.transform.position);
         if (isIdle && !isStun)
         {
             //frogAudioClip.Play();
@@ -89,6 +96,7 @@ public class Frog : MonoBehaviour
                 animator.enabled = true;
             }
         }
+        
     }
 
     // method handle frog jumping 
@@ -112,8 +120,7 @@ public class Frog : MonoBehaviour
         {
             animator.SetTrigger("FJump");
             rb.velocity = new Vector2(frogJumpSpeedX * jumpDirection, frogJumpFroceY);
-        }
-        
+        }        
     }
 
     // jump stuff from Daniel
