@@ -81,6 +81,7 @@ public class Icicle : MonoBehaviour
             iceRenderer.flipX = false;
             spawnLocation.transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.x);
         }
+        /*
         if (!isStun && isAttacked)
         {
             attackTimer += Time.deltaTime;
@@ -90,7 +91,8 @@ public class Icicle : MonoBehaviour
                 attackTimer = 0;
             }
         }
-        else if (isStun)
+        */
+        if (isStun)
         {
             animator.enabled = false;
             stunTimer += Time.deltaTime;

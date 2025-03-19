@@ -50,13 +50,10 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
-        else if (name == "JumpingLow")
-        {
-            sfxSource.PlayOneShot(s.clip, 0.1f);
-        }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            musicSource.clip = s.clip;
+            musicSource.Play();
         }
     }
 
@@ -68,13 +65,10 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
-        else if (name == "BarkBeast")
-        {
-            sfxSource.PlayOneShot(s.clip, 0.06f);
-        }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            musicSource.clip = s.clip;
+            musicSource.Play();
         }
     }
 
@@ -86,9 +80,18 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
+        /*
+        else if (name == "Slime")
+        {
+            sfxSource.clip = s.clip;
+            sfxSource.volume = 1.0f;
+            sfxSource.Play();
+        }
+        */
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            musicSource.clip = s.clip;
+            musicSource.Play();
         }
     }
 
