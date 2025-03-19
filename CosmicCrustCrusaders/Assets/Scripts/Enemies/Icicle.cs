@@ -35,11 +35,12 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private float delayAttack;
     private float attackTimer = 0.0f;
-    private bool isAttacked = false;
+    public bool isAttacked;
 
     void Start()
     {
         freezePlayer = false;
+        isAttacked = true;
         characterSpeed = player.movementSpeed;
         timer = 0;
 
@@ -101,11 +102,18 @@ public class Icicle : MonoBehaviour
                 animator.enabled = true;
             }
         }
+        else if (!isAttacked && !isStun)
+        {
+            animator.SetTrigger("IcicleAttack");
+            GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
+            isAttacked = true;
+            Debug.Log("Hit");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        /*
         if (collision.gameObject.CompareTag("Player"))
         {
             if (!isAttacked && !isStun)
@@ -116,7 +124,8 @@ public class Icicle : MonoBehaviour
                 Debug.Log("Hit");
             }
         }
-        else if (collision.gameObject.CompareTag("Toss"))
+        */
+        if (collision.gameObject.CompareTag("Toss"))
         {
             isStun = true;
         }

@@ -15,6 +15,8 @@ public class IceParticles : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     [SerializeField]
     private Transform iceSpawn;
+
+    public bool isRight;
     
     
     private void Start()
@@ -25,12 +27,12 @@ public class IceParticles : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // checking direction
-        if (ic.transform.position.x >= iceSpawn.position.x)
+        if (isRight)
         {
             direction = 1;
             spriteRenderer.flipX = true;
         }
-        else if (ic.transform.position.x <= iceSpawn.position.x)
+        else if (!isRight)
         {
             direction = -1;
             spriteRenderer.flipX = false;

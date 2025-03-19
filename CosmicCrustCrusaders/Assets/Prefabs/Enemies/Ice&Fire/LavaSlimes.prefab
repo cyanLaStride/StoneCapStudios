@@ -145,6 +145,7 @@ MonoBehaviour:
   circleRadius: 0.3
   isGrounded: 0
   stunTime: 3
+  playSoundDistance: 5
 --- !u!61 &731189107314529407
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -31,6 +31,10 @@ public class LavaSlimes : MonoBehaviour
     private float stunTime;
     private float stunTimer = 0.0f;
 
+    private float distance;
+    [SerializeField]
+    private float playSoundDistance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +46,11 @@ public class LavaSlimes : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance <= playSoundDistance)
+        {
+            AudioManager.Instance.PlayFireAndIceSFX("Slime");
+        }
         if (isRage && !isStun)
         {
             animator.SetBool("Rage",true);
@@ -106,5 +114,6 @@ public class LavaSlimes : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(flipCheck.transform.position, circleRadius);
+        Gizmos.DrawWireSphere (transform.position, playSoundDistance);
     }
 }
