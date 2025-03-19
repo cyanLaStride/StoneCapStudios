@@ -609,8 +609,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 399652453}
     - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: JungleSFX.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: PlayerSFX.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: JungleSFX.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d4288e814a5e2e440877d989da67fc4d, type: 3}
+    - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: JungleSFX.Array.data[6].name
+      value: Rushroom
       objectReference: {fileID: 0}
     - target: {fileID: 2618410089083734895, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: PlayerSFX.Array.data[3].clip
@@ -55795,6 +55807,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1032269553}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: isRight
       value: 0
       objectReference: {fileID: 0}
@@ -57331,8 +57347,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1032269553}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: isRight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: playSoundDistance
+      value: 12.82
       objectReference: {fileID: 0}
     - target: {fileID: 7955264152791289782, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: m_Size.x
@@ -58141,6 +58165,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1032269553}
     - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: isRight
       value: 0
@@ -61540,8 +61568,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1032269553}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: isRight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363608605503215963, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
+      propertyPath: playSoundDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7955264152791289782, guid: 08a1aa071b352ae4dbb192d822b8ba64, type: 3}
       propertyPath: m_Size.x

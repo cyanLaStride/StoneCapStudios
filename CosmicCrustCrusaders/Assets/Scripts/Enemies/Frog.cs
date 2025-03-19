@@ -68,6 +68,10 @@ public class Frog : MonoBehaviour
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance <= playSoundDistance)
+        {
+            AudioManager.Instance.PlayJungleSFX("Frog");
+        }
         if (isIdle && !isStun)
         {
             //frogAudioClip.Play();
@@ -156,5 +160,11 @@ public class Frog : MonoBehaviour
         {
             isStun = true;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

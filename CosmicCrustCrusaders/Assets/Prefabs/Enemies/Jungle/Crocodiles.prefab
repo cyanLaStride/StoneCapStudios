@@ -104,12 +104,15 @@ MonoBehaviour:
   animator: {fileID: 0}
   shuriken: {fileID: 3902629010181640613, guid: 3a7c860d069f2b846887137501fa9f73, type: 3}
   shootingLocation: {fileID: 8231583353359881503}
+  player: {fileID: 0}
   shurikenSpeed: 1000
   shootDelayTime: 5
   fireRate: 1
   shootTime: 2
   stunTime: 3
   tossCollider: {fileID: 7955264152791289782}
+  playSoundDistance: 12
+  playNinja: 5.6
   isRight: 0
   isStun: 0
 --- !u!50 &489810194501690405

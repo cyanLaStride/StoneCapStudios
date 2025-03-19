@@ -235,12 +235,14 @@ MonoBehaviour:
   spriteR: {fileID: 7714223947460684001}
   rb: {fileID: 3068888822086566132}
   animator: {fileID: 0}
+  player: {fileID: 0}
   isStun: 0
   frogJumpSpeedX: 12
   frogJumpFroceY: 20
   stunTime: 3
   tossCollider: {fileID: 7207235724594992869}
   frogIdleTime: 2
+  playSoundDistance: 5
 --- !u!114 &3232154722406217726
 MonoBehaviour:
   m_ObjectHideFlags: 0

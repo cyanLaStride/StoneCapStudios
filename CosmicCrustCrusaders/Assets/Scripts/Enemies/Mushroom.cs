@@ -28,11 +28,14 @@ public class Mushroom : MonoBehaviour
     private float runningRange;
     private float distance;
     [SerializeField]
+    private float playSoundDistance;
+    [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
 
     [SerializeField]
     private Collider2D tossCollider;
+
     /*
     [SerializeField]
     private float idleTime;
@@ -65,6 +68,10 @@ public class Mushroom : MonoBehaviour
             isIdle = false;
             //idleTimer = 0.0f;
             animator.SetBool("RRunning",true);
+            if (distance <= playSoundDistance)
+            {
+                AudioManager.Instance.PlayJungleSFX("Rushroom");
+            }
         }
         /*
         else if(distance > runningRange)
@@ -143,5 +150,6 @@ public class Mushroom : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(flipCheck.transform.position, circleRadius);
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

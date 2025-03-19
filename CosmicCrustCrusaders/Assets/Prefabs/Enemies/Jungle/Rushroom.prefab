@@ -116,6 +116,7 @@ MonoBehaviour:
   isStun: 0
   speed: 4
   runningRange: 15
+  playSoundDistance: 5
   stunTime: 3
   tossCollider: {fileID: 9172779980660650912}
 --- !u!50 &8142272100002630711

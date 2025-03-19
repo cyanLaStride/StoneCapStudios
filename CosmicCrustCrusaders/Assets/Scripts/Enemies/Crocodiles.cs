@@ -9,6 +9,8 @@ public class Crocodiles : MonoBehaviour
     public GameObject shuriken;
     [SerializeField]
     private Transform shootingLocation;
+    [SerializeField]
+    private PlayerController player;
 
     // shooting setting
     [SerializeField]
@@ -28,6 +30,11 @@ public class Crocodiles : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
+    private float distance;
+    [SerializeField]
+    private float playSoundDistance;
+    [SerializeField]
+    private float playNinja;
 
     public bool isRight;
     public bool isStun;
@@ -48,6 +55,7 @@ public class Crocodiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distance = Vector2.Distance(transform.position, player.transform.position);
         if (!isStun)
         {
             shootTimer += Time.deltaTime;
@@ -56,7 +64,14 @@ public class Crocodiles : MonoBehaviour
             {
                 shoot();
                 // throwing sound but affect whole map, will fix it later
-                //AudioManager.Instance.PlayJungleSFX("NinjaThrow");
+                if (distance <= playSoundDistance)
+                {
+                    AudioManager.Instance.PlayJungleSFX("NinjaThrow");
+                }
+                if (distance <= playNinja)
+                {
+                    AudioManager.Instance.PlayJungleSFX("Ninja");
+                }
                 shootTimer = 0.0f;
             }
         }
@@ -99,5 +114,12 @@ public class Crocodiles : MonoBehaviour
         {
             isStun = true;
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
+        Gizmos.DrawWireSphere(transform.position, playNinja);
     }
 }
