@@ -11,7 +11,6 @@ public class PlayMusic : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("hi");
             AudioManager.Instance.PlayMusic(musicName);
         }
     }

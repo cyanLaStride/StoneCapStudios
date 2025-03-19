@@ -93,6 +93,7 @@ MonoBehaviour:
   icp: {fileID: 2780184584237176644, guid: a2204c5c67814fe419e59c9cfa36b0d6, type: 3}
   ic: {fileID: 3440222763623771282}
   isRight: 0
+  timeBetweenAttack: 3
 --- !u!1 &2319774386527747341
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +187,7 @@ MonoBehaviour:
   icp: {fileID: 2780184584237176644, guid: a2204c5c67814fe419e59c9cfa36b0d6, type: 3}
   ic: {fileID: 3440222763623771282}
   isRight: 1
+  timeBetweenAttack: 3
 --- !u!1 &3562081271138385534
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +297,7 @@ MonoBehaviour:
   iceParticles: {fileID: 4749383967300199005, guid: a2204c5c67814fe419e59c9cfa36b0d6, type: 3}
   iceRenderer: {fileID: 0}
   stunTime: 3
-  delayAttack: 3
+  delayAttack: 3000
   isAttacked: 0
 --- !u!95 &2976806008048851413
 Animator:

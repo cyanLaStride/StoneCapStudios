@@ -52,8 +52,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            sfxSource.clip = s.clip;
+            sfxSource.Play();
         }
     }
 
@@ -67,8 +67,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            sfxSource.clip = s.clip;
+            sfxSource.Play();
         }
     }
 
@@ -90,8 +90,8 @@ public class AudioManager : MonoBehaviour
         */
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            sfxSource.clip = s.clip;
+            sfxSource.Play();
         }
     }
 
