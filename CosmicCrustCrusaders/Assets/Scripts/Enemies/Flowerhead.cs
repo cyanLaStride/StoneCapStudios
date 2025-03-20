@@ -21,6 +21,8 @@ public class Flowerhead : MonoBehaviour
 
     private float distance;
     private float toBaseDistance;
+    [SerializeField]
+    private float playSoundDistance;
 
     private bool isStun;
     [SerializeField]
@@ -71,6 +73,10 @@ public class Flowerhead : MonoBehaviour
                 animator.enabled = true;
             }
         }
+        if (distance <= playSoundDistance)
+        {
+            AudioManager.Instance.PlayFireAndIceSFX("SnowAngel");
+        }
         if (player.transform.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
@@ -90,5 +96,10 @@ public class Flowerhead : MonoBehaviour
         {
             isStun = true;
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

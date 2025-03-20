@@ -37,6 +37,10 @@ public class Icicle : MonoBehaviour
     private float attackTimer = 0.0f;
     public bool isAttacked;
 
+    private float distance;
+    [SerializeField]
+    private float playSoundDistance;
+
     void Start()
     {
         freezePlayer = false;
@@ -51,6 +55,7 @@ public class Icicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        distance = Vector2.Distance(transform.position, player.transform.position);
         if (freezePlayer)
         {
             if (timer <= freezeDuration)
@@ -108,8 +113,12 @@ public class Icicle : MonoBehaviour
         {
             animator.SetTrigger("IcicleAttack");
             GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
+            if (distance <= playSoundDistance)
+            {
+                AudioManager.Instance.PlayFireAndIceSFX("Icicle");
+            }
             isAttacked = true;
-            Debug.Log("Hit");
+
         }
     }
 
@@ -131,5 +140,10 @@ public class Icicle : MonoBehaviour
         {
             isStun = true;
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

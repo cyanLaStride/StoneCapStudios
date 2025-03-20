@@ -27,6 +27,11 @@ public class Penguin : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
+    [SerializeField]
+    private PlayerController player;
+    private float distance;
+    [SerializeField]
+    private float playSoundDistance;
 
     // getting component and setting up
     void Start()
@@ -45,6 +50,7 @@ public class Penguin : MonoBehaviour
 
     private void FixedUpdate()
     {
+        distance = Vector2.Distance(transform.position, player.transform.position);
         if (!attack && !isStun)
         {
             attackTimer += Time.fixedDeltaTime;
@@ -63,11 +69,15 @@ public class Penguin : MonoBehaviour
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
             {
-                stunTimer = 0;
                 tossCollider.enabled = true;
+                stunTimer = 0;
                 isStun = false;
                 animator.enabled = true;
             }
+        }
+        if (distance <= playSoundDistance)
+        {
+            AudioManager.Instance.PlayFireAndIceSFX("Penguin");
         }
     }
 
@@ -93,5 +103,10 @@ public class Penguin : MonoBehaviour
         {
             isStun = true;
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

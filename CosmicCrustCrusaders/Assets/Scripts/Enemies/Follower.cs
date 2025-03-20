@@ -16,6 +16,8 @@ public class Follower : MonoBehaviour
     private int targetDistance;
 
     private float distance;
+    [SerializeField]
+    private float playSoundDistance;
 
     private bool isStun;
     [SerializeField]
@@ -54,6 +56,10 @@ public class Follower : MonoBehaviour
                 animator.enabled = true;
             }
         }
+        if (distance <= playSoundDistance)
+        {
+            AudioManager.Instance.PlayJungleSFX("FireMoth");
+        }
         if (player.transform.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
@@ -74,5 +80,10 @@ public class Follower : MonoBehaviour
         {
             isStun = true;
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

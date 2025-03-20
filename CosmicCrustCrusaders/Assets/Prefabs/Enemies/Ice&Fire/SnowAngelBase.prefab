@@ -252,6 +252,7 @@ MonoBehaviour:
   targetDistance: 10
   flowerBase: {fileID: 3480515305202255823}
   radius: 10
+  playSoundDistance: 3
   stunTime: 3
   tossCollider: {fileID: 241324348826545570}
 --- !u!61 &241324348826545570

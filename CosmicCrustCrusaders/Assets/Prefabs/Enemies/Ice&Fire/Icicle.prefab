@@ -299,6 +299,7 @@ MonoBehaviour:
   stunTime: 3
   delayAttack: 3000
   isAttacked: 0
+  playSoundDistance: 8
 --- !u!95 &2976806008048851413
 Animator:
   serializedVersion: 5
