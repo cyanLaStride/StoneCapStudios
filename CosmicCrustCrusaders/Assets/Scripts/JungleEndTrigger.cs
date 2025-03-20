@@ -88,7 +88,7 @@ public class JungleEndTrigger : MonoBehaviour
                 }
                 else if (levelName == "Ignatea")
                 {
-                    SceneManager.LoadSceneAsync("Pizza Shop");
+                    SceneManager.LoadSceneAsync("Fire and Ice Customer");
                 }
             }
         }

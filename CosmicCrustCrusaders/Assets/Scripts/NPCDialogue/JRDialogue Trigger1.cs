@@ -71,8 +71,12 @@ public class JRDialogueTrigger : MonoBehaviour
             {
                 GameObject.Find("GameManager").GetComponent<GameManager>().CoinCount += 15;
                 SceneManager.LoadSceneAsync("Pizza Shop");
+            } else if (npcName == "Fice")
+            {
+                GameObject.Find("GameManager").GetComponent<GameManager>().CoinCount += 100;
+                SceneManager.LoadSceneAsync("Pizza Shop");
             }
-            
+
             //playerController.LockMovement(true); // Lock player movement when dialogue starts
         }
     }
