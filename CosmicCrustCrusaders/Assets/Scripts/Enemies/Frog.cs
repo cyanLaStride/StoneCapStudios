@@ -16,7 +16,7 @@ public class Frog : MonoBehaviour
     // setting up "enum" when animation is testing !!! remember
 
     // checking frog action
-    private bool isGround = false;
+    //private bool isGround = false;
     private bool isFacingR = false;
     private bool isFacingL = true;
     private bool isIdle; // animation
@@ -132,17 +132,20 @@ public class Frog : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
-            isGround = true;
+            //isGround = true;
             isIdle = true;
         }
     }
+    /*
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground")
         {
-            isGround = false;
+            //isGround = false;
         }
     }
+    */
+
     // on triggerEnter2D if needed or another method
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -34,7 +34,7 @@ public class Icicle : MonoBehaviour
     private float stunTimer = 0.0f;
     [SerializeField]
     private float delayAttack;
-    private float attackTimer = 0.0f;
+    //private float attackTimer = 0.0f;
     public bool isAttacked;
 
     private float distance;
