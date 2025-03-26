@@ -24,6 +24,7 @@ public class Mushroom : MonoBehaviour
     // field for basic
     [SerializeField]
     private float speed;
+    private float assignedSpeed;
     [SerializeField]
     private float runningRange;
     private float distance;
@@ -58,6 +59,7 @@ public class Mushroom : MonoBehaviour
             direction = -1;
             transform.Rotate(new Vector3(0, 180, 0));
         }
+        assignedSpeed = speed;
     }
     private void Update()
     {
@@ -110,6 +112,7 @@ public class Mushroom : MonoBehaviour
         {
             animator.enabled = false;
             tossCollider.enabled = false;
+            speed = 0;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             if (stunTimer >= stunTime)
@@ -117,6 +120,7 @@ public class Mushroom : MonoBehaviour
                 isStun = false; 
                 tossCollider.enabled = true;
                 stunTimer = 0;
+                speed = assignedSpeed;
                 animator.enabled = true;
             }
         }

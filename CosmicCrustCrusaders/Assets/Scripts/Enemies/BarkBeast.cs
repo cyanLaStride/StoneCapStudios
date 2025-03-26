@@ -63,6 +63,9 @@ public class BarkBeast : MonoBehaviour
     private float idleTime;
     private float idleTimer = 0.0f;
 
+    [SerializeField]
+    private Collider2D tossCollider;
+
     // music
     //private AudioSource barkAudioClip;
 
@@ -129,10 +132,12 @@ public class BarkBeast : MonoBehaviour
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
             player.movementSpeed = characterSpeed;
+            tossCollider.enabled = false;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
                 isStun = false;
+                tossCollider.enabled = true;
                 animator.enabled = true;
             }
         }
