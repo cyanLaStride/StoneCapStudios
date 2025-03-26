@@ -49,16 +49,16 @@ public class Flowerhead : MonoBehaviour
         {
             if (distance < targetDistance)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.fixedDeltaTime);
             }
             else if (distance > toBaseDistance)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.fixedDeltaTime);
             }
         }
         else if(toBaseDistance >= radius && !isStun)
         {
-                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.fixedDeltaTime);
         }
         else if (isStun)
         {
@@ -101,5 +101,7 @@ public class Flowerhead : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, playSoundDistance);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, targetDistance);
     }
 }

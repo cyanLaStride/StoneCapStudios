@@ -41,6 +41,9 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private float playSoundDistance;
 
+    [SerializeField]
+    private Collider2D tossCollider;
+
     void Start()
     {
         freezePlayer = false;
@@ -101,11 +104,13 @@ public class Icicle : MonoBehaviour
         {
             animator.enabled = false;
             stunTimer += Time.deltaTime;
+            tossCollider.enabled = false;
             player.movementSpeed = characterSpeed;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
                 isStun = false;
+                tossCollider.enabled = true;
                 animator.enabled = true;
             }
         }

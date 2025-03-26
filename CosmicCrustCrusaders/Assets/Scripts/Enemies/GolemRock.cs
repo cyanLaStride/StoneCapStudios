@@ -7,7 +7,7 @@ public class GolemRock : MonoBehaviour
     [SerializeField]
     private Transform rotateAroundThis;
     [SerializeField]
-    private float speed;
+    public float speed;
     [SerializeField]
     private bool isRotationRight;
 

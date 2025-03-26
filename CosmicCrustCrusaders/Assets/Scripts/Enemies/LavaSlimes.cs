@@ -35,6 +35,9 @@ public class LavaSlimes : MonoBehaviour
     [SerializeField]
     private float playSoundDistance;
 
+    [SerializeField]
+    private Collider2D tossCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,10 +71,12 @@ public class LavaSlimes : MonoBehaviour
             animator.enabled = false;
             stunTimer += Time.deltaTime;
             rb.velocity = Vector2.zero;
+            tossCollider.enabled = false;
             if (stunTimer >= stunTime)
             {
                 stunTimer = 0;
                 isStun = false;
+                tossCollider.enabled = true;
                 animator.enabled = true;
             }
         }

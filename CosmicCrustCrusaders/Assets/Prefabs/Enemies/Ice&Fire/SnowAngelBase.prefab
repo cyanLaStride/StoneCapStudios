@@ -252,7 +252,7 @@ MonoBehaviour:
   targetDistance: 10
   flowerBase: {fileID: 3480515305202255823}
   radius: 10
-  playSoundDistance: 3
+  playSoundDistance: 9
   stunTime: 3
   tossCollider: {fileID: 241324348826545570}
 --- !u!61 &241324348826545570
@@ -284,7 +284,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

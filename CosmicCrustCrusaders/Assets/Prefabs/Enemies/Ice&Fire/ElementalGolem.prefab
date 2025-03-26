@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 382957266187067774}
   - component: {fileID: 3879660940409596718}
-  - component: {fileID: 7714441516862589025}
   - component: {fileID: 2984976153326541683}
+  - component: {fileID: 7714441516862589025}
   - component: {fileID: 4782335758120521078}
   m_Layer: 8
   m_Name: ElementalGolem
@@ -88,6 +88,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2984976153326541683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7188355764773927985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2679eb96b2d22478da45887d33b668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  gl: {fileID: 8651636797912409450}
+  changeStateTime: 5
+  player: {fileID: 0}
+  playSoundDistance: 5
+  tossCollider: {fileID: 1973589447419124090}
+  stunTime: 3
 --- !u!61 &7714441516862589025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100,10 +119,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -117,7 +136,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -133,22 +152,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.33, y: 4.06}
   m_EdgeRadius: 0
---- !u!114 &2984976153326541683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7188355764773927985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2679eb96b2d22478da45887d33b668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  changeStateTime: 5
-  player: {fileID: 0}
-  playSoundDistance: 5
 --- !u!95 &4782335758120521078
 Animator:
   serializedVersion: 5
@@ -180,8 +183,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8692417394580317367}
   - component: {fileID: 8866606705601853262}
+  - component: {fileID: 1973589447419124090}
   - component: {fileID: 3955966986102712480}
-  - component: {fileID: 3722896728623812377}
   - component: {fileID: 8651636797912409450}
   - component: {fileID: 4657718062442191418}
   m_Layer: 8
@@ -258,7 +261,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3955966986102712480
+--- !u!61 &1973589447419124090
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,7 +290,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -303,8 +306,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.8}
   m_EdgeRadius: 0
---- !u!58 &3722896728623812377
-CircleCollider2D:
+--- !u!61 &3955966986102712480
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -336,8 +339,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.8}
+    newSize: {x: 0.8, y: 0.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.6, y: 0.8}
+  m_EdgeRadius: 0
 --- !u!114 &8651636797912409450
 MonoBehaviour:
   m_ObjectHideFlags: 0
