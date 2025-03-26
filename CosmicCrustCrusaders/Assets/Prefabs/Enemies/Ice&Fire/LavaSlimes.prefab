@@ -146,7 +146,7 @@ MonoBehaviour:
   circleRadius: 0.3
   isGrounded: 0
   stunTime: 3
-  playSoundDistance: 5
+  playSoundDistance: 6.5
   tossCollider: {fileID: 6235844185588762701}
 --- !u!61 &893048536640296439
 BoxCollider2D:

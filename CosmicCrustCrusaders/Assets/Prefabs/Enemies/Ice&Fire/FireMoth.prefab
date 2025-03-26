@@ -122,7 +122,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   targetDistance: 9
-  playSoundDistance: 3
+  playSoundDistance: 9
   stunTime: 3
   tossCollider: {fileID: 1960155197963426669}
 --- !u!61 &1960155197963426669

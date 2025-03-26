@@ -104,7 +104,7 @@ MonoBehaviour:
   gl: {fileID: 8651636797912409450}
   changeStateTime: 5
   player: {fileID: 0}
-  playSoundDistance: 5
+  playSoundDistance: 8
   tossCollider: {fileID: 1973589447419124090}
   stunTime: 3
 --- !u!61 &7714441516862589025

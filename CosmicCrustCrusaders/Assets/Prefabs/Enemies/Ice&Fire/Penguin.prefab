@@ -109,7 +109,7 @@ MonoBehaviour:
   stunTime: 3
   tossCollider: {fileID: 7543898823846136676}
   player: {fileID: 948259644604216238, guid: 380d544e1978d1f4194e4f1b0d125596, type: 3}
-  playSoundDistance: 5
+  playSoundDistance: 8
 --- !u!50 &2573043912848795871
 Rigidbody2D:
   serializedVersion: 4
