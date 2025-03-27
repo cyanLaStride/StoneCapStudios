@@ -4,27 +4,30 @@
 
 === IntroSceneEzekial ===
 
-...
 
-Customer: Hello...?
+Customer: H- Hey, is someone there?
 
-Cyrus: Hi there! Pizza for... Lilia?
+Customer: [Please don’t be another Bark Beast... They’re so mean...]
 
-Lilia: Oh... thanks?
++ Cyrus: Hey there! Pizza for... Lilia?
+Lilia: Oh, thank goodness... I really needed this...
 
-Cyrus: ...
++Cyrus: Er, ragh? I’m an evil bark beast?
+Customer: Pfft, okay, that was silly... are you the Pizza Person?
+Cyrus: Are you Lilia?
+Lilia: Yes!! Thank you!!
 
-+ Cyrus: Did you not order a pizza?
-	Lilia: No... I did...
-	Cyrus: Okay...?
+- Lilia: Did you remember the extra Mushrooms?
 
-+ Cyrus: Have a good day!
++ Cyrus: Yep! So many extras!
+	Lilia: Lovely.
 
-- Lilia: Okay...
++ Cyrus: Er, about that...
+	Cyrus: I may have thrown some of them at those Bark Beasts.
+	Lilia: Oh, that's okay. I hate those guys!! They make me slow and stuff!
+	Cyrus: Ah, thank goodness!
+- Lilia: Thank you!
 
 SUCCESSFUL DELIVERY!
 
 ->END
-
-
-

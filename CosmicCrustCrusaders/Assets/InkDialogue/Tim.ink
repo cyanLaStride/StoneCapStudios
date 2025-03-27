@@ -1,44 +1,45 @@
-
 ->  IntroSceneTim
 
 
 === IntroSceneTim ===
 
-Tim: Well, you’ve got an impressive resume and you’ve answered all my questions! Do you have any questions for me?
+Tim: Hey there, this is Galactic Slice, I’ll be ser-
 
-+ Cyrus: Nope 
+Tim: Hold on a sec, I’ve seen you around here before… Ah!
+
+Tim: Cyrus, ain’t it? You’ve got an impressive resume, kid, and you’ve answered all my questions! You got any questions for me?
+
++ Cyrus: Nope, not at all!
     
-+ Cyrus: Yeah, actually.. *hidden* what is ⏁⊑⟒ ⌇⟒☊...?
++ Cyrus: Yeah, actually... what is Zigwarbilarbl?
     Tim: I can’t answer that. Company property. Uh... anyways.. Do you want the job?
-    Cyrus: ... Yeah.
+    Cyrus: ... I mean, yeah?
+
+- Tim: Great! You’re hired! You can start immediately if ya want!
+Cyrus: Wait, right NOW?!
+Tim: After all, you did say you could start whenever, didn’t you?
 
 
-- Tim: Great! You’re hired! You can start immediately if ya want
++ Cyrus: Absolutely, Perfect! Thank you!
 
-+ Cyrus: Perfect! Thank you for this opportunity.
++ Cyrus: Err, can I take 2 weeks’ prep time?
+    Tim: .. Are you serious? I’ve already gotten the first order ready!
+    Cyrus: Well, I guess we can’t leave a customer upset, can we? I’ll start today!
 
-+ Cyrus: Is two weeks okay?
-    Tim: .. Are you serious? You said you could start whenever..?
-    Cyrus: Oh. Uh. I guess I did, ya. That works then?
+- Tim: Amazing! You can go ahead and start on your first order! The boxes are on the counter waiting; get ‘em while they’re hot! 
+Cyrus: Gotcha! On my wa-
+Tim: Hold on, wait! Before you go, make sure to stop by the store next door, Ezekiel’s Essentials!
 
-- Tim: Alright, you can go ahead and start on your first order, the boxes are on the counter waiting for you
-
-Chedder: mmmrp?
-
-Cyrus: ACK! What was that?
-
-Tim: Oh, the cat? That’s Cheddar. He’s been in the family for years. He’ll help you on your shifts.
-
-Cheddar: prrrrrrrrr
-
-Tim: Hey wait! Before you go, make sure to stop by the store next door. Ezekiel wants to meet you.
-
-+ Cyrus: Okay, will do. 
++ Cyrus: Essentials? What’s that?
+	Tim: Go look for yourself; he might have some stuff to help you out in space!
+	Tim: He’s also got a company phone for you that was getting some repairs, you know, to stay in touch!
+	Cyrus: Gotcha, Thanks!
 
 ->END
 
-+ Cyrus: Ezekiel?
-	Tim: “Yeah he’s a robot who owns a mechanic bar for other robots. He’ll give you some tools or something. I dun’ really know.
-	Cyrus: Alright, I’ll stop by.
++ Cyrus: Ezekiel? Who’s he?
+	Tim: Ah, he’s some robot who owns a mechanic bar for planet navigating gear. 
+	Tim: He might have advice for ya, and got a company phone that was getting some repairs for ya!
+	Cyrus: Alright, I’ll stop by!
 
 ->END

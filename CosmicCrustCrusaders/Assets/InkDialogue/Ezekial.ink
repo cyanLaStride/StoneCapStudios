@@ -5,34 +5,38 @@
 === IntroSceneEzekial ===
 
 
-Ezekial: Hey there! Pretty rare that I get a human in here, how can I service you?
+Ezekiel: A human? How rare! How can I service you?
 
-Cyrus: Oh hey, I uh- just got hired at the pizza place. I was told to come here.
+Cyrus: Oh hey, I uh- just got hired at Tim's Pizza Place, he told me to find you?
 
-Ezekiel: Oh ho ho! I see. What’s your name?
+Ezekiel: Ah! I see; he really is fond of humans! What’s your name?
 
-Cyrus: Cyrus.
++ Cyrus: Cyrus.
+  Ezekiel: Cyrus, what a nice name! Allow me to explain what we do here at Ezekiel's Essentials...
 
-Ezekiel: Nice to meet you! Now let me give you a brief explanation of what this place actually is, cause you look as confused as a martian.
++ Cyrus: You tell me Mr. Roboto!
+  Ezekiel: Analyzing... GREETINGS, [Cyrus D. Galactus]! Allow me to explain what we do here at Ezekiel's Essentials...
 
-Ezekiel: This place is my mechanic bar. I got every essential ANY robot would want...
-Ezekial: ...but some of it could help you out too. 
-Ezekial: Bring your gold here after your deliveries and buy whatever may help you. I mean, if you want to at least.
+- Ezekiel: This place is my mechanic bar. We carry EVERY tech essential any robot would EVER need...
+Ezekiel: ...but some of it could help you out, too. Pizza Delivery, the Intergalactic stuff, right?
+Ezekiel: Bring your gold here between shifts and get yourself some cool navigational upgrades!
 
-+ Cyrus: Huh. Okay then.
++ Cyrus: Huh? Okay then...
 
-+ Cyrus: What essentials are you talking about?
-Ezekiel: Oh ho! Aren’t you a listener! I got a grappling hook
-Ezekiel: some propellers...and.. y’know what
-Ezekiel: why don’t you come back when you have some money to see.
-Cyrus: Oh, uh okay I’ll come back later then..
++ Cyrus: What types of essentials are there?
+  Ezekiel: Oh ho! Aren’t you a listener! I got a grappling hook,
+  Ezekiel: Some air-gusting double-jumping propellers... and some lovely
+  Ezekiel: Speedy sneakers! Gotta go fast, right?
+  Cyrus: Lovely! Hey, this might help me on some of the wilder planets!
 
-- Ezekiel: Alright! before you head out take this.
-Ezekiel: Trust me.. you might find it helpful. HAH!
-Cyrus: Uh. Okay. Thank you...
+- Ezekiel: Alright! Before you head out, here's a word of advice...
+Ezekiel: You know those pizza toppings you got in that suit of yours?
+Ezekiel: Toss em at any foes you find! They'll be so perplexed, or hungry, it might buy you some time to walk right in front of them without getting hurt!
+Cyrus: Uh, weird, but okay! Toss toppings at enemies, don’t get hurt, got it? Thanks Ezzie!
+Ezekiel: That is not my name! My name is Ezekiel... Best of luck on your adventure, traveler! OH AND! Your Phone!
 
++ Cyrus: Almost forgot, Thanks!
++ Cyrus: Right! Just in case!
+- Ezekiel: Good luck on your Adventure!
 
 ->END
-
-
-

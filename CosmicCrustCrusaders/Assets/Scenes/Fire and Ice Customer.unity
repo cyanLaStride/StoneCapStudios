@@ -753,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 1468581324722992828, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: inkJSON
       value: 
-      objectReference: {fileID: 4900000, guid: 129fee0b0e36f3547809b65a0a96e723, type: 3}
+      objectReference: {fileID: 4900000, guid: 264977ac56fe3dc4283aa68e360da731, type: 3}
     - target: {fileID: 1468581324722992828, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: npcName
       value: Fice
