@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Follower : MonoBehaviour
 {
+    // setting up values
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -15,10 +16,12 @@ public class Follower : MonoBehaviour
     [SerializeField]
     private int targetDistance;
 
+    // checking distance
     private float distance;
     [SerializeField]
     private float playSoundDistance;
 
+    // stun setting
     private bool isStun;
     [SerializeField]
     private float stunTime;
@@ -26,16 +29,25 @@ public class Follower : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
+    // audio timer
+    private float soundTimer;
+    [SerializeField]
+    private float triggerSoundTime;
+    private bool isSoundPlayed;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        isSoundPlayed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // checking for distance
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
@@ -56,10 +68,22 @@ public class Follower : MonoBehaviour
                 animator.enabled = true;
             }
         }
-        if (distance <= playSoundDistance)
+        // play audio
+        if (distance <= playSoundDistance && !isSoundPlayed)
         {
-            AudioManager.Instance.PlayJungleSFX("FireMoth");
+            AudioManager.Instance.PlayFireAndIceSFX("FireMoth");
+            isSoundPlayed = true;
         }
+        else if (isSoundPlayed)
+        {
+            soundTimer += Time.deltaTime;
+            if (soundTimer >= triggerSoundTime)
+            {
+                isSoundPlayed = false;
+                soundTimer = 0.0f;
+            }
+        }
+        // flipping spirte based on player position
         if (player.transform.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
@@ -70,6 +94,7 @@ public class Follower : MonoBehaviour
         }
     }
 
+    // playing animation
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -81,6 +106,7 @@ public class Follower : MonoBehaviour
             isStun = true;
         }
     }
+    // audio circle
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

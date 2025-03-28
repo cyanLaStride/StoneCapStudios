@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: PlayerSFX.Array.data[4].name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 2693326796840588839, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+      propertyPath: enemiesSFXSource
+      value: 
+      objectReference: {fileID: 670595155}
     - target: {fileID: 3365888762830122392, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -56513,6 +56517,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &670595155 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6898816023461517203, guid: 49b472cec0b7c334ba2fec27883308a8, type: 3}
+  m_PrefabInstance: {fileID: 105538334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683381314
 GameObject:
   m_ObjectHideFlags: 0
@@ -58186,6 +58195,10 @@ PrefabInstance:
     - target: {fileID: 8206003898064986345, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069792058914241489, guid: 4906b0848be1d5b4f912c8ba54a63c2a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 1152
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

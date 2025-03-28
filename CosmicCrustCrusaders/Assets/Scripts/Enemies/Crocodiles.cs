@@ -15,8 +15,6 @@ public class Crocodiles : MonoBehaviour
     // shooting setting
     [SerializeField]
     private float shurikenSpeed;
-    //[SerializeField]
-    //private float shootAmout;
     [SerializeField]
     private float shootDelayTime;
     [SerializeField]
@@ -39,17 +37,10 @@ public class Crocodiles : MonoBehaviour
     public bool isRight;
     public bool isStun;
 
-    // music for now
-    //[SerializeField]
-    //private AudioSource ninjaAttackClip;
-    //[SerializeField]
-    //private AudioSource ninjaIdleClip;
-
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        //InvokeRepeating("shoot", shootDelayTime, shootTime);
     }
 
     // Update is called once per frame

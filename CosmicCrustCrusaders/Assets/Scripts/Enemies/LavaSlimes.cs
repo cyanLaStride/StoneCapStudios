@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class LavaSlimes : MonoBehaviour
 {
-    // player and checking
-    //private bool checkSameLevel;
-
+    // inspector setting
     [SerializeField]
     private PlayerController player;
     [SerializeField]
     private Rigidbody2D rb;
     [SerializeField]
     private Animator animator;
-
+    // basic setting
     [SerializeField]
     private float speed;
     private bool isRage;
@@ -25,7 +23,7 @@ public class LavaSlimes : MonoBehaviour
     private bool isRight;
     public float circleRadius;
     public bool isGrounded;
-
+    // stun setting
     private bool isStun;
     [SerializeField]
     private float stunTime;
@@ -34,6 +32,10 @@ public class LavaSlimes : MonoBehaviour
     private float distance;
     [SerializeField]
     private float playSoundDistance;
+    private float soundTimer;
+    [SerializeField]
+    private float triggerSoundTime;
+    private bool isSoundPlayed;
 
     [SerializeField]
     private Collider2D tossCollider;
@@ -49,11 +51,23 @@ public class LavaSlimes : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // checking player
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance <= playSoundDistance)
+        if (distance <= playSoundDistance && !isSoundPlayed)
         {
             AudioManager.Instance.PlayFireAndIceSFX("Slime");
+            isSoundPlayed = true;
         }
+        else if (isSoundPlayed)
+        {
+            soundTimer += Time.deltaTime;
+            if (soundTimer >= triggerSoundTime)
+            {
+                isSoundPlayed = false;
+                soundTimer = 0.0f;
+            }
+        }
+        // movement
         if (isRage && !isStun)
         {
             animator.SetBool("Rage",true);
@@ -80,6 +94,7 @@ public class LavaSlimes : MonoBehaviour
                 animator.enabled = true;
             }
         }
+        // flipping sprite when hitting wall
         if (isGrounded && isRight && !isStun)
         {
             flip();
@@ -88,6 +103,7 @@ public class LavaSlimes : MonoBehaviour
         {
             flip();
         }
+        // checking for same level
         if (player.transform.position.y - 1 >= transform.position.y - 0.5 && player.transform.position.y - 1 <= transform.position.y + 0.5)
         {
             isRage = true;
@@ -96,17 +112,15 @@ public class LavaSlimes : MonoBehaviour
         {
             isRage = false;
         }
-
-        
-        //Debug.Log(isRage);
     }
+    // flip method
     private void flip()
     {
         isRight = !isRight;
         transform.Rotate(new Vector3(0, 180, 0));
         speed = -speed;
     }
-
+    // checking getting hit
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Toss"))
@@ -114,7 +128,7 @@ public class LavaSlimes : MonoBehaviour
             isStun = true; 
         }
     }
-
+    // aduio circle
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

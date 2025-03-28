@@ -37,12 +37,6 @@ public class Mushroom : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
-    /*
-    [SerializeField]
-    private float idleTime;
-    private float idleTimer = 0.0f;
-    */
-
     // Start is called before the first frame update
     void Start()
     {
@@ -75,18 +69,6 @@ public class Mushroom : MonoBehaviour
                 AudioManager.Instance.PlayJungleSFX("Rushroom");
             }
         }
-        /*
-        else if(distance > runningRange)
-        {
-            idleTimer += Time.deltaTime;
-            if (idleTime <= idleTimer)
-            {
-                isIdle = true;
-                animator.SetBool("RRunning",false);
-                //idleTimer = 0.0f;
-            }
-        }
-        */
         // if rushroom is not idle
         if (!isIdle && !isStun)
         {
@@ -97,16 +79,6 @@ public class Mushroom : MonoBehaviour
                 speed = 0;
                 animator.SetBool("RRunning", false);
             }
-            /*
-            if (isGrounded && isRight)
-            {
-                flip();
-            }
-            else if (isGrounded && !isRight)
-            {
-                flip();
-            }
-            */
         }
         else if (isStun)
         {
@@ -138,16 +110,6 @@ public class Mushroom : MonoBehaviour
             isStun = true;
         }
     }
-
-    // changing direction
-    /*
-    private void flip()
-    {
-        isRight = !isRight;
-        transform.Rotate(new Vector3(0, 180, 0));
-        speed = -speed;
-    }
-    */
 
     // making the radius of circle visible
     private void OnDrawGizmosSelected()

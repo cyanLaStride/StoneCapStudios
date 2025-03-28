@@ -125,6 +125,7 @@ MonoBehaviour:
   playSoundDistance: 9
   stunTime: 3
   tossCollider: {fileID: 1960155197963426669}
+  triggerSoundTime: 5
 --- !u!61 &1960155197963426669
 BoxCollider2D:
   m_ObjectHideFlags: 0

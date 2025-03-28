@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] music;
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioSource enemiesSFXSource;
 
     private void Awake()
     {
@@ -67,8 +68,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            sfxSource.clip = s.clip;
-            sfxSource.Play();
+            enemiesSFXSource.clip = s.clip;
+            enemiesSFXSource.Play();
         }
     }
 
@@ -80,18 +81,10 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("You entered the wrong name");
         }
-        /*
-        else if (name == "Slime")
-        {
-            sfxSource.clip = s.clip;
-            sfxSource.volume = 1.0f;
-            sfxSource.Play();
-        }
-        */
         else
         {
-            sfxSource.clip = s.clip;
-            sfxSource.Play();
+            enemiesSFXSource.clip = s.clip;
+            enemiesSFXSource.Play();
         }
     }
 

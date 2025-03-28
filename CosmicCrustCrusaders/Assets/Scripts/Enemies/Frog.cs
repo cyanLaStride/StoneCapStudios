@@ -12,11 +12,7 @@ public class Frog : MonoBehaviour
     public Animator animator;
     [SerializeField]
     private PlayerController player;
-    // public Animator animator; //later for animation
-    // setting up "enum" when animation is testing !!! remember
 
-    // checking frog action
-    //private bool isGround = false;
     private bool isFacingR = false;
     private bool isFacingL = true;
     private bool isIdle; // animation
@@ -40,17 +36,14 @@ public class Frog : MonoBehaviour
     public float frogIdleTime;
     private int jumpDirection;
 
+    // checking for sound
     private float distance;
     [SerializeField]
     private float playSoundDistance;
-
-    //private int enemyLayer = LayerMask.NameToLayer("Enemies");
-    //private int stunLayer = LayerMask.NameToLayer("stunLayer");
-
-    // music
-    //[SerializeField]
-    //private AudioSource frogAudioClip;
-
+    private float soundTimer;
+    [SerializeField]
+    private float triggerSoundTime;
+    private bool isSoundPlayed;
 
     // Start is called before the first frame update
     void Start()
@@ -67,10 +60,21 @@ public class Frog : MonoBehaviour
     // fixed update specifically dealing with rigidbody (gravity stuff) and timer
     void Update()
     {
+        // getting player and enemies distance
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if (distance <= playSoundDistance)
+        if (distance <= playSoundDistance & !isSoundPlayed)
         {
             AudioManager.Instance.PlayJungleSFX("Frog");
+            isSoundPlayed = true;
+        }
+        else if (isSoundPlayed)
+        {
+            soundTimer += Time.deltaTime;
+            if (soundTimer >= triggerSoundTime)
+            {
+                isSoundPlayed = false;
+                soundTimer = 0.0f;
+            }
         }
         if (isIdle && !isStun)
         {
@@ -136,15 +140,6 @@ public class Frog : MonoBehaviour
             isIdle = true;
         }
     }
-    /*
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "ground")
-        {
-            //isGround = false;
-        }
-    }
-    */
 
     // on triggerEnter2D if needed or another method
     private void OnTriggerEnter2D(Collider2D collision)

@@ -14,9 +14,6 @@ public class FlowerV2 : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
-    //music
-    //private AudioSource flowerAduioClip;
-
     // Start is called before the first frame update
 
     void Start()
@@ -37,6 +34,7 @@ public class FlowerV2 : MonoBehaviour
             //flowerAduioClip.Play();
             animator.SetBool("FlowerIdle", true);
         }
+        // when enemies is stun
         if (isStun)
         {
             animator.enabled = false;
@@ -57,10 +55,10 @@ public class FlowerV2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isStun)
         {
+            AudioManager.Instance.PlayJungleSFX("DanglingFlower");
             // Check player direction and play animation
             animator.SetBool("FlowerAttack", true);
             animator.SetBool("FlowerIdle", false);
-            AudioManager.Instance.PlayJungleSFX("DanglingFlower");
             isIdle = false;
         }
         else if (collision.gameObject.CompareTag("Toss"))

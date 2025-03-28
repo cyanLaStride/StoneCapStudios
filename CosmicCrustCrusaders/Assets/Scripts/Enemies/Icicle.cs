@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Icicle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // cool particle effect later
-    // freeze character?
-
     // player speed
     [SerializeField]
     private PlayerController player;
@@ -21,6 +17,7 @@ public class Icicle : MonoBehaviour
     [SerializeField]
     private int freezeDuration;
 
+    // checking direction and getting gameobject
     static public bool isRight;
     [SerializeField]
     private Transform spawnLocation;
@@ -28,19 +25,16 @@ public class Icicle : MonoBehaviour
     private GameObject iceParticles;
     public SpriteRenderer iceRenderer;
 
+    // control stun
     private bool isStun;
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
     [SerializeField]
     private float delayAttack;
-    //private float attackTimer = 0.0f;
     public bool isAttacked;
 
-    private float distance;
-    [SerializeField]
-    private float playSoundDistance;
-
+    // getting collider
     [SerializeField]
     private Collider2D tossCollider;
 
@@ -58,7 +52,7 @@ public class Icicle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
+        // freeze player timer
         if (freezePlayer)
         {
             if (timer <= freezeDuration)
@@ -76,6 +70,7 @@ public class Icicle : MonoBehaviour
             player.movementSpeed = characterSpeed;
             timer = 0;
         }
+        // checking player is left or right from enemeis
         if (player.transform.position.x > transform.position.x)
         {
             isRight = true;
@@ -89,17 +84,7 @@ public class Icicle : MonoBehaviour
             iceRenderer.flipX = false;
             spawnLocation.transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.x);
         }
-        /*
-        if (!isStun && isAttacked)
-        {
-            attackTimer += Time.deltaTime;
-            if (attackTimer >= delayAttack)
-            {
-                isAttacked = false;
-                attackTimer = 0;
-            }
-        }
-        */
+        // when enemies got stun
         if (isStun)
         {
             animator.enabled = false;
@@ -118,37 +103,16 @@ public class Icicle : MonoBehaviour
         {
             animator.SetTrigger("IcicleAttack");
             GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
-            if (distance <= playSoundDistance)
-            {
-                AudioManager.Instance.PlayFireAndIceSFX("Icicle");
-            }
+            AudioManager.Instance.PlayFireAndIceSFX("Icicle");
             isAttacked = true;
-
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (!isAttacked && !isStun)
-            {
-                animator.SetTrigger("IcicleAttack");
-                GameObject icicleShoot = Instantiate(iceParticles, spawnLocation.position, spawnLocation.rotation);
-                isAttacked = true;
-                Debug.Log("Hit");
-            }
-        }
-        */
         if (collision.gameObject.CompareTag("Toss"))
         {
             isStun = true;
         }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }

@@ -5,25 +5,6 @@ using UnityEngine;
 
 public class BarkBeast : MonoBehaviour
 {
-    /* rip code
-    // camera position
-    [SerializeField]
-    private Camera cameraPos;
-    private Vector3 originalPos;
-
-    // random number max and min
-    [SerializeField]
-    private float randomRangeMax;
-    [SerializeField] 
-    private float randomRangeMin;
-    [SerializeField]
-    private int timeBetweenShake;
-
-    // shake
-    [SerializeField]
-    private int shakeAmount;
-    private bool shake;
-    */
     // all componenet
     [SerializeField]
     private PlayerController player;
@@ -66,17 +47,11 @@ public class BarkBeast : MonoBehaviour
     [SerializeField]
     private Collider2D tossCollider;
 
-    // music
-    //private AudioSource barkAudioClip;
-
     // Start is called before the first frame update
     void Start()
     {
-        //originalPos = cameraPos.transform.position;
         rb = GetComponent<Rigidbody2D>();
-        //spriteR = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        //barkAudioClip = GetComponent<AudioSource>();
         isIdle = true;
         isSlowed = false;
         characterSpeed = player.movementSpeed;
@@ -145,16 +120,6 @@ public class BarkBeast : MonoBehaviour
         {
             animator.SetBool("BWalking", false);
         }
-        /*
-        if (shake)
-        {
-            for (int i = 0; i < shakeAmount; i++)
-            {
-                Debug.Log("boop");
-                cameraPos.transform.position += new Vector3(Random.Range(-randomRangeMin, randomRangeMax), Random.Range(-randomRangeMin, randomRangeMax), 0);
-            }
-        }
-        */
     }
 
     // change direction
@@ -168,27 +133,11 @@ public class BarkBeast : MonoBehaviour
     // when entering bark range?
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.CompareTag("Player") && !isStun)
-        //{
-        //    animator.SetTrigger("BAttack");
-        //    player.movementSpeed = characterSpeed * (1 / speedDecreasePercentage);
-        //}
         if (collision.gameObject.CompareTag("Toss"))
         {
             isStun = true;
         }
     }
-    /*
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //cameraPos.transform.position = originalPos;
-            //shake = false;
-            player.movementSpeed = characterSpeed;
-        }
-    }
-    */
 
     // making the radius of circle visible
     private void OnDrawGizmosSelected()

@@ -105,8 +105,11 @@ MonoBehaviour:
   changeStateTime: 5
   player: {fileID: 0}
   playSoundDistance: 8
+  triggerSoundTime: 5
+  speedmultiplier: 3
   tossCollider: {fileID: 1973589447419124090}
   stunTime: 3
+  isSlowed: 0
 --- !u!61 &7714441516862589025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -366,6 +369,7 @@ MonoBehaviour:
   rotateAroundThis: {fileID: 382957266187067774}
   speed: 10
   isRotationRight: 0
+  el: {fileID: 2984976153326541683}
 --- !u!114 &4657718062442191418
 MonoBehaviour:
   m_ObjectHideFlags: 0

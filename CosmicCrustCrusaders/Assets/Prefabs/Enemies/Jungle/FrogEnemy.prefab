@@ -243,6 +243,7 @@ MonoBehaviour:
   tossCollider: {fileID: 7207235724594992869}
   frogIdleTime: 2
   playSoundDistance: 5
+  triggerSoundTime: 5
 --- !u!114 &3232154722406217726
 MonoBehaviour:
   m_ObjectHideFlags: 0

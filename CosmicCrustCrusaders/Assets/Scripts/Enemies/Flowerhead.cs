@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Flowerhead : MonoBehaviour
 {
+    // basic setting
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -18,18 +19,23 @@ public class Flowerhead : MonoBehaviour
     private Transform flowerBase;
     [SerializeField]
     private int radius;
-
+    // audio setting
     private float distance;
     private float toBaseDistance;
     [SerializeField]
     private float playSoundDistance;
-
+    private float soundTimer;
+    [SerializeField]
+    private float triggerSoundTime;
+    private bool isSoundPlayed;
+    // stun setting
     private bool isStun;
     [SerializeField]
     private float stunTime;
     private float stunTimer = 0.0f;
     [SerializeField]
     private Collider2D tossCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +51,7 @@ public class Flowerhead : MonoBehaviour
         toBaseDistance = Vector2.Distance(flowerBase.position, transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
+        // enemy movement
         if (toBaseDistance < radius && !isStun)
         {
             if (distance < targetDistance)
@@ -60,6 +67,7 @@ public class Flowerhead : MonoBehaviour
         {
                 transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.fixedDeltaTime);
         }
+        // enemies got stun
         else if (isStun)
         {
             animator.enabled = false;
@@ -73,10 +81,22 @@ public class Flowerhead : MonoBehaviour
                 animator.enabled = true;
             }
         }
-        if (distance <= playSoundDistance)
+        // play sound
+        if (distance <= playSoundDistance && !isSoundPlayed)
         {
             AudioManager.Instance.PlayFireAndIceSFX("SnowAngel");
+            isSoundPlayed = true;
         }
+        else if (isSoundPlayed)
+        {
+            soundTimer += Time.deltaTime;
+            if (soundTimer >= triggerSoundTime)
+            {
+                isSoundPlayed = false;
+                soundTimer = 0.0f;
+            }
+        }
+        // flipping sprite based on character
         if (player.transform.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
@@ -86,6 +106,8 @@ public class Flowerhead : MonoBehaviour
             spriteRenderer.flipX = false;
         }
     }
+
+    // animation and stun check
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -97,6 +119,8 @@ public class Flowerhead : MonoBehaviour
             isStun = true;
         }
     }
+
+    // audio and target circle
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

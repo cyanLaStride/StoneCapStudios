@@ -10,6 +10,7 @@ public class Penguin : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    // checking direction
     [SerializeField]
     private bool isRight;
     private int direction;
@@ -20,18 +21,13 @@ public class Penguin : MonoBehaviour
     private float attackTimer;
     private bool attack;
 
+    // stun settings
     private bool isStun;
     [SerializeField]
     private float stunTime;
     private float stunTimer;
     [SerializeField]
     private Collider2D tossCollider;
-
-    [SerializeField]
-    private PlayerController player;
-    private float distance;
-    [SerializeField]
-    private float playSoundDistance;
 
     // getting component and setting up
     void Start()
@@ -40,6 +36,7 @@ public class Penguin : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        // setting up face direction
         if (!isRight)
         {
             flip();
@@ -50,7 +47,6 @@ public class Penguin : MonoBehaviour
 
     private void FixedUpdate()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position);
         if (!attack && !isStun)
         {
             attackTimer += Time.fixedDeltaTime;
@@ -75,10 +71,6 @@ public class Penguin : MonoBehaviour
                 animator.enabled = true;
             }
         }
-        if (distance <= playSoundDistance)
-        {
-            AudioManager.Instance.PlayFireAndIceSFX("Penguin");
-        }
     }
 
     private void flip()
@@ -97,16 +89,12 @@ public class Penguin : MonoBehaviour
             {
                 rb.velocity = Vector2.right * force;
                 attack = false;
+                AudioManager.Instance.PlayFireAndIceSFX("Penguin");
             }
         }
         else if (collision.gameObject.CompareTag("Toss"))
         {
             isStun = true;
         }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, playSoundDistance);
     }
 }
