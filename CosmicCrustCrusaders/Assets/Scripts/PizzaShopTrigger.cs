@@ -86,6 +86,7 @@ public class PizzaShopTrigger : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && scoreScreen5.activeInHierarchy)
             {
                 if (levelName == "Earth"){
+                    gameManager.upgFlashlightUnlock = true;
                     SceneManager.LoadSceneAsync("Dialogue Upgrade Shop");
                 } else if (levelName == "Jungle")
                 {

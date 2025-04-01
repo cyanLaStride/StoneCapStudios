@@ -757,7 +757,7 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 8dad045fb8f0c6a488d49e6af7e949f0, type: 3}
     - target: {fileID: 1468581324722992828, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: npcName
-      value: Fice
+      value: GoodEnd
       objectReference: {fileID: 0}
     - target: {fileID: 2429356136241914425, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: m_Sprite

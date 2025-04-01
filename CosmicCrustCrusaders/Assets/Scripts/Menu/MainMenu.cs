@@ -35,7 +35,14 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(5);
+        if (GameObject.Find("GameManager").GetComponent<GameManager>().upgFlashlightUnlock)
+        {
+            SceneManager.LoadSceneAsync(12);
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync(5);
+        }
     }
     public void QuitGame()
     {
@@ -47,4 +54,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync("Dialogue Pizza Shop");
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadSceneAsync(16);
+    }
 }

@@ -17,6 +17,6 @@ Cyrus: Talks on what...
 Cyrus: A PROMOTION?!
 Tim: Heck no, a raise! Get down here, kid, we’ve got some chatting to do!
 Cyrus: Ah, gotcha. On my way!
-
+THANK YOU FOR PLAYING!
 
 ->END
