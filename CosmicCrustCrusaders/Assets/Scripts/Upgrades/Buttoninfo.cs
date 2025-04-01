@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Buttoninfo : MonoBehaviour
+public class Buttoninfo : MonoBehaviour, IPointerEnterHandler
 {
     public int ItemID;
     public Text PriceTxt;
     public Text QuantityTxt;
     public Text StockTxt;
-    public GameObject ShopManager; 
-    
+    public GameObject ShopManager;
+    public GameObject ToolTip;
+    public GameObject NotToolTip1;
+    public GameObject NotToolTip2;
 
     // Update is called once per frame
     void Update()
@@ -26,5 +29,11 @@ public class Buttoninfo : MonoBehaviour
 
 
 
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ToolTip.SetActive(true);
+        NotToolTip1.SetActive(false);
+        NotToolTip2.SetActive(false);
     }
 }
