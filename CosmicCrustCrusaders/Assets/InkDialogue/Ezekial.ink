@@ -31,9 +31,10 @@ Ezekiel: Bring your gold here between shifts and get yourself some cool navigati
 
 - Ezekiel: Alright! Before you head out, here's a word of advice...
 Ezekiel: You know those pizza toppings you got in that suit of yours?
-Ezekiel: Toss em at any foes you find! They'll be so perplexed, or hungry, it might buy you some time to walk right in front of them without getting hurt!
+Ezekiel: Toss em at any foes you find! Trust Me!
+Ezekiel: They'll be so perplexed, or hungry, it might buy you some time to walk right in front of them without getting hurt!
 Cyrus: Uh, weird, but okay! Toss toppings at enemies, don’t get hurt, got it? Thanks Ezzie!
-Ezekiel: That is not my name! My name is Ezekiel... Best of luck on your adventure, traveler! OH AND! Your Phone!
+Ezekiel: That is not my name! My name is... Never Mind... Best of luck on your adventure, traveler! OH AND! Your Phone!
 
 + Cyrus: Almost forgot, Thanks!
 + Cyrus: Right! Just in case!

@@ -102,11 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   gl: {fileID: 8651636797912409450}
-  changeStateTime: 5
+  changeStateTime: 4
   player: {fileID: 0}
   playSoundDistance: 8
   triggerSoundTime: 5
-  speedmultiplier: 3
+  speedmultiplier: 4
   tossCollider: {fileID: 1973589447419124090}
   stunTime: 3
   isSlowed: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateAroundThis: {fileID: 382957266187067774}
-  speed: 10
+  speed: 20
   isRotationRight: 0
   el: {fileID: 2984976153326541683}
 --- !u!114 &4657718062442191418
