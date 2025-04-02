@@ -22,7 +22,7 @@ public class IceParticles : MonoBehaviour
     private void Start()
     {
         // setting speed
-        speed = speed * 0.001f;
+        speed = speed * Time.deltaTime;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
