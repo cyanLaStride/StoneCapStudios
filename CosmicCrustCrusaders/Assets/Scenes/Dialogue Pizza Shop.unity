@@ -673,7 +673,7 @@ PrefabInstance:
     - target: {fileID: 2429356136241914425, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 33a417ab8e4226d41a3f43a5c5b38e9d, type: 3}
+      objectReference: {fileID: 21300000, guid: 395c6f02cacf8fe489f45c681957f43b, type: 3}
     - target: {fileID: 2685659482041361293, guid: 4bd902bbcf2f892499bd0984d1d49a56, type: 3}
       propertyPath: m_Name
       value: NPC_juryrigged
