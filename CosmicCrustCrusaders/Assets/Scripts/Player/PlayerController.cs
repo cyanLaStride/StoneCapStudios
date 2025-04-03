@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     public bool upgPropellorUse = false;
 
     public bool upgBoost = false;
-    private float upgBoostSpeed = 5f;
+    private float upgBoostSpeed = 12f;
     public bool isInteracting = false;
 
     // Start is called before the first frame update
@@ -279,12 +279,12 @@ public class PlayerController : MonoBehaviour
                 AudioManager.Instance.PlayPlayerSFX("Throwing");
             }
         }
-        if (Input.GetKey(KeyCode.P)) // for ease of testing
+        if (Input.GetKey(KeyCode.P)) // for ease of testing, and as a secret pizza pistol upgrade
         {
-            upgFlashlight = true;
-            upgGrapplingHook = true;
-            upgPropellor = true;
-            upgBuddyBoosters = true;
+            // upgFlashlight = true;
+            upgGrapplingHook = false;
+            // upgPropellor = true;
+            // upgBuddyBoosters = true;
             upgPizzaPistol = true;
 }
         /* obselete camera movement
