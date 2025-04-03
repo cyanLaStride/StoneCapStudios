@@ -10615,7 +10615,7 @@ Transform:
   m_GameObject: {fileID: 111322050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.033304892, y: 0.21206258, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 1}
   m_LocalScale: {x: 0.85847807, y: 0.40617752, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13975,7 +13975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.022, y: -0.027}
+  m_AnchoredPosition: {x: 0, y: -0.17}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667891611
@@ -13998,8 +13998,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gameplay\r                  Controls\n\r\n\rJump\r \t\t\t\tW\n\nLeft\r
-    \t\t\t\tA\r\n\nRight\r \t\t\t\tD\r"
+  m_text: "Gameplay\r\t\tControls\n\r\n\rJump\r \t\t\t\tW\nLeft\r \t\t\t\tA\r\nRight\r
+    \t\t\t\tD\r\nCrouch\t\t\tS"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
   m_sharedMaterial: {fileID: -7991762183134681939, guid: 0c333af18e205d3479c1ffbebd0a703f, type: 2}
@@ -14033,7 +14033,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14062,7 +14062,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.527609, y: 2.0720189, z: 9.570122, w: 2.137797}
+  m_margin: {x: 9.527609, y: 2.0720189, z: 9.570122, w: 2.6028514}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
