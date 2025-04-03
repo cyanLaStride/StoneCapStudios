@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     public bool upgPropellorUse = false;
 
     public bool upgBoost = false;
-    private float upgBoostSpeed = 2f;
+    private float upgBoostSpeed = 5f;
     public bool isInteracting = false;
 
     // Start is called before the first frame update
@@ -197,7 +197,7 @@ public class PlayerController : MonoBehaviour
         }
         if (upgGrapplingHook)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(1))
             {
                 Debug.Log("spiderman");
                 RaycastHit2D hit = Physics2D.Raycast(
@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.E) || Input.GetMouseButtonUp(1))
             {
                 Debug.Log("spiderman't");
                 joint.enabled = false;
