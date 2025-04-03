@@ -102,9 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ic: {fileID: 3440222763623771282, guid: 8db9436593e2c6b4b97b3df06565dd27, type: 3}
-  isRight: 0
-  speed: 5
+  speed: 4
   spriteRenderer: {fileID: 0}
+  iceSpawn: {fileID: 0}
+  isRight: 1
 --- !u!61 &5184856604329735197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,10 +164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHp: {fileID: 0}
-  damage: 2
+  damage: 1.5
   onEnter: 0
-  onStay: 0
   onTrigger: 1
+  nextAttackDelaySec: 0
 --- !u!61 &7581801534456176884
 BoxCollider2D:
   m_ObjectHideFlags: 0

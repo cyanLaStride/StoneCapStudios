@@ -56,16 +56,16 @@ public class Flowerhead : MonoBehaviour
         {
             if (distance < targetDistance)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.fixedDeltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             }
             else if (distance > toBaseDistance)
             {
-                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.fixedDeltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.deltaTime);
             }
         }
         else if(toBaseDistance >= radius && !isStun)
         {
-                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.fixedDeltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, flowerBase.transform.position, speed * Time.deltaTime);
         }
         // enemies got stun
         else if (isStun)

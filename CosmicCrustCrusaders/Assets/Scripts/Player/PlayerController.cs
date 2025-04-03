@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     public bool upgPropellorUse = false;
 
     public bool upgBoost = false;
-    private float upgBoostSpeed = 12f;
+    private float upgBoostSpeed = 1750;
     public bool isInteracting = false;
 
     // Start is called before the first frame update
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         {
             if (upgBoost)
             {
-                rb2d.AddForce(new Vector2(-upgBoostSpeed * slow, 0));
+                rb2d.AddForce(new Vector2(-Time.deltaTime * upgBoostSpeed, 0));
             } else
             {
                 rb2d.velocity = new Vector2(-movementSpeed * slow, rb2d.velocity.y);
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             if (upgBoost)
             {
-                rb2d.AddForce(new Vector2(upgBoostSpeed * slow, 0));
+                rb2d.AddForce(new Vector2(Time.deltaTime * upgBoostSpeed, 0));
             }
             else
             {
